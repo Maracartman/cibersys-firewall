@@ -23,6 +23,8 @@ import java.util.Collection;
  */
 public class AppFilter extends OncePerRequestFilter {
 
+    /**Archivo de configuración**/
+
     @Value("${cibersys.token.header}")
     private String tokenHeader;
 
