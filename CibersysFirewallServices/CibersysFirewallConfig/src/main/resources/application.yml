@@ -1,0 +1,42 @@
+server:
+  port: 3333
+  
+  
+spring:
+  application:
+    name: configserver
+  cloud:
+    bus:
+      enabled: true
+    config:
+      prefix: /config
+      server:
+        git:
+         uri: https://maracartman@gitlab.com/maracartman/Cibersys-Config.git
+         username: mar
+         password: mar
+
+  profiles:
+    active: native
+
+logging:
+  file: logs/${spring.application.name}.log
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+    com.atsistemas: 'DEBUG'
+#---
+#spring:
+#  profiles: production
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://maracartman@gitlab.com/maracartman/Cibersys-Config.git
+#          username: maracartman
+#          password: maracartman01031991
+#          searchPaths: Cibersys-Config
+#
+#---
+#spring:
+#  profiles: development

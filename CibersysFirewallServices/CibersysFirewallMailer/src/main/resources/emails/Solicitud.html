@@ -1,0 +1,160 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Olvido</title>
+    <style>
+        .btn-link {
+            border: none;
+            outline: none;
+            background: none;
+            cursor: pointer;
+            color: #0000EE;
+            padding: 0;
+            font-weight: 600;
+            color: #009de0;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: inherit;
+        }
+    </style>
+</head>
+<body style="font-family:Arial">
+<table cellspacing="0" cellpadding="0" border="0" align="center">
+    <tbody>
+    <tr>
+        <td style="font-size:0" width="600" valign="top" height="" align="center">
+            <table width="600" cellpadding="0" border="0">
+                <tbody>
+                <tr>
+                    <td style="display:block;font-size:0;line-height:0" width="600" height="397">
+                        <img src="cid:emails/Solicitud_archivos/head.png" height="397" width="600">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table width="600" cellspacing="0" border="0">
+                <tbody>
+                <tr>
+                    <td width="600">
+                        <table style="border-collapse: collapse" width="100%">
+                            <tbody>
+                            <tr>
+                                <td width="100%" align="center">
+                                    <h1 style="font-weight: lighter;font-size: 46px;margin-top: 20px;color: #009DE0;">
+                                        ¡Hola!</h1>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table style="border-collapse: collapse" width="100%">
+                <tbody>
+                <tr>
+                    <td width="100%" align="center">
+                        <h2 style="color: #4B443F;font-size: 25px;margin-bottom: 28px;">{{nombre}} {{apellido}}</h2>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table style="border-collapse: collapse; font-family:calibri; " width="100%">
+                <tbody>
+                <tr>
+                    <td width="100%" align="center">
+							<span style="font-size: 26px;color: #4B443F;margin-bottom: 16px;font-weight: 600;display: block;">
+								¿Olvidaste tu datos de inicio de sesión?
+							</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table style="border-collapse: collapse; font-family:calibri;color: #4B443F;" width="100%">
+                <tbody>
+                <tr>
+                    <td width="100%" align="center">
+							<span style="font-size: 26px;font-weight: lighter; margin-bottom: 10px; display: block;">
+								Los datos de tu cuenta son:
+							</span>
+							<span style="font-size: 26px;font-weight: lighter;display:block;margin-bottom: 10px;">
+								Usuario: <strong>{{username}}</strong>
+							</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table style="border-collapse: collapse; font-family:calibri;color: #4B443F;" width="100%">
+                <tbody>
+                <tr>
+                    <td width="100%" align="center">
+                        <span style="display:block;border-top:1px solid #555; width: 500px;margin-bottom: 20px;margin-top: 30px;"></span>
+							<span style="font-size: 23px;font-weight: 100;display: block;margin-bottom: 20px;">
+                            Si deseas restablecer tu contraseña haz click
+
+                                <form action="https://desarrollo.cibersys.com/dev/firewall-virtual/recovery/"
+                                      method="post">
+                                    <input class="form-control" name="validation_code"
+                                           type="hidden"
+                                           value="{{validation_code}}"/>
+  <button type="submit" class="btn-link">AQUÍ</button>
+                                </form>
+							</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table style="color:#fff;border-collapse: collapse;" width="100%" cellspacing="0" border="0">
+                <tbody>
+                <tr>
+                    <td style="display:block;font-size:0;line-height:0;" width="300" height="100" align="center">
+                        <a target="_blank" href="https://www.cibersys.com">
+                            <img src="cid:emails/General_resources/cibersys-logo.png"
+                                 style="height: 56px;display: block;font-size: 0px;margin-top: 20px;" alt="">
+                        </a>
+                    </td>
+                    <td style="text-align:right;padding: 20px;" width="300" height="100">
+                        <a href="" style="text-decoration:none;float:left; margin:0px 4px;margin-left: 16px;">
+                            <img style="height:50px"
+                                 src="cid:emails/General_resources/google.png" alt="">
+                        </a>
+                        <a href="" style="text-decoration:none;float:left; margin:0px 4px;">
+                            <img style="height:50px"
+                                 src="cid:emails/General_resources/linkedin.png"
+                                 alt="">
+                        </a>
+                        <a href="" style="text-decoration:none;float:left; margin:0px 4px;">
+                            <img style="height:50px"
+                                 src="cid:emails/General_resources/facebook.png"
+                                 alt="">
+                        </a>
+                        <a href="" style="text-decoration:none;float:left; margin:0px 4px;">
+                            <img style="height:50px"
+                                 src="cid:emails/General_resources/twitter.png" alt="">
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table style="border-collapse: collapse; font-family:calibri; " width="100%">
+                <tbody>
+                <tr>
+                    <td style="color:#fff;background:#009DE0;" width="100%" height="30" align="center">
+                        <span style="font-size: 20px;">Soporte: <a style="color: #fff; text-decoration: none"
+                                                                   href="mailto:soporte@cibersys.com">soporte@cibersys.com</a></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

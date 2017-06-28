@@ -1,0 +1,62 @@
+server:
+  port: 5655
+  #Configuracion de enrutamiento
+cibersys:
+    services:
+            login: /CibersysFirewall/public/login
+            update: /CibersysFirewall/public/update
+            passwordchange: /CibersysFirewall/public/passwordchange
+            services:
+              public: /CibersysFirewall/public/
+              private: /CibersysFirewall/private/
+            path: CibersysFirewall/
+
+            dbm:
+              services: /CibersysFirewall/dbm/
+              usuario: /CibersysFirewall/dbm/usuario
+              path: CibersysFirewall/dbm/
+              route: http://localhost:5656
+            mannager:
+              services: /CibersysFirewall/mannager/
+              usuario: /CibersysFirewall/mannager/usuario
+              update: /CibersysFirewall/mannager/update
+              recuperatepassword: /CibersysFirewall/mannager/recuperatepassword
+
+              path: CibersysFirewall/mannager/
+              route: http://localhost:5657
+  #Configuracion de seguridad
+    token:
+      header: X-Auth-Token
+      secret: 1234567890*-+/AbCdEfGhIjKlMnOpQrStUvWxYz.,
+      expiration: 604800
+
+
+---
+spring:
+  profiles: production
+cibersys:
+  services:
+      dbm:
+        route: http://localhost:5656
+      mannager:
+        route: http://localhost:5657
+
+---
+spring:
+  profiles: development
+cibersys:
+  services:
+        dbm:
+          route: http://localhost:5656
+        mannager:
+          route: http://localhost:5657
+
+---
+spring:
+  profiles: remote
+cibersys:
+  services:
+        dbm:
+          route: http://localhost:5656
+        mannager:
+          route: http://localhost:5657

@@ -1,0 +1,54 @@
+# Spring properties
+spring:
+  application:
+     name: mailer-service
+  mail:
+      host: smtp.gmail.com
+      port: 587
+      username: cibersys.firewall@gmail.com
+      password: cibersys.firewall.12345
+      properties:
+        mail:
+          smtp:
+            auth: true
+            starttls:
+              enable: true
+              required: true
+server:
+  port: 5658   # HTTP (Tomcat) port
+
+
+cibersys:
+    token:
+        header: X-Auth-Token
+        secret: 1234567890*-+/AbCdEfGhIjKlMnOpQrStUvWxYz.,
+        expiration: 604800
+        route: http://localhost:5658
+    services:
+            login: /CibersysFirewall/login
+            update: /CibersysFirewall/update
+            services: /CibersysFirewall/
+            path: CibersysFirewall/
+            route: http://localhost:5655
+
+            dbm:
+              services: /CibersysFirewall/dbm/
+              usuario: /CibersysFirewall/dbm/usuario
+              path: CibersysFirewall/dbm/
+              route: http://localhost:5656
+            mannager:
+              services: /CibersysFirewall/mannager/
+              usuario: /CibersysFirewall/mannager/usuario
+              update: /CibersysFirewall/mannager/update
+              path: CibersysFirewall/mannager/
+              route: http://localhost:5657
+
+            mailer:
+              services: /CibersysFirewall/mailer/
+              forgot: /CibersysFirewall/mailer/forgot
+              success: /CibersysFirewall/mailer/success
+              recuperatepassword: /CibersysFirewall/mannager/recuperatepassword
+              update: /CibersysFirewall/mannager/update
+              path: CibersysFirewall/mailer/
+
+
