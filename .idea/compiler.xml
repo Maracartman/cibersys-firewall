@@ -15,6 +15,7 @@
         <module name="cibersys-firewall-eureka" />
         <module name="CibersysAccountsMannager" />
         <module name="CibersysFirewallAccountsMannager" />
+        <module name="CibersysfirewallAuthorization" />
         <module name="CibersysFirewallAuthorization" />
         <module name="CibersysFirewallCommons" />
         <module name="CibersysFirewallConfig" />
@@ -22,6 +23,7 @@
         <module name="CibersysFirewallDomain" />
         <module name="CibersysFirewallEureka" />
         <module name="CibersysFirewallMailer" />
+        <module name="cibersysfirewallmailer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -31,6 +33,7 @@
       <module name="CibersysAccountsMannager" target="1.8" />
       <module name="CibersysFirewallAccountsMannager" target="1.8" />
       <module name="CibersysFirewallAuthorization" target="1.7" />
+      <module name="CibersysfirewallAuthorization" target="1.7" />
       <module name="cibersysfirewallcenter" target="1.8" />
       <module name="CibersysFirewallCenter" target="1.8" />
       <module name="CibersysFirewallCommons" target="1.5" />
@@ -39,6 +42,7 @@
       <module name="CibersysFirewallDomain" target="1.5" />
       <module name="CibersysFirewallEureka" target="1.8" />
       <module name="CibersysFirewallMailer" target="1.8" />
+      <module name="cibersysfirewallmailer" target="1.8" />
       <module name="CibersysFirewallServices" target="1.6" />
     </bytecodeTargetLevel>
   </component>
