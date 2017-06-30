@@ -1,5 +1,15 @@
 server:
   port: 5655
+#  ssl:
+#    key-store: /etc/letsencrypt/live/qa.cc.cloudvoice.io/keystore.p12
+#    key-password: ark123456
+#    key-store-type: PKCS12
+#    keyStoreType: PKCS12
+#
+#
+#  security:
+#    require-ssl: true
+
   #Configuracion de enrutamiento
 cibersys:
     services:
