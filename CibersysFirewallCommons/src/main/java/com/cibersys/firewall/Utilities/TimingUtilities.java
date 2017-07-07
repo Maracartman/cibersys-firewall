@@ -15,7 +15,10 @@ public class TimingUtilities {
  * Dado una fecha se verifica si ya transcurrieron las dos horas limites.
  * **/
     public Boolean isTheVerificationCodeExpired(Date expirationDate){
-        Period p = new Period(new DateTime(new Date()),new DateTime(expirationDate));
-        return p.getHours() >= 2 ? true : false;
+        Period p = new Period(new DateTime(expirationDate),new DateTime(new Date()));
+        return p.getHours() >= 2  ||
+                p.getDays() != 0 ||
+                p.getMonths() != 0 ||
+                p.getYears() != 0 ? true : false;
     }
 }

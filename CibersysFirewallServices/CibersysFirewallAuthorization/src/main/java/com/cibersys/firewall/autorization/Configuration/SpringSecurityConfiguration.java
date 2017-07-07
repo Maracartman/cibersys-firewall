@@ -50,7 +50,7 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
                         "/**/*.css",
                         "/**/*.js"
                 ).permitAll();
-        final CorsConfiguration config = new CorsConfiguration();
+        CorsConfiguration config = new CorsConfiguration();
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         config.addAllowedOrigin("*");
         config.addAllowedHeader("*");
