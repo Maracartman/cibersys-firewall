@@ -4,7 +4,7 @@ import com.cibesys.firewall.mailer.RequestHandlers.AbstractHandler.AbstractReque
 import org.springframework.http.ResponseEntity;
 
 /**
- * Created by AKDESK25 on 6/26/2017.
+ * Created by Luis Maracara on 6/26/2017.
  */
 public interface NewPasswordRequestService extends AbstractRequestHandlerService<ResponseEntity> {
 }

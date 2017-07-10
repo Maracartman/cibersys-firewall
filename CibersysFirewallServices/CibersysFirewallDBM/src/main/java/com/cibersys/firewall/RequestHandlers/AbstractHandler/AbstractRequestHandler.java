@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import java.util.Map;
 
 /**
- * Created by AKDESK25 on 6/16/2017.
+ * Created by Luis Maracara on 6/16/2017.
  */
 public abstract class AbstractRequestHandler<T> {
 

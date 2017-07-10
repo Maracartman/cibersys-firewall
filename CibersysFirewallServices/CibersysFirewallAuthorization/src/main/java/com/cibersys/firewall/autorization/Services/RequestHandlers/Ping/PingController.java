@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * Created by AKDESK25 on 6/13/2017.
+ * Created by Luis Maracara on 6/13/2017.
  */
 @RestController
 public class PingController {

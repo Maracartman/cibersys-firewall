@@ -15,7 +15,7 @@ import org.springframework.web.client.ResourceAccessException;
 import java.util.Map;
 
 /**
- * Created by AKDESK25 on 6/19/2017.
+ * Created by Luis Maracara on 6/19/2017.
  */
 @Service
 public class UserUpdateRequestServiceImpl extends AbstractRequestHandler<ResponseEntity<?>> implements UserUpdateRequestService {

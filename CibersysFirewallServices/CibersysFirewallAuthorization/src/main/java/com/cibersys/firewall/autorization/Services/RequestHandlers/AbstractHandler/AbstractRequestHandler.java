@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Map;
 
 /**
- * Created by AKDESK25 on 6/16/2017.
+ * Created by Luis Maracara on 6/16/2017.
  */
 public abstract class AbstractRequestHandler<T> {
 

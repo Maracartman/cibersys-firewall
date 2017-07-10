@@ -65,7 +65,21 @@
     <profiles>
 
         <profile>
-            <id>development-remote-debug</id>
+            <id>Development-remote</id>
+            <properties>
+                <spring.profiles.active>remote</spring.profiles.active>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-devtools</artifactId>
+                    <optional>true</optional>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <profile>
+            <id>Development-remote-debug</id>
             <properties>
                 <spring.profiles.active>remote</spring.profiles.active>
             </properties>
@@ -94,7 +108,7 @@
         </profile>
 
         <profile>
-            <id>development-debug</id>
+            <id>Development-debug</id>
             <properties>
                 <spring.profiles.active>development</spring.profiles.active>
             </properties>

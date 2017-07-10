@@ -39,8 +39,42 @@
 
 
 	<profiles>
+
+
+
 		<profile>
-			<id>development-debug</id>
+			<id>Development-remote-debug</id>
+			<properties>
+				<spring.profiles.active>remote</spring.profiles.active>
+			</properties>
+			<dependencies>
+
+				<dependency>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-devtools</artifactId>
+					<optional>true</optional>
+				</dependency>
+			</dependencies>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-maven-plugin</artifactId>
+						<version>1.4.0.RELEASE</version>
+						<configuration>
+							<jvmArguments>
+								-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5007
+							</jvmArguments>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+
+
+		<profile>
+			<id>Development-debug</id>
 			<properties>
 				<spring.profiles.active>development</spring.profiles.active>
 			</properties>
@@ -59,7 +93,7 @@
 						<version>1.4.0.RELEASE</version>
 						<configuration>
 							<jvmArguments>
-								-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5016
+								-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5007
 							</jvmArguments>
 						</configuration>
 					</plugin>

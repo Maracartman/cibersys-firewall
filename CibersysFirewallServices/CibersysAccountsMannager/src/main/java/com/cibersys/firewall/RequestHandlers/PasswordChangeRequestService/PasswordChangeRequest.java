@@ -5,7 +5,7 @@ import com.cibersys.firewall.RequestHandlers.AbstractHandler.AbstractRequestHand
 import com.cibersys.firewall.domain.models.DTO.ResponseBody.AbstractResponseBody;
 
 /**
- * Created by AKDESK25 on 6/21/2017.
+ * Created by Luis Maracara on 6/21/2017.
  */
 public interface PasswordChangeRequest extends AbstractRequestHandlerService<AbstractResponseBody> {
 }

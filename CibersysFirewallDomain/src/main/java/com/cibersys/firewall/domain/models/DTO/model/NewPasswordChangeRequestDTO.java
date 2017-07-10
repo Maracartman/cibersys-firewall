@@ -4,7 +4,7 @@ package com.cibersys.firewall.domain.models.DTO.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Created by AKDESK25 on 6/21/2017.
+ * Created by Luis Maracara on 6/21/2017.
  */
 public class NewPasswordChangeRequestDTO {
 

@@ -26,7 +26,7 @@ import java.util.Locale;
 import java.util.Map;
 
 /**
- * Created by AKDESK25 on 6/16/2017.
+ * Created by Luis Maracara on 6/16/2017.
  */
 @RestController
 @RequestMapping("${cibersys.services.mailer.path}")

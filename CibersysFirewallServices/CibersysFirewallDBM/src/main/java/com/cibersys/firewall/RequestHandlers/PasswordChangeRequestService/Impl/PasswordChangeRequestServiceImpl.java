@@ -17,7 +17,7 @@ import java.util.Date;
 import java.util.Map;
 
 /**
- * Created by AKDESK25 on 6/22/2017.
+ * Created by Luis Maracara on 6/22/2017.
  */
 @Service
 public class PasswordChangeRequestServiceImpl extends AbstractRequestHandler<NewPasswordChangeRequestResponse> implements PasswordChangeRequestService {

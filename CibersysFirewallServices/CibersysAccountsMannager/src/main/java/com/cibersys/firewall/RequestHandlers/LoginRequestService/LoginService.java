@@ -8,7 +8,7 @@ import com.cibersys.firewall.domain.models.DTO.responseDTO.LoginResponse;
 import org.springframework.http.ResponseEntity;
 
 /**
- * Created by AKDESK25 on 6/16/2017.
+ * Created by Luis Maracara on 6/16/2017.
  */
 public interface LoginService extends AbstractRequestHandlerService<LoginResponse> {
 }

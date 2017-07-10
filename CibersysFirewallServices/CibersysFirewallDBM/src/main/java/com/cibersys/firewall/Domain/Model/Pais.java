@@ -3,7 +3,7 @@ package com.cibersys.firewall.Domain.Model;
 import javax.persistence.*;
 
 /**
- * Created by AKDESK25 on 6/14/2017.
+ * Created by Luis Maracara on 6/14/2017.
  */
 @Entity
 @Table(name = "pais")

@@ -5,7 +5,7 @@ import com.cibersys.firewall.domain.models.DTO.model.UserUpdateResponseDTO;
 import lombok.Data;
 
 /**
- * Created by AKDESK25 on 6/19/2017.
+ * Created by Luis Maracara on 6/19/2017.
  */
 @Data
 public class UpdateResponse extends AbstractResponseBody<UserUpdateResponseDTO> {

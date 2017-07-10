@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 /**
- * Created by AKDESK25 on 6/12/2017.
+ * Created by Luis Maracara on 6/12/2017.
  */
 //@MappedSuperclass
 public class Base {

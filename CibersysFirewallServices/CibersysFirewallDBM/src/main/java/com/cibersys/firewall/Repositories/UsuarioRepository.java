@@ -11,7 +11,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import javax.transaction.Transactional;
 
 /**
- * Created by AKDESK25 on 6/14/2017.
+ * Created by Luis Maracara on 6/14/2017.
  */
 @Transactional
 @RepositoryRestResource(collectionResourceRel = "usuario", path = "usuario")
