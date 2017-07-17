@@ -43,17 +43,7 @@ spring:
 cibersys:
   services:
       dbm:
-        route: https://localhost:5656
-server:
-  ssl:
-      key-store: /etc/letsencrypt/live/qa.cc.cloudvoice.io/keystore.p12
-      key-password: ark123456
-      key-store-type: PKCS12
-      keyStoreType: PKCS12
-
-
-  security:
-      require-ssl: true
+        route: http://localhost:5656
 
 ---
 spring:

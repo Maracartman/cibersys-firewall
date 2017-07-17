@@ -46,27 +46,10 @@ spring:
   profiles: production
 cibersys:
   services:
-            login: /CibersysFirewall/public/login
-            update: /CibersysFirewall/public/update
-            passwordchange: /CibersysFirewall/public/passwordchange
-            services:
-              public: /CibersysFirewall/public/
-              private: /CibersysFirewall/private/
-            path: CibersysFirewall/
-
-            dbm:
-              services: /CibersysFirewall/dbm/
-              usuario: /CibersysFirewall/dbm/usuario
-              path: CibersysFirewall/dbm/
-              route: https://localhost:5656
-            mannager:
-              services: /CibersysFirewall/mannager/
-              usuario: /CibersysFirewall/mannager/usuario
-              update: /CibersysFirewall/mannager/update
-              recuperatepassword: /CibersysFirewall/mannager/recuperatepassword
-
-              path: CibersysFirewall/mannager/
-              route: https://localhost:5657
+      dbm:
+        route: http://localhost:5656
+      mannager:
+        route: http://localhost:5657
 
 server:
   ssl:
