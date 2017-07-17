@@ -51,4 +51,47 @@ cibersys:
               update: /CibersysFirewall/mannager/update
               path: CibersysFirewall/mailer/
 
+---
+spring:
+  application:
+    name: mailer
+  profiles: production
+cibersys:
+  services:
+            login: /CibersysFirewall/login
+            update: /CibersysFirewall/update
+            services: /CibersysFirewall/
+            path: CibersysFirewall/
+            route: http://localhost:5655
+
+            dbm:
+              services: /CibersysFirewall/dbm/
+              usuario: /CibersysFirewall/dbm/usuario
+              path: CibersysFirewall/dbm/
+              route: https://localhost:5656
+            mannager:
+              services: /CibersysFirewall/mannager/
+              usuario: /CibersysFirewall/mannager/usuario
+              update: /CibersysFirewall/mannager/update
+              path: CibersysFirewall/mannager/
+              route: https://localhost:5657
+
+            mailer:
+              services: /CibersysFirewall/mailer/
+              forgot: /CibersysFirewall/mailer/forgot
+              success: /CibersysFirewall/mailer/success
+              recuperatepassword: /CibersysFirewall/mannager/recuperatepassword
+              update: /CibersysFirewall/mannager/update
+              path: CibersysFirewall/mailer/
+server:
+  ssl:
+      key-store: /etc/letsencrypt/live/qa.cc.cloudvoice.io/keystore.p12
+      key-password: ark123456
+      key-store-type: PKCS12
+      keyStoreType: PKCS12
+
+
+  security:
+      require-ssl: true
+
 
