@@ -4,7 +4,7 @@ import com.cibersys.firewall.RequestHandlers.AbstractHandler.AbstractRequestHand
 import com.cibersys.firewall.domain.models.DTO.responseDTO.UpdateResponse;
 
 /**
- * Created by AKDESK25 on 6/19/2017.
+ * Created by Luis Maracara on 6/19/2017.
  */
 public interface UserUpdateRequestService extends AbstractRequestHandlerService<UpdateResponse> {
 }

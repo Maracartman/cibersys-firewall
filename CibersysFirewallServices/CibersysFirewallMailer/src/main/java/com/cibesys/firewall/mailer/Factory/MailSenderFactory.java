@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.Map;
 
 /**
- * Created by AKDESK25 on 6/22/2017.
+ * Created by Luis Maracara on 6/22/2017.
  */
 @Service
 public class MailSenderFactory extends AbstractSenderFactory<AbstractEmailSenderService,MailSenderParameters>

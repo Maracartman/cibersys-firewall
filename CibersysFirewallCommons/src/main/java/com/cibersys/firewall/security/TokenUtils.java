@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 /**
- * Created by AKDESK25 on 6/13/2017.
+ * Created by Luis Maracara on 6/13/2017.
  */
 //@Component
 public class TokenUtils {

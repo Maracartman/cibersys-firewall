@@ -5,7 +5,7 @@ import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
 import lombok.Data;
 
 /**
- * Created by AKDESK25 on 6/14/2017.
+ * Created by Luis Maracara on 6/14/2017.
  */
 @Data
 public class LoginResponse extends AbstractResponseBody<UserDTO> {

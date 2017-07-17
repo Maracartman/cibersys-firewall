@@ -9,19 +9,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UserDTO {
     private Long id;
     private String userName, password;
-
+    private Integer idRol;
 
     public UserDTO(){}
 
-    public UserDTO(String username, String password) {
-        this.userName = username;
-        this.password = password;
-    }
-
-    public UserDTO(Long id, String userName, String password) {
+    public UserDTO(String userName, String password, Integer idRol) {
         this.id = id;
         this.userName = userName;
         this.password = password;
+        this.idRol = idRol;
+    }
+
+    public UserDTO(String s, String s1) {
+        this.userName = s;
+        this.password = s1;
     }
 
     @JsonIgnore
@@ -33,6 +34,11 @@ public class UserDTO {
         this.id = id;
     }
 
+
+    @JsonProperty("rol")
+    public Integer getIdRol() {
+        return idRol;
+    }
 
     @JsonProperty("user")
     public String getUserName() {

@@ -6,7 +6,7 @@ import com.cibesys.firewall.mailer.RequestHandlers.AbstractHandler.AbstractReque
 import org.springframework.http.ResponseEntity;
 
 /**
- * Created by AKDESK25 on 6/21/2017.
+ * Created by Luis Maracara on 6/21/2017.
  */
 public interface PasswordChangeRequest extends AbstractRequestHandlerService<ResponseEntity> {
 }

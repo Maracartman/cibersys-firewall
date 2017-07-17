@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.Map;
 
 /**
- * Created by AKDESK25 on 6/26/2017.
+ * Created by Luis Maracara on 6/26/2017.
  */
 @Service
 public class NewPasswordRequestServiceImpl extends AbstractRequestHandler<ResponseEntity<?>> implements NewPasswordRequestService {

@@ -19,7 +19,7 @@ import org.springframework.web.client.RestTemplate;
 import javax.annotation.PostConstruct;
 
 /**
- * Created by AKDESK25 on 6/19/2017.
+ * Created by Luis Maracara on 6/19/2017.
  */
 @Service
 public class UserGeneralRequestBuilderImpl implements UserGeneralRequestBuilder{

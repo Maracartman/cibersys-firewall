@@ -12,18 +12,9 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="Cibersys Firewall - Backend" />
-        <module name="cibersys-firewall-eureka" />
         <module name="CibersysAccountsMannager" />
-        <module name="CibersysFirewallAccountsMannager" />
-        <module name="CibersysfirewallAuthorization" />
         <module name="CibersysFirewallAuthorization" />
-        <module name="CibersysFirewallCommons" />
-        <module name="CibersysFirewallConfig" />
-        <module name="CibersysFirewallDBM" />
-        <module name="CibersysFirewallDomain" />
-        <module name="CibersysFirewallEureka" />
         <module name="CibersysFirewallMailer" />
-        <module name="cibersysfirewallmailer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

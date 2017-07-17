@@ -8,10 +8,6 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/CibersysFirewallServices/pom.xml" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallEureka/pom.xml" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/pom.xml" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/pom.xml" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/pom.xml" />
       </list>
     </option>
   </component>

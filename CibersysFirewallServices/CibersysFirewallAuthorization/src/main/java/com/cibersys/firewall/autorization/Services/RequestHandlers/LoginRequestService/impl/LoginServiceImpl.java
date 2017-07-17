@@ -24,10 +24,6 @@ import java.util.Map;
 @Service
 public class LoginServiceImpl extends AbstractRequestHandler<ResponseEntity<?>> implements LoginService {
 
-
-
-
-
     @Override
     public ResponseEntity<?> proceedRequest(Map<String, String> body) {
         UserDTO user = objectMapper.convertValue(body,UserDTO.class);
@@ -39,7 +35,7 @@ public class LoginServiceImpl extends AbstractRequestHandler<ResponseEntity<?>> 
                 HttpHeaders responseHeader = new HttpHeaders();
                 responseHeader.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
                 try {
-                    responseHeader.add("X-Auth-Token", tokenUtils.generateToken(objectMapper.writeValueAsString(user)));
+                    responseHeader.add("X-Auth-Token", tokenUtils.generateToken(objectMapper.writeValueAsString(consult)));
                 } catch (JsonProcessingException e) {
                     e.printStackTrace();
                 }
