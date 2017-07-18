@@ -61,10 +61,10 @@ cibersys:
 
 server:
   ssl:
-      key-store: /etc/letsencrypt/live/qa.cc.cloudvoice.io/keystore.p12
-      key-password: ark123456
-      key-store-type: PKCS12
+      key-store: /etc/letsencrypt/live/qa.cc.cloudvoice.io2/keystore.p12
       keyStoreType: PKCS12
+      key-store-password: ark123456
+      key-alias: tomcat
 
 
   security:
