@@ -2,6 +2,7 @@ package com.cibersys.firewall.autorization.Services.Utilities.impl;
 
 import com.cibersys.firewall.autorization.Services.Utilities.UserGeneralRequestBuilder;
 import com.cibersys.firewall.domain.models.DTO.model.NewPasswordChangeRequestDTO;
+import com.cibersys.firewall.domain.models.DTO.model.PasswordChangeRequestDTO;
 import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
 import com.cibersys.firewall.domain.models.DTO.model.UserUpdateRequestDTO;
 import com.cibersys.firewall.security.TokenUtils;
@@ -59,6 +60,11 @@ public class UserGeneralRequestBuilderImpl implements UserGeneralRequestBuilder{
     }
     @Override
     public HttpEntity<UserUpdateRequestDTO> buildUserUpdateDTORequest(UserUpdateRequestDTO u) {
+        return new HttpEntity<>(u,headers);
+    }
+
+    @Override
+    public HttpEntity<PasswordChangeRequestDTO> buildPasswordChangeRequestDTO(PasswordChangeRequestDTO u) {
         return new HttpEntity<>(u,headers);
     }
 

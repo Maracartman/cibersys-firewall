@@ -73,24 +73,13 @@ public class AppFilter extends OncePerRequestFilter {
                 if (userToken == null) {
                     ((HttpServletResponse) response).sendError(HttpServletResponse.SC_UNAUTHORIZED, "El token no es valido.");
                 } else {
-                    Boolean valid = false;
-                    switch (request.getRequestURI().split("/")[request.getRequestURI().split("/").length - 1]) {
-                        case "update":
-                            valid = true;
-                            break;
-                        case "recuperatepassword":
-                            valid = true;
-                            break;
-                        default:
-                            ((HttpServletResponse) response).sendError(HttpServletResponse.SC_UNAUTHORIZED, "El usuario no es valido.");
-                    }
-                    if (valid) {
+                    if(verifyValidRequest(userToken)){
                         Collection<SimpleGrantedAuthority> authorities = new ArrayList<SimpleGrantedAuthority>();
                         authorities.add(new SimpleGrantedAuthority("ADMIN"));
                         UsernamePasswordAuthenticationToken authRequest = new UsernamePasswordAuthenticationToken(userToken.getUserName(), userToken.getPassword(), authorities);
                         SecurityContextHolder.getContext().setAuthentication(authRequest);
                         filterChain.doFilter(request, response);
-                    } else {
+                    }else{
                         ((HttpServletResponse) response).sendError(HttpServletResponse.SC_UNAUTHORIZED, "El usuario no es valido.");
                     }
                 }
@@ -104,6 +93,4 @@ public class AppFilter extends OncePerRequestFilter {
         UserDTO consult = restTemplate.postForObject(mannagerRoute + mannagerUsuario, request1, LoginResponse.class).getResponse();
         return consult != null && (userToken.getUserName().equals(consult.getUserName()));
     }
-
-
 }

@@ -1,13 +1,16 @@
-package com.cibersys.firewall.autorization.Services.RequestHandlers.PasswordChange.impl;
+package com.cibersys.firewall.RequestHandlers.PasswordChange.impl;
 
-import com.cibersys.firewall.autorization.Services.RequestHandlers.AbstractHandler.AbstractRequestHandler;
-import com.cibersys.firewall.autorization.Services.RequestHandlers.PasswordChange.PasswordChange;
+
+import com.cibersys.firewall.RequestHandlers.AbstractHandler.AbstractRequestHandler;
+import com.cibersys.firewall.RequestHandlers.PasswordChange.PasswordChange;
+import com.cibersys.firewall.domain.models.DTO.ResponseBody.AbstractResponseBody;
 import com.cibersys.firewall.domain.models.DTO.model.PasswordChangeRequestDTO;
-import com.cibersys.firewall.domain.models.DTO.responseDTO.ResponseError;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.UpdateResponse;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.ResourceAccessException;
 
 import java.util.Map;
@@ -17,22 +20,22 @@ import java.util.Map;
  */
 
 @Service
-public class PasswordChangeImpl extends AbstractRequestHandler<ResponseEntity<?>> implements PasswordChange {
+public class PasswordChangeImpl extends AbstractRequestHandler<AbstractResponseBody> implements PasswordChange {
     @Override
-    public ResponseEntity<?> proceedRequest(Map<String, String> body) {
-
+    public AbstractResponseBody proceedRequest(Map<String, String> body, Map<String, String> header) {
         PasswordChangeRequestDTO passwordChangeRequestDTO = objectMapper.convertValue(body,PasswordChangeRequestDTO.class);
-        HttpEntity<PasswordChangeRequestDTO> request = userGeneralRequestBuilder.buildPasswordChangeRequestDTO(passwordChangeRequestDTO);
+        MultiValueMap<String, String> headers = new LinkedMultiValueMap<String, String>();
+        header.forEach((s, s2) -> headers.add(s, s2));
+        HttpEntity<PasswordChangeRequestDTO> request =new HttpEntity<PasswordChangeRequestDTO>(passwordChangeRequestDTO, headers);
         try {
-            UpdateResponse consult = restTemplate.postForObject(mannagerRoute + mannagerPasswordChange, request, UpdateResponse.class);
+            UpdateResponse consult = restTemplate.postForObject(dbmRoute + dbmPasswordChange, request, UpdateResponse.class);
             if (!consult.getError()) {
-                return ResponseEntity.ok(consult);
+                return consult;
             } else {
-                return ResponseEntity.ok(new ResponseError(Long.valueOf(401),consult.getMessage(),
-                        true,null));
+                return new UpdateResponse(Long.valueOf(200),"Se ha producido un error", true, null);
             }
         } catch (ResourceAccessException e) {
-            return ResponseEntity.ok(new ResponseError(Long.valueOf(401), "El servicio solicitado no se encuentra disponible",true,null));
+            return new UpdateResponse(Long.valueOf(200),"Se ha producido un error", true, null);
         }
 
     }

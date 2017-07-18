@@ -31,7 +31,7 @@ public class PasswordChangeRequestImpl extends AbstractRequestHandler<AbstractRe
         });
         HttpEntity<NewPasswordChangeRequestDTO> request = new HttpEntity<NewPasswordChangeRequestDTO>(newPasswordRequest, headers);
         try {
-            NewPasswordChangeRequestResponse consult = restTemplate.postForObject(dbmRoute + dbmPasswordChange, request, NewPasswordChangeRequestResponse.class);
+            NewPasswordChangeRequestResponse consult = restTemplate.postForObject(dbmRoute + dbmRecuperatePassword, request, NewPasswordChangeRequestResponse.class);
             if (!consult.getError()) {
                 /**El DBM pudo satisfactoriamente crear un nuevo codigo de verificación antes de proceder
                  * llamamos al micro servicio de @MAILER para que envie el correo electrónico**/

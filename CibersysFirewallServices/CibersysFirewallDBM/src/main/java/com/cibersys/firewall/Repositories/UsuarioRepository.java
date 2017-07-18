@@ -9,14 +9,17 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 /**
  * Created by Luis Maracara on 6/14/2017.
  */
 @Transactional
 @RepositoryRestResource(collectionResourceRel = "usuario", path = "usuario")
-public interface UsuarioRepository extends CrudRepository<Usuario,Long> {
+public interface UsuarioRepository extends JpaRepository<Usuario,Long> {
     Usuario findOneByEmailAndContraseñaAndEstatus(@Param("user") String email,@Param("password") String encriptedPassword,@Param("estatus") String estatus);
+
+    List<Usuario> findByEmailAndContraseña(@Param("email") String email, @Param("password") String encriptedPassword);
 
     Usuario findByEmailAndCodigoValidacionAndEstatus(String email,String codigoValidacion,String estatus);
 

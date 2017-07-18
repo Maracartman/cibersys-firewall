@@ -30,7 +30,7 @@ public class PasswordChangeRequestImpl extends AbstractRequestHandler<ResponseEn
         HttpEntity<NewPasswordChangeRequestDTO> request = userGeneralRequestBuilder.buildNewPasswordChangeRequestDTO(newPasswordRequest);
         try{
             NewPasswordChangeRequestResponse consult =
-                    restTemplate.postForObject(mannagerRoute + mannagerPasswordChange, request, NewPasswordChangeRequestResponse.class);
+                    restTemplate.postForObject(mannagerRoute + mannagerRecuperatePassword, request, NewPasswordChangeRequestResponse.class);
             if (!consult.getError()) {
                 return ResponseEntity.ok(consult);
             } else {

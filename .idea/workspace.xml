@@ -1,108 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9c298db-b850-4acc-9c57-992bc649c32b" name="Default" comment="">
-<<<<<<< HEAD
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-=======
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CibersysFirewallCommons/target/CibersysFirewallCommons-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CibersysFirewallCommons/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallCommons/target/classes/com/cibersys/firewall/security/TokenUtils.class" afterPath="$PROJECT_DIR$/CibersysFirewallCommons/target/classes/com/cibersys/firewall/security/TokenUtils.class" />
+    <list default="true" id="0dfa1381-676e-486a-bdc9-8f4b286316c5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/PasswordChangeRequestDTO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChange/PasswordChange.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChange/impl/PasswordChangeImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/PasswordChange/PasswordChange.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/PasswordChange/impl/PasswordChangeImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeService/PasswordChangeService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeService/impl/PasswordChangeServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallCommons/target/CibersysFirewallCommons-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/CibersysFirewallCommons/target/CibersysFirewallCommons-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallDomain/target/cibersys-firewall-domain-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/CibersysFirewallDomain/target/cibersys-firewall-domain-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallDomain/target/classes/com/cibersys/firewall/domain/models/DTO/model/UserDTO.class" afterPath="$PROJECT_DIR$/CibersysFirewallDomain/target/classes/com/cibersys/firewall/domain/models/DTO/model/UserDTO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallCommons/CibersysFirewallCommons.iml" afterPath="$PROJECT_DIR$/CibersysFirewallCommons/CibersysFirewallCommons.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/Utilities/TimingUtilities.java" afterPath="$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/Utilities/TimingUtilities.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/commons/Ping.java" afterPath="$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/commons/Ping.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/security/TokenUtils.java" afterPath="$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/security/TokenUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/Base.java" afterPath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/Base.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/ResponseBody/AbstractResponseBody.java" afterPath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/ResponseBody/AbstractResponseBody.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/NewPasswordChangeRequestDTO.java" afterPath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/NewPasswordChangeRequestDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/UserDTO.java" afterPath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/UserDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/UserUpdateRequestDTO.java" afterPath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/UserUpdateRequestDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/UserUpdateResponseDTO.java" afterPath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/UserUpdateResponseDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/LoginResponse.java" afterPath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/LoginResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/NewPasswordChangeRequestResponse.java" afterPath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/NewPasswordChangeRequestResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallCommons/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/CibersysFirewallCommons/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/UpdateResponse.java" afterPath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/UpdateResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/Usuario.java" afterPath="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/Usuario.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallDomain/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/CibersysFirewallDomain/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/pom.xml" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/AbstractHandler/AbstractRequestHandlerService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/AbstractHandler/AbstractRequestHandlerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/GatewayRequestService/GatewayService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/GatewayRequestService/GatewayService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/LoginRequestService/LoginService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/LoginRequestService/LoginService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeRequestService/PasswordChangeRequest.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeRequestService/PasswordChangeRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/CibersysAccountsMannagerApplication.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/CibersysAccountsMannagerApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/AbstractHandler/AbstractRequestHandler.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/AbstractHandler/AbstractRequestHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeRequestService/impl/PasswordChangeRequestImpl.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeRequestService/impl/PasswordChangeRequestImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/UserUpdateRequestService/UserUpdateRequestService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/UserUpdateRequestService/UserUpdateRequestService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/UserUpdateRequestService/impl/UserUpdateRequestServiceImpl.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/UserUpdateRequestService/impl/UserUpdateRequestServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/Utilities/UserGeneralRequestBuilder.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/Utilities/UserGeneralRequestBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/Utilities/impl/UserGeneralRequestBuilderImpl.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/Utilities/impl/UserGeneralRequestBuilderImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/pom.xml" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/resources/application.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/AuthorizationController.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/AuthorizationController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Configuration/AppFilter.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Configuration/AppFilter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/AbstractHandler/AbstractRequestHandler.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/AbstractHandler/AbstractRequestHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/AbstractHandler/AbstractRequestHandlerService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/AbstractHandler/AbstractRequestHandlerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/GatewayRequestService/GatewayService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/GatewayRequestService/GatewayService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/LoginRequestService/LoginService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/LoginRequestService/LoginService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/LoginRequestService/impl/LoginServiceImpl.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/LoginRequestService/impl/LoginServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/PasswordChangeRequest/PasswordChangeRequest.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/PasswordChangeRequest/PasswordChangeRequest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/PasswordChangeRequest/impl/PasswordChangeRequestImpl.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/PasswordChangeRequest/impl/PasswordChangeRequestImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/Ping/PingController.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/Ping/PingController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/UserUpdateRequestService/UserUpdateRequestService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/UserUpdateRequestService/UserUpdateRequestService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/UserUpdateRequestService/impl/UserUpdateRequestServiceImpl.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/UserUpdateRequestService/impl/UserUpdateRequestServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/Utilities/UserGeneralRequestBuilder.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/Utilities/UserGeneralRequestBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/Utilities/impl/UserGeneralRequestBuilderImpl.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/Utilities/impl/UserGeneralRequestBuilderImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/resources/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallConfig/src/main/java/com/cibersys/firewall/config/ConfigController.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallConfig/src/main/java/com/cibersys/firewall/config/ConfigController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/pom.xml" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Domain/Model/Cliente.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Domain/Model/Cliente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Domain/Model/Pais.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Domain/Model/Pais.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Domain/Model/Usuario.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Domain/Model/Usuario.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Repositories/ClienteRepository.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Repositories/ClienteRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Repositories/PaisRepository.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Repositories/PaisRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/CibersysFirewallDbmApplication.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/CibersysFirewallDbmApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Repositories/UsuarioRepository.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Repositories/UsuarioRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/AbstractHandler/AbstractRequestHandler.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/AbstractHandler/AbstractRequestHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/AbstractHandler/AbstractRequestHandlerService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/AbstractHandler/AbstractRequestHandlerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/GatewayRequestService/GatewayService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/GatewayRequestService/GatewayService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeRequestService/Impl/PasswordChangeRequestServiceImpl.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeRequestService/Impl/PasswordChangeRequestServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeRequestService/PasswordChangeRequestService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeRequestService/PasswordChangeRequestService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserUpdateRequestService/UserUpdateRequestService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserUpdateRequestService/UserUpdateRequestService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserUpdateRequestService/UserUpdateRequestServiceImpl/UserUpdateRequestServiceImpl.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserUpdateRequestService/UserUpdateRequestServiceImpl/UserUpdateRequestServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserVerification/UserVerificationImpl/UserVerificationServiceImpl.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserVerification/UserVerificationImpl/UserVerificationServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/resources/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/pom.xml" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Configuration/EmailConfiguration/SpringMailConfig.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Configuration/EmailConfiguration/SpringMailConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Factory/AbstractFactory/AbstractSenderFactory.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Factory/AbstractFactory/AbstractSenderFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Factory/AbstractFactory/SenderFactory.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Factory/AbstractFactory/SenderFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Factory/MailSenderFactory.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Factory/MailSenderFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Factory/Parameters/MailSenderParameters.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Factory/Parameters/MailSenderParameters.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/AbstractHandler/AbstractRequestHandler.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/AbstractHandler/AbstractRequestHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/AbstractHandler/AbstractRequestHandlerService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/AbstractHandler/AbstractRequestHandlerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/GatewayRequestService/GatewayService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/GatewayRequestService/GatewayService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/NewPasswordRequestService/NewPasswordRequestService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/NewPasswordRequestService/NewPasswordRequestService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/NewPasswordRequestService/impl/NewPasswordRequestServiceImpl.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/NewPasswordRequestService/impl/NewPasswordRequestServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/PasswordChangeRequestService/PasswordChangeRequest.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/PasswordChangeRequestService/PasswordChangeRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/PasswordChangeRequestService/impl/PasswordChangeRequestImpl.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/PasswordChangeRequestService/impl/PasswordChangeRequestImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Senders/Abstract/MailSenderService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Senders/Abstract/MailSenderService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Senders/NewPasswordSender/NewPasswordSender.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Senders/NewPasswordSender/NewPasswordSender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Senders/RecuperaMailSender/RecuperateMailSenderService.java" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Senders/RecuperaMailSender/RecuperateMailSenderService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/pom.xml" afterPath="$PROJECT_DIR$/CibersysFirewallServices/pom.xml" />
->>>>>>> maracartman/master
     </list>
-    <ignored path="Cibersys Firewall - Backend.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/target/" />
+    <ignored path="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallConfig/target/" />
+    <ignored path="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/target/" />
+    <ignored path="$PROJECT_DIR$/CibersysFirewallServices/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path=".idea/dataSources.local.xml" />
-    <ignored path="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallCenter/target/" />
     <ignored path="$PROJECT_DIR$/CibersysFirewallDomain/target/" />
     <ignored path="$PROJECT_DIR$/CibersysFirewallCommons/target/" />
-    <ignored path="$PROJECT_DIR$/CibersysFirewallServices/target/" />
+    <ignored path="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/target/" />
     <ignored path="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallEureka/target/" />
     <ignored path="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/target/" />
-    <ignored path="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/target/" />
-    <ignored path="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallConfig/target/" />
-    <ignored path="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/target/" />
-    <ignored path="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,122 +48,39 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Cibersys Firewall - Backend$CibersysAccountsMannagerApplication.coverage" NAME="CibersysAccountsMannagerApplication Coverage Results" MODIFIED="1498146488401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FavoritesManager">
-    <favorites_list name="Cibersys Firewall - Backend" />
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="LoginServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/LoginRequestService/impl/LoginServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="2465">
-              <caret line="145" column="18" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
-              <folding />
-=======
-            <state relative-caret-position="121">
-              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding>
-                <element signature="e#1721#1737#0" expanded="true" />
-                <element signature="e#1964#1973#0" expanded="true" />
-              </folding>
->>>>>>> maracartman/master
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserVerificationServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserVerification/UserVerificationImpl/UserVerificationServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="663">
-              <caret line="39" column="88" selection-start-line="39" selection-start-column="88" selection-end-line="39" selection-end-column="88" />
-=======
-            <state relative-caret-position="155">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
->>>>>>> maracartman/master
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/LoginRequestService/impl/LoginServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="1037">
-              <caret line="61" column="101" selection-start-line="61" selection-start-column="101" selection-end-line="61" selection-end-column="101" />
-=======
-            <state relative-caret-position="189">
-              <caret line="38" column="53" lean-forward="true" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
->>>>>>> maracartman/master
+            <state relative-caret-position="241">
+              <caret line="37" column="121" lean-forward="true" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="121" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Configuration/AppFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="867">
-              <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-=======
-            <state relative-caret-position="108">
-              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
->>>>>>> maracartman/master
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="TimingUtilities.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/Utilities/TimingUtilities.java">
-=======
-      <file leaf-file-name="TokenUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/security/TokenUtils.java">
->>>>>>> maracartman/master
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="124" column="27" lean-forward="false" selection-start-line="124" selection-start-column="27" selection-end-line="124" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/LoginResponse.java">
+      <file leaf-file-name="AppFilter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Configuration/AppFilter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
-              <folding />
+              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+              <folding>
+                <element signature="e#3536#3560#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDTO.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/UserDTO.java">
+      <file leaf-file-name="PasswordChangeServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeService/impl/PasswordChangeServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-              <folding />
+            <state relative-caret-position="136">
+              <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="76" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -236,59 +91,25 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>l</find>
-      <find>lu</find>
-      <find>lui</find>
-      <find>L</find>
-      <find>Lu</find>
-      <find>Luis Ma</find>
-      <find>Luis Maracara</find>
-      <find>d</find>
-      <find>devel</find>
-      <find>develo</find>
-      <find>develop</find>
-      <find>developme</find>
-      <find>development</find>
-      <find>development-d</find>
-      <find>development-de</find>
-      <find>development-deb</find>
-      <find>development-debug-re</find>
-      <find>development-debug-r</find>
-      <find>development-debug-</find>
-      <find>development-debu</find>
-      <find>P</find>
-      <find>Produc</find>
-      <find>Productio</find>
-      <find>Production</find>
-      <find>Development-debug</find>
-      <find>development-debug</find>
-      <find>development-remote-debug</find>
-      <find>debug</find>
-      <find>INTERNAL_TOKEN</find>
-      <find>secret</find>
+      <find>s</find>
+      <find>5</find>
+      <find>55</find>
+      <find>56</find>
+      <find>5655</find>
+      <find>mannagerRoute</find>
+      <find>encrypter</find>
     </findStrings>
-    <replaceStrings>
-      <replace />
-      <replace>Luis Maracara</replace>
-      <replace>Development-debug</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
-    <option name="modificationStamps">
-      <map>
-        <entry key="$PROJECT_DIR$/../restful-spring-security" value="1496946097462" />
-      </map>
-    </option>
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
@@ -296,57 +117,28 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Senders/NewPasswordSenderImpl/NewPasswordSender.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Senders/NewPasswordSender/Impl/NewPasswordSender.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Senders/NewPasswordSender/NewPasswordSender.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/NewPasswordRequestService/NewPasswordRequestService.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Factory/Parameters/MailSenderParameters.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/NewPasswordChangeRequestDTO.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/resources/css/style.css" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Configuration/business/service/EmailService.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Configuration/EmailConfiguration/SpringMailConfig.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/CibersysFirewallMailerApplication.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/GatewayRequestService/GatewayService.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Configuration/AppFilter.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Configuration/AppFilter.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/GatewayRequestService/GatewayService.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/converter/PasswordEncrypter.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/converter/ConverterUtilities.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/resources/emails/Solicitud.html" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/resources/emails/Exito.html" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Repositories/UsuarioRepository.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/PasswordChange/PasswordChange.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/AuthorizationController.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/PasswordChangeRequestDTO.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/Utilities/UserGeneralRequestBuilder.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/Utilities/impl/UserGeneralRequestBuilderImpl.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/AbstractHandler/AbstractRequestHandler.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/LoginRequestService/impl/LoginServiceImpl.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserVerification/UserVerificationImpl/UserVerificationServiceImpl.java" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/CibersysAccountsMannagerApplication.java" />
         <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/AbstractHandler/AbstractRequestHandler.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/PasswordChangeRequestService/impl/PasswordChangeRequestImpl.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/NewPasswordChangeRequestResponse.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeRequestService/Impl/PasswordChangeRequestServiceImpl.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/NewPasswordRequestService/impl/NewPasswordRequestServiceImpl.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Senders/Abstract/AbstractEmailSenderService.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Senders/NewPasswordSender/Impl/NewPasswordSenderImpl.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Senders/RecuperaMailSender/Impl/RecuperatePasswordMailerImpl.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Configuration/ConfigurationProperties.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserUpdateRequestService/UserUpdateRequestServiceImpl/UserUpdateRequestServiceImpl.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/UserUpdateRequestService/impl/UserUpdateRequestServiceImpl.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/configuration/AbstractAppSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Configuration/AppFilter.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallCommons/pom.xml" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/AuthorizationController.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Configuration/SpringSecurityConfiguration.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/Utilities/TimingUtilities.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/commons/Ping.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/security/TokenUtils.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/pom.xml" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/pom.xml" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/pom.xml" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/pom.xml" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/pom.xml" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/LoginRequestService/impl/LoginServiceImpl.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/LoginResponse.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserVerification/UserVerificationImpl/UserVerificationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/UserDTO.java" />
-        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/LoginRequestService/impl/LoginServiceImpl.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeService/PasswordChangeService.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/CibersysFirewallDbmApplication.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Configuration/AppFilter.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeService/impl/PasswordChangeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChange/PasswordChange.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/PasswordChange/impl/PasswordChangeImpl.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/UpdateResponse.java" />
+        <option value="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChange/impl/PasswordChangeImpl.java" />
       </list>
     </option>
   </component>
@@ -355,11 +147,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="JsbtTreeLayoutManager">
-    <layout place="tools.popupGrunt">
-      <scroll-view-position x="0" y="0" />
-    </layout>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -386,7 +173,7 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="CibersysFirewallMailer" />
+          <option name="myItemId" value="CibersysFirewallDBM" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -396,7 +183,7 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="CibersysFirewallMailer" />
+          <option name="myItemId" value="CibersysFirewallDBM" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
@@ -410,7 +197,7 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="CibersysFirewallMailer" />
+          <option name="myItemId" value="CibersysFirewallDBM" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
@@ -443,9 +230,6 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -461,25 +245,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -489,11 +276,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -507,11 +294,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -519,176 +306,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-<<<<<<< HEAD
-              <option name="myItemId" value="CibersysFirewallDomain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys - Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys - Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallDomain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys - Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys - Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallDomain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys - Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys - Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallDomain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys - Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys - Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallDomain" />
-=======
               <option name="myItemId" value="CibersysFirewallDBM" />
->>>>>>> maracartman/master
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-<<<<<<< HEAD
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DTO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="responseDTO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys - Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys - Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallDomain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DTO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -697,22 +321,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Cibersys - Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallCommons" />
-=======
->>>>>>> maracartman/master
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -734,11 +342,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -768,99 +376,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallServices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallDBM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RequestHandlers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UserVerification" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallServices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallDBM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RequestHandlers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UserVerification" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UserVerificationImpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -894,11 +414,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -926,175 +446,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Configuration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallServices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallAuthorization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallServices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallAuthorization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallServices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallAuthorization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autorization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallServices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallAuthorization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autorization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallServices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallAuthorization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autorization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="RequestHandlers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PasswordChangeService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
+              <option name="myItemId" value="Cibersys - Firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1102,7 +468,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallAuthorization" />
+              <option name="myItemId" value="CibersysFirewallDBM" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1118,11 +484,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="autorization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Services" />
+              <option name="myItemId" value="firewall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1130,53 +492,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LoginRequestService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cibersys-Firewall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallServices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CibersysFirewallAuthorization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autorization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RequestHandlers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LoginRequestService" />
+              <option name="myItemId" value="PasswordChangeService" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1186,61 +502,17 @@
           </PATH>
         </subPane>
       </pane>
-<<<<<<< HEAD
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
-=======
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
->>>>>>> maracartman/master
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
-    <property name="SearchEverywhereHistoryKey" value="Char&#9;PSI&#9;JAVA://java.lang.Character" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Cibersys Firewall - Backend\CibersysFirewallServices\CibersysFirewallMailer\src\main\resources\emails\General_resources" />
-      <recent name="D:\Cibersys Firewall - Backend\CibersysFirewallServices\CibersysFirewallMailer\src\main\resources\emails\Exito_archivos" />
-      <recent name="D:\Cibersys Firewall - Backend\CibersysFirewallServices" />
-      <recent name="D:\Cibersys Firewall - Backend" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.cibesys.firewall.mailer.Configuration.EmailConfiguration" />
-      <recent name="com.cibesys.firewall.mailer.Senders.NewPasswordSender" />
-      <recent name="com.cibesys.firewall.mailer.Senders.NewPasswordSenderImpl" />
-      <recent name="com.cibesys.firewall.mailer.Senders.RecuperaMailSender" />
-      <recent name="com.cibesys.firewall.mailer.Factory" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Cibersys Firewall - Backend\CibersysFirewallServices\CibersysFirewallMailer\src\main\resources\emails\Solicitud_archivos" />
-      <recent name="D:\Cibersys Firewall - Backend\CibersysFirewallServices\CibersysFirewallMailer\src\main\resources\emails" />
-      <recent name="D:\Cibersys Firewall - Backend\CibersysFirewallServices\CibersysFirewallMailer\src\main\java\com\cibesys\firewall\mailer\Configuration" />
-      <recent name="D:\Cibersys Firewall - Backend\CibersysFirewallServices\CibersysFirewallMailer\src\main\java\com\cibesys\firewall\mailer\RequestHandlers" />
-      <recent name="D:\Cibersys Firewall - Backend\CibersysFirewallServices\CibersysAccountsMannager\src\main\java\com\cibersys\firewall\RequestHandlers" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.cibesys.firewall.mailer.Senders" />
-      <recent name="com.cibesys.firewall.mailer.RequestHandlers.GatewayRequestService" />
-      <recent name="com.cibesys.firewall.mailer.RequestHandlers" />
-      <recent name="com.cibesys.firewall.mailer.Configuration" />
-      <recent name="com.cibesys.firewall.mailer.Service" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.cibersys.firewall.domain.model" />
-      <recent name="com.cibersys.firewall.autorization.services.configuration" />
+      <recent name="C:\workspace\Cibersys - Firewall\CibersysFirewallServices\CibersysAccountsMannager\src\main\java\com\cibersys\firewall\RequestHandlers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1255,7 +527,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthorizationController">
+  <component name="RunManager" selected="Spring Boot.CibersysAccountsMannagerApplication">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -1302,7 +574,7 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="DEBUGGER_TYPE" value="Java" />
@@ -1341,7 +613,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="arquillianRunConfiguration">
@@ -1494,7 +766,6 @@
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
       <setting name="depsClasspath" value="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1564,7 +835,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Cibersys Firewall - Backend" />
+      <module name="CibersysFirewallAccountsMannager" />
       <envs />
       <method />
     </configuration>
@@ -1666,277 +937,160 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="CibersysFirewallEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cibersys.firewall.eureka.CibersysFirewallEurekaApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="ConfigController" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cibersys.firewall.config.ConfigController" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <module name="CibersysFirewallConfig" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="false" name="CibersysFirewallDbmApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cibersys.firewall.CibersysFirewallDbmApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <module name="CibersysFirewallDBM" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="CibersysAccountsMannagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cibersys.firewall.CibersysAccountsMannagerApplication" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <module name="CibersysFirewallAccountsMannager" />
       <envs />
       <method />
     </configuration>
     <configuration default="false" name="AuthorizationController" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cibersys.firewall.autorization.AuthorizationController" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <module name="CibersysfirewallAuthorization" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ConfigController" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cibersys.firewall.config.ConfigController" />
+      <module name="CibersysFirewallConfig" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CibersysFirewallEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cibersys.firewall.eureka.CibersysFirewallEurekaApplication" />
+      <module name="cibersys-firewall-eureka" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CibersysAccountsMannagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cibersys.firewall.CibersysAccountsMannagerApplication" />
+      <module name="CibersysFirewallAccountsMannager" />
       <envs />
       <method />
     </configuration>
     <configuration default="false" name="CibersysFirewallMailerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cibesys.firewall.mailer.CibersysFirewallMailerApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <module name="cibersysfirewallmailer" />
       <envs />
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Spring Boot.CibersysFirewallEurekaApplication" />
-      <item index="1" class="java.lang.String" itemvalue="Spring Boot.ConfigController" />
-      <item index="2" class="java.lang.String" itemvalue="Spring Boot.CibersysFirewallDbmApplication" />
-      <item index="3" class="java.lang.String" itemvalue="Spring Boot.CibersysAccountsMannagerApplication" />
-      <item index="4" class="java.lang.String" itemvalue="Spring Boot.AuthorizationController" />
+      <item index="0" class="java.lang.String" itemvalue="Spring Boot.CibersysFirewallDbmApplication" />
+      <item index="1" class="java.lang.String" itemvalue="Spring Boot.AuthorizationController" />
+      <item index="2" class="java.lang.String" itemvalue="Spring Boot.ConfigController" />
+      <item index="3" class="java.lang.String" itemvalue="Spring Boot.CibersysFirewallEurekaApplication" />
+      <item index="4" class="java.lang.String" itemvalue="Spring Boot.CibersysAccountsMannagerApplication" />
       <item index="5" class="java.lang.String" itemvalue="Spring Boot.CibersysFirewallMailerApplication" />
     </list>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\AKDESK25\AppData\Roaming\Subversion</configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c9c298db-b850-4acc-9c57-992bc649c32b" name="Default" comment="" />
-      <created>1497270800116</created>
+      <changelist id="0dfa1381-676e-486a-bdc9-8f4b286316c5" name="Default" comment="" />
+      <created>1500382337654</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1497270800116</updated>
-      <workItem from="1497270803032" duration="4788000" />
-      <workItem from="1497277031614" duration="18812000" />
-      <workItem from="1497358906084" duration="32397000" />
-      <workItem from="1497452545376" duration="2177000" />
-      <workItem from="1497455064541" duration="13517000" />
-      <workItem from="1497874665683" duration="13588000" />
-      <workItem from="1497900159977" duration="67644000" />
-      <workItem from="1498219894956" duration="72000" />
-      <workItem from="1498221030037" duration="49230000" />
-      <workItem from="1498675227224" duration="33000" />
-      <workItem from="1498835961309" duration="3538000" />
-      <workItem from="1499434709784" duration="566000" />
-      <workItem from="1499435366205" duration="640000" />
-      <workItem from="1499436034836" duration="3680000" />
-      <workItem from="1499440366033" duration="2583000" />
-<<<<<<< HEAD
-      <workItem from="1500295406988" duration="121000" />
-=======
-      <workItem from="1499682621454" duration="5982000" />
-      <workItem from="1499724577823" duration="2302000" />
-      <workItem from="1499727249818" duration="1347000" />
->>>>>>> maracartman/master
+      <updated>1500382337654</updated>
+      <workItem from="1500382351411" duration="2584000" />
+      <workItem from="1500385010217" duration="3307000" />
+      <workItem from="1500388576017" duration="8442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="219551000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="0" />
-=======
-    <option name="totallyTimeSpent" value="229061000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="14333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
->>>>>>> maracartman/master
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33169934" sideWeight="0.36778116" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2677761" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3846154" sideWeight="0.4969605" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-=======
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32405892" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
->>>>>>> maracartman/master
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33169934" sideWeight="0.36778116" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29970104" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36824876" sideWeight="0.63221884" order="7" side_tool="false" content_ui="tabs" />
->>>>>>> maracartman/master
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31770045" sideWeight="0.7607527" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41489363" sideWeight="0.2392473" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-<<<<<<< HEAD
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38562092" sideWeight="0.4969605" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36928105" sideWeight="0.63221884" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
->>>>>>> maracartman/master
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23524962" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35022694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33169934" sideWeight="0.36778116" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2677761" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23524962" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3846154" sideWeight="0.4969605" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32405892" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36824876" sideWeight="0.63221884" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31770045" sideWeight="0.7607527" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41489363" sideWeight="0.2392473" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35022694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
   </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/CibersysFirewallConfigRepo" />
-    </ignored-roots>
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/LoginRequestService/impl/LoginServiceImpl.java</url>
-          <line>37</line>
-          <properties />
-          <option name="timeStamp" value="251" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/LoginRequestService/impl/LoginServiceImpl.java</url>
-          <line>47</line>
-          <properties />
-          <option name="timeStamp" value="263" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserVerification/UserVerificationImpl/UserVerificationServiceImpl.java</url>
-          <line>30</line>
-          <properties />
-          <option name="timeStamp" value="264" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="265" />
+      <option name="time" value="52" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1945,12 +1099,67 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/resources/emails/Exito_archivos/google.png" />
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/resources/emails/General_resources/google.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-=======
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Repositories/UsuarioRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/LoginResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="50" lean-forward="false" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/LoginResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Domain/Model/Usuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/PasswordChangeRequest/PasswordChangeRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/NewPasswordChangeRequestResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="94" lean-forward="true" selection-start-line="13" selection-start-column="94" selection-end-line="13" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/NewPasswordChangeRequestDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1958,494 +1167,359 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/NewPasswordChangeRequestResponse.java">
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/UserUpdateRequestService/UserUpdateRequestService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="113" lean-forward="false" selection-start-line="13" selection-start-column="86" selection-end-line="13" selection-end-column="113" />
+        <state relative-caret-position="119">
+          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="95" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeRequestService/impl/PasswordChangeRequestImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-        </state>
->>>>>>> maracartman/master
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeRequestService/Impl/PasswordChangeRequestServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="44" column="33" lean-forward="false" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Senders/Abstract/AbstractEmailSenderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="54" column="29" lean-forward="false" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/PasswordChangeRequestService/impl/PasswordChangeRequestImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Senders/RecuperaMailSender/Impl/RecuperatePasswordMailerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1281">
-          <caret line="104" column="14" lean-forward="false" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/RequestHandlers/NewPasswordRequestService/impl/NewPasswordRequestServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Senders/NewPasswordSender/Impl/NewPasswordSenderImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="72" column="61" lean-forward="false" selection-start-line="72" selection-start-column="61" selection-end-line="72" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/resources/emails/General_resources/cibersys-logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/src/main/java/com/cibesys/firewall/mailer/Configuration/ConfigurationProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="63" column="18" lean-forward="false" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class" />
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserUpdateRequestService/UserUpdateRequestServiceImpl/UserUpdateRequestServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="39" column="98" lean-forward="false" selection-start-line="39" selection-start-column="98" selection-end-line="39" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/UserUpdateRequestService/impl/UserUpdateRequestServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="73" lean-forward="false" selection-start-line="0" selection-start-column="73" selection-end-line="0" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Configuration/AppFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-328">
-          <caret line="63" column="88" lean-forward="false" selection-start-line="63" selection-start-column="88" selection-end-line="63" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/Configuration/AppFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/configuration/AbstractAppSecurityConfig.java" />
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Configuration/SecurityServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/PasswordChange/PasswordChange.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/AuthorizationController.java">
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/UserUpdateRequestDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" column="48" lean-forward="false" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Configuration/SpringSecurityConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="62" column="68" lean-forward="false" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        <state relative-caret-position="424">
+          <caret line="47" column="5" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="47" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="70" column="28" lean-forward="false" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallConfig/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallCommons/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/Utilities/TimingUtilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="63" column="60" lean-forward="false" selection-start-line="63" selection-start-column="60" selection-end-line="63" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/CibersysFirewallDBM.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/commons/Ping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Domain/Model/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="41" lean-forward="false" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/UserUpdateRequestService/impl/UserUpdateRequestServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/ResponseBody/AbstractResponseBody.java">
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/Utilities/UserGeneralRequestBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/UpdateResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="107" column="18" lean-forward="true" selection-start-line="80" selection-start-column="8" selection-end-line="107" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="64" column="7" lean-forward="false" selection-start-line="64" selection-start-column="7" selection-end-line="91" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="50" column="101" lean-forward="false" selection-start-line="50" selection-start-column="101" selection-end-line="50" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="101" column="18" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="101" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="128" column="101" lean-forward="false" selection-start-line="128" selection-start-column="101" selection-end-line="128" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/GatewayRequestService/GatewayService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/AbstractHandler/AbstractRequestHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/GatewayRequestService/GatewayService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/GatewayRequestService/GatewayService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt/0.7.0/jjwt-0.7.0.jar!/io/jsonwebtoken/Claims.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/LoginResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="72" lean-forward="false" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/Utilities/impl/UserGeneralRequestBuilderImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="46" column="37" lean-forward="false" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+        <state relative-caret-position="424">
+          <caret line="67" column="43" lean-forward="false" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/UserDTO.java">
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/PasswordChangeRequest/impl/PasswordChangeRequestImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="2465">
-          <caret line="145" column="18" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
-=======
-        <state relative-caret-position="187">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
->>>>>>> maracartman/master
+        <state relative-caret-position="266">
+          <caret line="32" column="63" lean-forward="false" selection-start-line="32" selection-start-column="63" selection-end-line="32" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Configuration/AppFilter.java">
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/AbstractHandler/AbstractRequestHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="663">
-          <caret line="39" column="88" selection-start-line="39" selection-start-column="88" selection-end-line="39" selection-end-column="88" />
-=======
-        <state relative-caret-position="108">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
->>>>>>> maracartman/master
+        <state relative-caret-position="114">
+          <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/security/TokenUtils.java">
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserVerification/UserVerification.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="199">
-          <caret line="88" column="18" selection-start-line="62" selection-start-column="8" selection-end-line="88" selection-end-column="18" />
-=======
-        <state relative-caret-position="133">
-          <caret line="124" column="27" lean-forward="false" selection-start-line="124" selection-start-column="27" selection-end-line="124" selection-end-column="27" />
+        <state relative-caret-position="119">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding />
->>>>>>> maracartman/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/LoginRequestService/impl/LoginServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="1037">
-          <caret line="61" column="101" selection-start-line="61" selection-start-column="101" selection-end-line="61" selection-end-column="101" />
-          <folding />
-=======
-        <state relative-caret-position="121">
+        <state relative-caret-position="240">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
-            <element signature="e#1721#1737#0" expanded="true" />
-            <element signature="e#1964#1973#0" expanded="true" />
+            <element signature="e#1721#1737#0" expanded="false" />
+            <element signature="e#1964#1973#0" expanded="false" />
           </folding>
->>>>>>> maracartman/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-714">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/AuthorizationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="58" column="39" lean-forward="false" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserUpdateRequestService/UserUpdateRequestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="95" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/Repositories/UsuarioRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/CibersysFirewallDbmApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="32" column="46" lean-forward="true" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeService/PasswordChangeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/CibersysAccountsMannagerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="39" column="43" lean-forward="true" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserVerification/UserVerificationImpl/UserVerificationServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="867">
-          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-=======
-        <state relative-caret-position="155">
+        <state relative-caret-position="204">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
->>>>>>> maracartman/master
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/PasswordChangeRequestDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/GatewayRequestService/GatewayService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/GatewayRequestService/GatewayService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/GatewayRequestService/GatewayService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/AbstractHandler/AbstractRequestHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/AbstractHandler/AbstractRequestHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallCommons/src/main/java/com/cibersys/firewall/converter/PasswordEncrypter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/UserUpdateRequestService/UserUpdateRequestServiceImpl/UserUpdateRequestServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="55" lean-forward="true" selection-start-line="6" selection-start-column="55" selection-end-line="7" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/UserUpdateResponseDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/UserUpdateRequestService/impl/UserUpdateRequestServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="31" column="42" lean-forward="true" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChange/PasswordChange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="90" lean-forward="false" selection-start-line="10" selection-start-column="90" selection-end-line="10" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/PasswordChange/impl/PasswordChangeImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/UserUpdateRequestService/impl/UserUpdateRequestServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/ResponseBody/AbstractResponseBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/UpdateResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="45" lean-forward="true" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChange/impl/PasswordChangeImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="37" column="82" lean-forward="false" selection-start-line="37" selection-start-column="82" selection-end-line="37" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1418#1444#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Services/RequestHandlers/LoginRequestService/impl/LoginServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="38" column="53" lean-forward="true" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+        <state relative-caret-position="241">
+          <caret line="37" column="121" lean-forward="true" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="121" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/responseDTO/LoginResponse.java">
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM/src/main/java/com/cibersys/firewall/RequestHandlers/PasswordChangeService/impl/PasswordChangeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
-          <folding />
+          <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CibersysFirewallDomain/src/main/java/com/cibersys/firewall/domain/models/DTO/model/UserDTO.java">
+    <entry file="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/src/main/java/com/cibersys/firewall/autorization/Configuration/AppFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <element signature="e#3536#3560#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>CibersysFirewallCommons</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: ch.qos.logback:logback-classic:1.1.11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
-  </component>
-  <component name="mavenExecuteGoalHistory">
-    <option value="" />
   </component>
 </project>

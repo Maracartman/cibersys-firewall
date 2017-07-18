@@ -15,4 +15,5 @@ public class UpdateResponse extends AbstractResponseBody<UserUpdateResponseDTO> 
     public UpdateResponse(Long code, String message, Boolean error, UserUpdateResponseDTO response) {
         super(code, message, error, response);
     }
+
 }

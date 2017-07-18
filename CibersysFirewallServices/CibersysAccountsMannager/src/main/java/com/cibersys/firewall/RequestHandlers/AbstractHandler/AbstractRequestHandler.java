@@ -32,11 +32,14 @@ public abstract class AbstractRequestHandler<T> {
     @Value("${cibersys.services.dbm.route}")
     protected String dbmRoute;
 
+    @Value("${cibersys.services.dbm.passwordchange}")
+    protected String dbmPasswordChange;
+
     @Value("${cibersys.services.mailer.route}")
     protected String mailerRoute;
 
     @Value("${cibersys.services.dbm.recuperatepassword}")
-    protected String dbmPasswordChange;
+    protected String dbmRecuperatePassword;
 
     @Value("${cibersys.services.mailer.recuperatepassword}")
     protected String mailerPasswordChange;

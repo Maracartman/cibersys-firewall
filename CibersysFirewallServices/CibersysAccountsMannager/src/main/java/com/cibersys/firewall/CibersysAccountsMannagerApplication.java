@@ -1,6 +1,7 @@
 package com.cibersys.firewall;
 
 import com.cibersys.firewall.RequestHandlers.LoginRequestService.LoginService;
+import com.cibersys.firewall.RequestHandlers.PasswordChange.PasswordChange;
 import com.cibersys.firewall.RequestHandlers.PasswordChangeRequestService.PasswordChangeRequest;
 import com.cibersys.firewall.RequestHandlers.UserUpdateRequestService.UserUpdateRequestService;
 import org.springframework.boot.SpringApplication;
@@ -36,6 +37,7 @@ public class CibersysAccountsMannagerApplication {
 		map.put("usuario", LoginService.class);
 		map.put("update", UserUpdateRequestService.class);
 		map.put("recuperatepassword", PasswordChangeRequest.class);
+		map.put("passwordchange", PasswordChange.class);
 
 		return map;
 	}

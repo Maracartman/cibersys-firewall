@@ -39,6 +39,9 @@ public abstract class AbstractRequestHandler<T> {
     protected String mannagerUpdate;
 
     @Value("${cibersys.services.mannager.recuperatepassword}")
+    protected String mannagerRecuperatePassword;
+
+    @Value("${cibersys.services.mannager.passwordchange}")
     protected String mannagerPasswordChange;
 
     @Autowired

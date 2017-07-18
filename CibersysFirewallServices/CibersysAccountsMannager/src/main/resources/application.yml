@@ -19,6 +19,7 @@ cibersys:
             usuario: /CibersysFirewall/dbm/usuario
             update: /CibersysFirewall/dbm/update
             recuperatepassword: /CibersysFirewall/dbm/recuperatepassword
+            passwordchange: /CibersysFirewall/dbm/passwordchange
             path: CibersysFirewall/dbm/
             route: http://localhost:5656
 
