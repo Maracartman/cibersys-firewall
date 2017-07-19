@@ -44,8 +44,29 @@ spring:
   profiles: production
 cibersys:
   services:
-      dbm:
-        route: http://localhost:5656
+          dbm:
+            services: /CibersysFirewall/dbm/
+            usuario: /CibersysFirewall/dbm/usuario
+            update: /CibersysFirewall/dbm/update
+            recuperatepassword: /CibersysFirewall/dbm/recuperatepassword
+            passwordchange: /CibersysFirewall/dbm/passwordchange
+            path: CibersysFirewall/dbm/
+            route: http://localhost:5656
+
+          mannager:
+            services: /CibersysFirewall/mannager/
+            usuario: /CibersysFirewall/mannager/usuario
+            path: CibersysFirewall/mannager/
+            update: /CibersysFirewall/mannager/update
+            route: https://localhost:5657
+
+          mailer:
+            path: CibersysFirewall/mailer/
+            route: http://localhost:5658
+            services: CibersysFirewall/mailer/
+            recuperatepassword: /CibersysFirewall/mailer/recuperatepassword
+            update: /CibersysFirewall/mailer/update
+     
 
 ---
 spring:

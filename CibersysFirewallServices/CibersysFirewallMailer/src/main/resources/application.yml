@@ -51,4 +51,8 @@ cibersys:
               update: /CibersysFirewall/mannager/update
               path: CibersysFirewall/mailer/
 
+---
+spring:
+  profiles: production               
+
 

@@ -49,7 +49,7 @@ cibersys:
               services: /CibersysFirewall/dbm/
               usuario: /CibersysFirewall/dbm/usuario
               path: CibersysFirewall/dbm/
-              route: https://localhost:5656
+              route: http://localhost:5656
             mannager:
               services: /CibersysFirewall/mannager/
               usuario: /CibersysFirewall/mannager/usuario
@@ -57,14 +57,14 @@ cibersys:
               recuperatepassword: /CibersysFirewall/mannager/recuperatepassword
 
               path: CibersysFirewall/mannager/
-              route: https://localhost:5657
+              route: http://localhost:5657
 
 server:
   ssl:
-      key-store: /etc/letsencrypt/live/qa.cc.cloudvoice.io2/keystore.p12
+      key-store: /etc/letsencrypt/live/qa.cc.cloudvoice.io/keystore.p12
       keyStoreType: PKCS12
       key-store-password: ark123456
-      key-alias: tomcat
+      
 
 
   security:
