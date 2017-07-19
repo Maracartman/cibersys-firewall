@@ -5,7 +5,7 @@
     <file url="file://$PROJECT_DIR$/CibersysFirewallCommons" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CibersysFirewallDomain" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CibersysFirewallServices" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAccountsMannager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallConfig" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM" charset="UTF-8" />
