@@ -6,13 +6,12 @@ import com.cibersys.firewall.RequestHandlers.AbstractHandler.AbstractRequestHand
 import com.cibersys.firewall.RequestHandlers.PasswordChangeRequestService.PasswordChangeRequestService;
 import com.cibersys.firewall.Utilities.ManagerToken;
 import com.cibersys.firewall.converter.ConverterUtilities;
-import com.cibersys.firewall.domain.models.DTO.model.NewPasswordChangeRequestDTO;
+import com.cibersys.firewall.domain.models.DTO.RequestDTO.NewPasswordChangeRequestDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.NewPasswordChangeRequestResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
@@ -36,7 +35,7 @@ public class PasswordChangeRequestServiceImpl extends AbstractRequestHandler<New
 
 
     @Override
-    public NewPasswordChangeRequestResponse proceedRequest(Map<String, String> body) {
+    public NewPasswordChangeRequestResponse proceedRequest(Map<String, String> body,Map<String, String> header) {
         NewPasswordChangeRequestDTO request = objectMapper.convertValue(body, NewPasswordChangeRequestDTO.class);
         Usuario userRequested = usuarioRepository.findByEmailAndEstatus(request.getEmail(), "1");
         if (userRequested != null) {

@@ -1,6 +1,8 @@
 package com.cibersys.firewall.Domain.Model;
 
 
+import lombok.AllArgsConstructor;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -9,6 +11,7 @@ import java.util.Date;
  * Created by Luis Maracara on 6/14/2017.
  */
 @Entity
+@AllArgsConstructor
 @Table(name = "usuario")
 public class Usuario{
     @Id
@@ -42,6 +45,8 @@ public class Usuario{
     @JoinColumn(name = "idcliente")
     private Cliente cliente;
 
+    public Usuario() {
+    }
 
     public Long getIdusuario() {
         return idusuario;

@@ -1,10 +1,10 @@
 package com.cibersys.firewall.RequestHandlers.UserUpdateRequestService.impl;
 
-import com.cibersys.firewall.RequestHandlers.AbstractHandler.AbstractRequestHandler;
+import com.cibersys.firewall.RequestHandlers.AbstractHandler.Impl.AbstractRequestHandler;
 import com.cibersys.firewall.RequestHandlers.UserUpdateRequestService.UserUpdateRequestService;
 import com.cibersys.firewall.Utilities.UserGeneralRequestBuilder;
 import com.cibersys.firewall.domain.models.DTO.ResponseBody.AbstractResponseBody;
-import com.cibersys.firewall.domain.models.DTO.model.UserUpdateRequestDTO;
+import com.cibersys.firewall.domain.models.DTO.RequestDTO.UserUpdateRequestDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.NewPasswordChangeRequestResponse;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.UpdateResponse;
 import org.springframework.beans.factory.annotation.Autowired;

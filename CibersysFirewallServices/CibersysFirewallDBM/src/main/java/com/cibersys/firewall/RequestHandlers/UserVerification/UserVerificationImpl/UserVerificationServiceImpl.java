@@ -23,12 +23,14 @@ public class UserVerificationServiceImpl extends AbstractRequestHandler<Abstract
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    private PasswordEncrypter encrypter = new PasswordEncrypter();
+    @Autowired
+    private PasswordEncrypter encrypter;
 
     @Override
-    public AbstractResponseBody proceedRequest(Map body) {
+    public AbstractResponseBody proceedRequest(Map<String,String> body,Map<String, String> header) {
         UserDTO user = objectMapper.convertValue(body,UserDTO.class);
         Usuario usuario = usuarioRepository.findOneByEmailAndContraseñaAndEstatus(user.getUserName(),user.getPassword().length()>20 ? user.getPassword() : encrypter.cryptWithMD5(user.getPassword()),"1");
-        return usuario != null? (AbstractResponseBody) new LoginResponse(Long.valueOf(200),"",false,new UserDTO(usuario.getEmail(),usuario.getContraseña(),Integer.parseInt(usuario.getRol()))) : new ResponseError(Long.valueOf(401),"Usuario no encontrado",true,null);
+        return usuario != null? (AbstractResponseBody) new LoginResponse(Long.valueOf(200),"",false,new UserDTO(usuario.getEmail(),usuario.getContraseña(),Integer.parseInt(usuario.getRol()))) : new ResponseError(Long.valueOf(401),"Usuario no encontrado.",true,null);
     }
+
 }

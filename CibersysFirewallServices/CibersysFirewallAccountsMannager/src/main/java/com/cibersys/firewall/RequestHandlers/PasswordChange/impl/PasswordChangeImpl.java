@@ -1,13 +1,12 @@
 package com.cibersys.firewall.RequestHandlers.PasswordChange.impl;
 
 
-import com.cibersys.firewall.RequestHandlers.AbstractHandler.AbstractRequestHandler;
+import com.cibersys.firewall.RequestHandlers.AbstractHandler.Impl.AbstractRequestHandler;
 import com.cibersys.firewall.RequestHandlers.PasswordChange.PasswordChange;
 import com.cibersys.firewall.domain.models.DTO.ResponseBody.AbstractResponseBody;
-import com.cibersys.firewall.domain.models.DTO.model.PasswordChangeRequestDTO;
+import com.cibersys.firewall.domain.models.DTO.RequestDTO.PasswordChangeRequestDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.UpdateResponse;
 import org.springframework.http.HttpEntity;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;

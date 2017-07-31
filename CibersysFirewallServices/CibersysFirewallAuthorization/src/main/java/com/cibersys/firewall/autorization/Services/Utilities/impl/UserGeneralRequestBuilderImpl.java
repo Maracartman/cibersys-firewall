@@ -1,10 +1,8 @@
 package com.cibersys.firewall.autorization.Services.Utilities.impl;
 
 import com.cibersys.firewall.autorization.Services.Utilities.UserGeneralRequestBuilder;
-import com.cibersys.firewall.domain.models.DTO.model.NewPasswordChangeRequestDTO;
-import com.cibersys.firewall.domain.models.DTO.model.PasswordChangeRequestDTO;
+import com.cibersys.firewall.domain.models.DTO.RequestDTO.*;
 import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
-import com.cibersys.firewall.domain.models.DTO.model.UserUpdateRequestDTO;
 import com.cibersys.firewall.security.TokenUtils;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -18,6 +16,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
+import java.util.Map;
 
 /**
  * Created by Luis Maracara on 6/19/2017.
@@ -71,5 +70,21 @@ public class UserGeneralRequestBuilderImpl implements UserGeneralRequestBuilder{
     @Override
     public HttpEntity<NewPasswordChangeRequestDTO> buildNewPasswordChangeRequestDTO(NewPasswordChangeRequestDTO u) {
         return new HttpEntity<>(u,headers);
+    }
+
+    @Override
+    public HttpEntity<PasswordChangeRequest> buildPasswordChangeRequestDTO(PasswordChangeRequest u) {
+        return new HttpEntity<>(u,headers);
+    }
+    @Override
+    public HttpEntity<SetUsuarioRequestDTO> buildSetUsuarioRequestDTO(SetUsuarioRequestDTO setUsuarioRequest, Map<String, String> header){
+        headers.add("requester_user",header.get("x-auth-token"));
+        return new HttpEntity<>(setUsuarioRequest,headers);
+    }
+
+    @Override
+    public HttpEntity<NewPanelClientRequestDTO> buildSetUsuarioRequestDTO(NewPanelClientRequestDTO setClienteRequest, Map<String, String> header) {
+        headers.add("requester_user",header.get("x-auth-token"));
+        return new HttpEntity<>(setClienteRequest,headers);
     }
 }

@@ -1,9 +1,11 @@
 package com.cibersys.firewall.autorization;
 
 import com.cibersys.firewall.autorization.Services.RequestHandlers.LoginRequestService.LoginService;
-import com.cibersys.firewall.autorization.Services.RequestHandlers.PasswordChange.PasswordChange;
-import com.cibersys.firewall.autorization.Services.RequestHandlers.PasswordChangeRequest.PasswordChangeRequest;
+import com.cibersys.firewall.autorization.Services.RequestHandlers.PasswordChangeService.PasswordChange;
+import com.cibersys.firewall.autorization.Services.RequestHandlers.PasswordChangeRequestService.PasswordChangeRequest;
 import com.cibersys.firewall.autorization.Services.RequestHandlers.UserUpdateRequestService.UserUpdateRequestService;
+import com.cibersys.firewall.autorization.Services.RequestHandlers.SetUsuarioService.SetUsuarioService;
+import com.cibersys.firewall.autorization.Services.RequestHandlers.SetClienteRequestService.SetClienteService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -57,6 +59,8 @@ public class AuthorizationController {
         map.put("public/update", UserUpdateRequestService.class);
         map.put("public/recuperatepassword", PasswordChangeRequest.class);
         map.put("private/passwordchange", PasswordChange.class);
+        map.put("private/setUsuario", SetUsuarioService.class);
+        map.put("private/setCliente", SetClienteService.class);
 
 
         return map;

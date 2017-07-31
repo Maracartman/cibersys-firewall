@@ -36,6 +36,32 @@ public class ManagerToken {
 	    stringBuilder.append(unixTime.toString());
 		return stringBuilder.toString().substring(7,13);
 	}
+/**
+ * Metodo para crear una contraseña aleatoria para la primera vez que se crea un usuario
+ * Default = 15;
+ *
+ * **/
+	public String generateRandomPassword(Integer characternumbers){
+
+		Integer characters_number = characternumbers  == null ? 15 : characternumbers;
+
+		StringBuilder stringBuilder = new StringBuilder();
+
+		Long unixTime = System.currentTimeMillis() / 1000L;
+
+
+		final String alphabet = "123456789ZXCVBNMASDFGHJKLQWERTYUIOP";
+		final int N = alphabet.length();
+
+		Random r = new Random();
+
+		for (int i = 0; i < characternumbers+5; i++) {
+			stringBuilder.append(alphabet.charAt(r.nextInt(N)));
+		}
+
+		stringBuilder.append(unixTime.toString());
+		return stringBuilder.toString().substring(0,characternumbers);
+	}
 	
 	
 	/**

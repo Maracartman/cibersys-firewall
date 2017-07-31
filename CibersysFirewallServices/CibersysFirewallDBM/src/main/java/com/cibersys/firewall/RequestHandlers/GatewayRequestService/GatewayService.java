@@ -10,10 +10,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.http.MediaType;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
@@ -21,7 +18,7 @@ import java.util.Map;
 /**
  * Created by Luis Maracara on 6/16/2017.
  */
-@Controller
+@RestController
 @RequestMapping("${cibersys.services.dbm.path}")
 //@PreAuthorize("hasIpAddress('127.0.0.1')")
 public class GatewayService {
@@ -34,13 +31,13 @@ public class GatewayService {
     private ApplicationContext context;
 
     @RequestMapping(value = "/**", method= RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    @ResponseBody
-    public AbstractResponseBody proceedAuthRequest(HttpServletRequest request, @RequestBody Map<String,String> body){
+
+    public AbstractResponseBody proceedAuthRequest(HttpServletRequest request, @RequestBody Map<String,String> body, @RequestHeader Map<String, String> header){
         String serviceRequested = request.getRequestURI().split("/")[request.getRequestURI().split("/").length-1];
         if(requestHandlerCollection.get(serviceRequested) != null){
             AbstractRequestHandler handler  = (AbstractRequestHandler) context.getBean((Class<?>)
                     requestHandlerCollection.get(serviceRequested));
-            return (AbstractResponseBody) handler.proceedRequest(body);
+            return (AbstractResponseBody) handler.proceedRequest(body,header);
         }else{
             return null;
         }

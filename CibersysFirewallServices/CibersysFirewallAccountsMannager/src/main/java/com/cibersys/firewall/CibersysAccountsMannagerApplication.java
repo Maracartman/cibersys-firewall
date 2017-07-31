@@ -3,6 +3,8 @@ package com.cibersys.firewall;
 import com.cibersys.firewall.RequestHandlers.LoginRequestService.LoginService;
 import com.cibersys.firewall.RequestHandlers.PasswordChange.PasswordChange;
 import com.cibersys.firewall.RequestHandlers.PasswordChangeRequestService.PasswordChangeRequest;
+import com.cibersys.firewall.RequestHandlers.SetClienteRequestService.SetClienteService;
+import com.cibersys.firewall.RequestHandlers.SetUsuarioService.SetUsuarioService;
 import com.cibersys.firewall.RequestHandlers.UserUpdateRequestService.UserUpdateRequestService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -30,14 +32,18 @@ public class CibersysAccountsMannagerApplication {
 		Map<String, Class<?>> map = new HashMap<>();
 
 		/**
-		 * Aqui se agregaran todos los controladores que se encargaran de recibir el request
-		 * y construir el response
 		 *
-		 * **/
+		 * Aqui se agregaran todos los controladores que se encargaran de recibir el request
+		 * y construir el response.
+		 *
+		 **/
 		map.put("usuario", LoginService.class);
 		map.put("update", UserUpdateRequestService.class);
 		map.put("recuperatepassword", PasswordChangeRequest.class);
 		map.put("passwordchange", PasswordChange.class);
+		map.put("passwordchange", PasswordChange.class);
+		map.put("setUsuario", SetUsuarioService.class);
+		map.put("setCliente", SetClienteService.class);
 
 		return map;
 	}

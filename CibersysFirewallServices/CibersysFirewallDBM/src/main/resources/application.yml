@@ -61,9 +61,8 @@ cibersys:
 spring:
   profiles: remote
   datasource:
-    url: jdbc:mysql://aklara.webhop.me:3306/cibersysfirewall?zeroDateTimeBehavior=convertToNull
-    username: mysql
-    password: mysql
+    url: jdbc:mysql://localhost:3306/cibersysfirewall?zeroDateTimeBehavior=convertToNull
+    username: root
 cibersys:
   services:
         dbm:

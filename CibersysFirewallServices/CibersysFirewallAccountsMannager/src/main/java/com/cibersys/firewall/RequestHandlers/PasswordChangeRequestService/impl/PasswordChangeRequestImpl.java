@@ -1,10 +1,10 @@
 package com.cibersys.firewall.RequestHandlers.PasswordChangeRequestService.impl;
 
 
-import com.cibersys.firewall.RequestHandlers.AbstractHandler.AbstractRequestHandler;
+import com.cibersys.firewall.RequestHandlers.AbstractHandler.Impl.AbstractRequestHandler;
 import com.cibersys.firewall.RequestHandlers.PasswordChangeRequestService.PasswordChangeRequest;
 import com.cibersys.firewall.domain.models.DTO.ResponseBody.AbstractResponseBody;
-import com.cibersys.firewall.domain.models.DTO.model.NewPasswordChangeRequestDTO;
+import com.cibersys.firewall.domain.models.DTO.RequestDTO.NewPasswordChangeRequestDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.NewPasswordChangeRequestResponse;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.ResponseError;
 import org.springframework.http.HttpEntity;

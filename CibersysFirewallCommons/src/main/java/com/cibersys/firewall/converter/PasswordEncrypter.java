@@ -1,5 +1,7 @@
 package com.cibersys.firewall.converter;
 
+import org.springframework.stereotype.Service;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.logging.Level;
@@ -8,6 +10,7 @@ import java.util.logging.Logger;
 /**
  * Created by Luis Maracara on 6/19/2017.
  */
+@Service
 public class PasswordEncrypter {
     private static MessageDigest md;
     public static String cryptWithMD5(String pass){

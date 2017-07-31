@@ -22,6 +22,8 @@ cibersys:
               update: /CibersysFirewall/mannager/update
               recuperatepassword: /CibersysFirewall/mannager/recuperatepassword
               passwordchange: /CibersysFirewall/mannager/passwordchange
+              setUsuario: /CibersysFirewall/mannager/setUsuario
+              setCliente: /CibersysFirewall/mannager/setCliente
 
               path: CibersysFirewall/mannager/
               route: http://localhost:5657

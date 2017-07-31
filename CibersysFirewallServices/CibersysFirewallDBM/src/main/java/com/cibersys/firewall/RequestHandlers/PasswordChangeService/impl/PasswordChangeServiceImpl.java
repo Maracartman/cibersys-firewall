@@ -6,8 +6,8 @@ import com.cibersys.firewall.RequestHandlers.AbstractHandler.AbstractRequestHand
 import com.cibersys.firewall.RequestHandlers.PasswordChangeService.PasswordChangeService;
 import com.cibersys.firewall.Utilities.TimingUtilities;
 import com.cibersys.firewall.converter.PasswordEncrypter;
-import com.cibersys.firewall.domain.models.DTO.model.PasswordChangeRequestDTO;
-import com.cibersys.firewall.domain.models.DTO.model.UserUpdateResponseDTO;
+import com.cibersys.firewall.domain.models.DTO.RequestDTO.PasswordChangeRequestDTO;
+import com.cibersys.firewall.domain.models.DTO.responseDTO.UserUpdateResponseDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.UpdateResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,15 +27,16 @@ public class PasswordChangeServiceImpl extends AbstractRequestHandler<UpdateResp
     @Autowired
     private ObjectMapper objectMapper;
 
+    @Autowired
     private PasswordEncrypter encrypter;
 
     @Autowired
     private TimingUtilities timingUtilities;
 
     @Override
-    public UpdateResponse proceedRequest(Map<String, String> body) {
+    public UpdateResponse proceedRequest(Map<String, String> body,Map<String, String> header) {
         PasswordChangeRequestDTO u = objectMapper.convertValue(body,PasswordChangeRequestDTO.class);
-        encrypter = new PasswordEncrypter();
+
         Usuario usuario = usuarioRepository.findOneByEmailAndContraseñaAndEstatus(u.getEmail(),
                 encrypter.cryptWithMD5(u.getOldPassword()),"1");
         if(usuario != null){

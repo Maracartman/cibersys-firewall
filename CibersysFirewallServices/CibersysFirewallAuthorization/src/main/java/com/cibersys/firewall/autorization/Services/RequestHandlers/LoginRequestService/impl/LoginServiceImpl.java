@@ -1,15 +1,13 @@
 package com.cibersys.firewall.autorization.Services.RequestHandlers.LoginRequestService.impl;
 
 
-import com.cibersys.firewall.autorization.Services.RequestHandlers.AbstractHandler.AbstractRequestHandler;
+import com.cibersys.firewall.autorization.Services.RequestHandlers.AbstractHandler.Impl.AbstractRequestHandler;
 import com.cibersys.firewall.autorization.Services.RequestHandlers.LoginRequestService.LoginService;
-import com.cibersys.firewall.autorization.Services.Utilities.UserGeneralRequestBuilder;
 import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.LoginResponse;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.ResponseError;
 import com.cibersys.firewall.security.TokenUtils;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +23,7 @@ import java.util.Map;
 public class LoginServiceImpl extends AbstractRequestHandler<ResponseEntity<?>> implements LoginService {
 
     @Override
-    public ResponseEntity<?> proceedRequest(Map<String, String> body) {
+    public ResponseEntity<?> proceedRequest(Map<String, String> body,Map<String, String> header) {
         UserDTO user = objectMapper.convertValue(body,UserDTO.class);
         tokenUtils = new TokenUtils(secret,expiration);
         HttpEntity<UserDTO> request = userGeneralRequestBuilder.buildUserDTORequest(user);

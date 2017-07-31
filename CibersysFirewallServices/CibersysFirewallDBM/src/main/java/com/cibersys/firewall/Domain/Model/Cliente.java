@@ -1,5 +1,7 @@
 package com.cibersys.firewall.Domain.Model;
 
+import lombok.AllArgsConstructor;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -7,6 +9,7 @@ import java.util.Date;
  * Created by Luis Maracara on 6/14/2017.
  */
 @Entity
+@AllArgsConstructor
 @Table(name = "cliente")
 public class Cliente {
     @Id
@@ -21,14 +24,23 @@ public class Cliente {
 
     private Date fecha_activacion,fecha_actualizacion;
 
-    @Column(columnDefinition="INT(11)")
-    private Long usuario_activacion,usuario_actualizacion;
+//    @Column(columnDefinition="INT(11)")
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "usuario_activacion")
+    private Usuario usuarioActivacion;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "usuario_actualizacion")
+    private Usuario usuarioActualizacion;
 
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "idpais")
     private Pais pais;
 
+    public Cliente() {
+    }
 
     public Integer getIdcliente() {
         return idcliente;
@@ -41,12 +53,12 @@ public class Cliente {
     public String getDireccion() {
         return direccion;
     }
-
-    public String getTelefono_1() {
+    @Column(name = "telefono_1")
+    public String getTelefono1() {
         return telefono_1;
     }
-
-    public String getTelefono_2() {
+    @Column(name = "telefono_2")
+    public String getTelefono2() {
         return telefono_2;
     }
 
@@ -61,77 +73,24 @@ public class Cliente {
     public String getEstatus() {
         return estatus;
     }
-
-    public Date getFecha_activacion() {
+    @Column(name = "fecha_activacion")
+    public Date getFechaActivacion() {
         return fecha_activacion;
     }
-
-    public Date getFecha_actualizacion() {
+    @Column(name = "fecha_actualizacion")
+    public Date getFechaActualizacion() {
         return fecha_actualizacion;
     }
-
-    public Long getUsuario_activacion() {
-        return usuario_activacion;
+    @Column(name = "usuarioActivacion")
+    public Usuario getUsuarioActivacion() {
+        return usuarioActivacion;
     }
-
-    public Long getUsuario_actualizacion() {
-        return usuario_actualizacion;
+    @Column(name = "usuarioActualizacion")
+    public Usuario getUsuarioActualizacion() {
+        return usuarioActualizacion;
     }
 
     public Pais getPais() {
         return pais;
-    }
-
-
-    public void setIdcliente(Integer idcliente) {
-        this.idcliente = idcliente;
-    }
-
-    public void setRif(String rif) {
-        this.rif = rif;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public void setTelefono_1(String telefono_1) {
-        this.telefono_1 = telefono_1;
-    }
-
-    public void setTelefono_2(String telefono_2) {
-        this.telefono_2 = telefono_2;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setEstatus(String estatus) {
-        this.estatus = estatus;
-    }
-
-    public void setFecha_activacion(Date fecha_activacion) {
-        this.fecha_activacion = fecha_activacion;
-    }
-
-    public void setFecha_actualizacion(Date fecha_actualizacion) {
-        this.fecha_actualizacion = fecha_actualizacion;
-    }
-
-    public void setUsuario_activacion(Long usuario_activacion) {
-        this.usuario_activacion = usuario_activacion;
-    }
-
-    public void setUsuario_actualizacion(Long usuario_actualizacion) {
-        this.usuario_actualizacion = usuario_actualizacion;
-    }
-
-    public void setPais(Pais pais) {
-        this.pais = pais;
     }
 }

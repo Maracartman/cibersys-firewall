@@ -6,8 +6,8 @@ import com.cibersys.firewall.RequestHandlers.AbstractHandler.AbstractRequestHand
 import com.cibersys.firewall.RequestHandlers.UserUpdateRequestService.UserUpdateRequestService;
 import com.cibersys.firewall.Utilities.TimingUtilities;
 import com.cibersys.firewall.converter.PasswordEncrypter;
-import com.cibersys.firewall.domain.models.DTO.model.UserUpdateRequestDTO;
-import com.cibersys.firewall.domain.models.DTO.model.UserUpdateResponseDTO;
+import com.cibersys.firewall.domain.models.DTO.RequestDTO.UserUpdateRequestDTO;
+import com.cibersys.firewall.domain.models.DTO.responseDTO.UserUpdateResponseDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.UpdateResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +32,7 @@ public class UserUpdateRequestServiceImpl extends AbstractRequestHandler<UpdateR
     @Autowired
     private TimingUtilities timingUtilities;
     @Override
-    public UpdateResponse proceedRequest(Map<String, String> body) {
+    public UpdateResponse proceedRequest(Map<String, String> body,Map<String, String> header) {
         UserUpdateRequestDTO u = objectMapper.convertValue(body,UserUpdateRequestDTO.class);
         Usuario usuario = usuarioRepository.findByEmailAndCodigoValidacionAndEstatus(u.getEmail(),
                u.getVerificationCode(),"1");

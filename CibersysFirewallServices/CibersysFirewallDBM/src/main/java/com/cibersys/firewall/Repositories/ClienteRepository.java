@@ -1,6 +1,7 @@
 package com.cibersys.firewall.Repositories;
 
 import com.cibersys.firewall.Domain.Model.Cliente;
+import com.cibersys.firewall.Domain.Model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import javax.transaction.Transactional;
@@ -11,5 +12,6 @@ import javax.transaction.Transactional;
 @Transactional
 public interface ClienteRepository extends JpaRepository<Cliente,Long> {
 
+    Cliente findByUsuarioActivacionAndEstatus(Usuario usuario_activacion, String estatus);
 
 }

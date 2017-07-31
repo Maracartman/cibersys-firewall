@@ -1,6 +1,6 @@
 package com.cibersys.firewall.RequestHandlers.AbstractHandler;
 
-import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
+import com.cibersys.firewall.converter.PasswordEncrypter;
 import com.cibersys.firewall.security.TokenUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,9 +31,12 @@ public abstract class AbstractRequestHandler<T> {
     @Autowired
     protected ObjectMapper objectMapper;
 
+    @Autowired
+    protected PasswordEncrypter passwordEncrypter;
+
     protected TokenUtils tokenUtils;
 
 
-    public abstract T proceedRequest(Map<String, String> body);
+    public abstract T proceedRequest(Map<String, String> body,Map<String, String> header);
 
 }

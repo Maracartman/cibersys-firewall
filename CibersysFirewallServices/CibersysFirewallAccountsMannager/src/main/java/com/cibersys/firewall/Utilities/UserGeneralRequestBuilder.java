@@ -1,7 +1,7 @@
 package com.cibersys.firewall.Utilities;
 
 import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
-import com.cibersys.firewall.domain.models.DTO.model.UserUpdateRequestDTO;
+import com.cibersys.firewall.domain.models.DTO.RequestDTO.UserUpdateRequestDTO;
 import org.springframework.http.HttpEntity;
 
 /**

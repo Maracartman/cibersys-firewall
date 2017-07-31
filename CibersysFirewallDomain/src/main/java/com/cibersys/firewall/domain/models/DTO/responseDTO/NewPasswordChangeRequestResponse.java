@@ -1,7 +1,7 @@
 package com.cibersys.firewall.domain.models.DTO.responseDTO;
 
 import com.cibersys.firewall.domain.models.DTO.ResponseBody.AbstractResponseBody;
-import com.cibersys.firewall.domain.models.DTO.model.NewPasswordChangeRequestDTO;
+import com.cibersys.firewall.domain.models.DTO.RequestDTO.NewPasswordChangeRequestDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

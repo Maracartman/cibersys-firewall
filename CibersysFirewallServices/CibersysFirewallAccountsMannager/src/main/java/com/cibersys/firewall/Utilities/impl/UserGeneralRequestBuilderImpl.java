@@ -3,7 +3,7 @@ package com.cibersys.firewall.Utilities.impl;
 
 import com.cibersys.firewall.Utilities.UserGeneralRequestBuilder;
 import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
-import com.cibersys.firewall.domain.models.DTO.model.UserUpdateRequestDTO;
+import com.cibersys.firewall.domain.models.DTO.RequestDTO.UserUpdateRequestDTO;
 import com.cibersys.firewall.security.TokenUtils;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

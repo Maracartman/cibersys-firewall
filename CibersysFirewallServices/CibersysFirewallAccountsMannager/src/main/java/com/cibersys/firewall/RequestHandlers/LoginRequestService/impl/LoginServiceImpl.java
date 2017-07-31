@@ -1,13 +1,10 @@
 package com.cibersys.firewall.RequestHandlers.LoginRequestService.impl;
 
 
-import com.cibersys.firewall.RequestHandlers.AbstractHandler.AbstractRequestHandler;
+import com.cibersys.firewall.RequestHandlers.AbstractHandler.Impl.AbstractRequestHandler;
 import com.cibersys.firewall.RequestHandlers.LoginRequestService.LoginService;
-import com.cibersys.firewall.domain.models.DTO.ResponseBody.AbstractResponseBody;
 import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.LoginResponse;
-import com.cibersys.firewall.security.TokenUtils;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;

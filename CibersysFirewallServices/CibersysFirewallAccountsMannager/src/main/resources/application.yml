@@ -20,6 +20,8 @@ cibersys:
             update: /CibersysFirewall/dbm/update
             recuperatepassword: /CibersysFirewall/dbm/recuperatepassword
             passwordchange: /CibersysFirewall/dbm/passwordchange
+            setUsuario: /CibersysFirewall/dbm/setUsuario
+            setCliente: /CibersysFirewall/dbm/setCliente
             path: CibersysFirewall/dbm/
             route: http://localhost:5656
 
@@ -28,6 +30,7 @@ cibersys:
             usuario: /CibersysFirewall/mannager/usuario
             path: CibersysFirewall/mannager/
             update: /CibersysFirewall/mannager/update
+            passwordchange: /CibersysFirewall/mannager/passwordchange
             route: http://localhost:5657
 
           mailer:

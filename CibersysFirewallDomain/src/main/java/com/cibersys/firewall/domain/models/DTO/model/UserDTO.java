@@ -11,6 +11,8 @@ public class UserDTO {
     private String userName, password;
     private Integer idRol;
 
+    private String name,lastName;
+
     public UserDTO(){}
 
     public UserDTO(String userName, String password, Integer idRol) {
@@ -34,13 +36,21 @@ public class UserDTO {
         this.id = id;
     }
 
+    @JsonProperty("name")
+    public String getName() {
+        return name;
+    }
+    @JsonProperty("lastName")
+    public String getLastName() {
+        return lastName;
+    }
 
     @JsonProperty("rol")
     public Integer getIdRol() {
         return idRol;
     }
 
-    @JsonProperty("user")
+    @JsonProperty("email") /**En versiónes anteriores esté era user**/
     public String getUserName() {
         return userName;
     }

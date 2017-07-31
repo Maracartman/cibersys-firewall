@@ -1,7 +1,6 @@
 package com.cibesys.firewall.mailer.RequestHandlers.PasswordChangeRequestService.impl;
 
-import com.cibersys.firewall.domain.models.DTO.model.NewPasswordChangeRequestDTO;
-import com.cibersys.firewall.domain.models.DTO.model.UserUpdateRequestDTO;
+import com.cibersys.firewall.domain.models.DTO.RequestDTO.NewPasswordChangeRequestDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.NewPasswordChangeRequestResponse;
 import com.cibesys.firewall.mailer.Factory.MailSenderFactory;
 import com.cibesys.firewall.mailer.Factory.Parameters.MailSenderParameters;

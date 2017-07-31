@@ -1,7 +1,6 @@
 package com.cibersys.firewall.domain.models.DTO.responseDTO;
 
 import com.cibersys.firewall.domain.models.DTO.ResponseBody.AbstractResponseBody;
-import com.cibersys.firewall.domain.models.DTO.model.UserUpdateResponseDTO;
 import lombok.Data;
 
 /**
