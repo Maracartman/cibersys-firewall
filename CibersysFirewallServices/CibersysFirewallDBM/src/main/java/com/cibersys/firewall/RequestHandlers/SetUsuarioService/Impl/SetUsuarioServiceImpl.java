@@ -4,7 +4,7 @@ package com.cibersys.firewall.RequestHandlers.SetUsuarioService.Impl;
 import com.cibersys.firewall.Domain.Model.Usuario;
 import com.cibersys.firewall.Repositories.Services.UsuarioService;
 import com.cibersys.firewall.Repositories.UsuarioRepository;
-import com.cibersys.firewall.RequestHandlers.AbstractHandler.AbstractRequestHandler;
+import com.cibersys.firewall.RequestHandlers.AbstractHandler.Impl.AbstractRequestHandler;
 import com.cibersys.firewall.RequestHandlers.SetUsuarioService.SetUsuarioService;
 import com.cibersys.firewall.Utilities.ManagerToken;
 import com.cibersys.firewall.domain.models.DTO.RequestDTO.SetUsuarioRequestDTO;
@@ -69,7 +69,6 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                                         ,request.getName(),request.getLastName(),"2",
                                         null,null,null,"1",new Date(),null,null);
                                 usuarioService.saveUsuario(true,new_user);
-//                                usuarioRepository.save(new_user);
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.", false,
                                         new SetUsuarioResponse(request.getAction(),request.getName(),request.getLastName(),request.getEmail(),request.getBlock(),new_user_password
                                         ));
@@ -81,7 +80,6 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                                 usuario.setNombre(request.getName());
                                 usuario.setEmail(request.getEmail());
                                 usuarioService.saveUsuario(false,usuario);
-//                                usuarioRepository.save(usuario);
 
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.", false,
                                         new SetUsuarioResponse(request.getAction(),request.getName(),request.getLastName(),request.getEmail(),request.getBlock(),null

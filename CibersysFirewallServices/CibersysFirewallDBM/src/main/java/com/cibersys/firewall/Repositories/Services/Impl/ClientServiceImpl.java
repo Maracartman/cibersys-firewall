@@ -22,4 +22,9 @@ public class ClientServiceImpl implements ClientService {
     public Cliente getClientByUsuarioActivacionAndEstaus(Usuario usuario_activacion, String estatus) {
         return repository.findByUsuarioActivacionAndEstatus(usuario_activacion,estatus);
     }
+
+    @Override
+    public Cliente guardarCliente(Cliente client) {
+        return repository.save(client);
+    }
 }

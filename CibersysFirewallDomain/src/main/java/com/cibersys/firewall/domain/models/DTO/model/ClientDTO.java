@@ -9,21 +9,28 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class ClientDTO {
 
-    private String nombreEmpresa,direccion,telefono;
+    private String nombreEmpresa, direccion, telefono, pais;
+
+    public ClientDTO() {
+    }
 
     @JsonProperty("nombreEmpresa")
     public String getNombreEmpresa() {
         return nombreEmpresa;
     }
+
     @JsonProperty("direccion")
     public String getDireccion() {
         return direccion;
     }
+
     @JsonProperty("telefono")
     public String getTelefono() {
         return telefono;
     }
 
-    public ClientDTO() {
+    @JsonProperty("pais")
+    public String getPais() {
+        return pais;
     }
 }

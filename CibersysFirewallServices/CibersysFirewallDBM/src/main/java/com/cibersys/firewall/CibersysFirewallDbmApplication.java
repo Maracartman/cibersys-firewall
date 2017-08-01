@@ -3,6 +3,7 @@ package com.cibersys.firewall;
 
 import com.cibersys.firewall.RequestHandlers.PasswordChangeRequestService.PasswordChangeRequestService;
 import com.cibersys.firewall.RequestHandlers.PasswordChangeService.PasswordChangeService;
+import com.cibersys.firewall.RequestHandlers.SetClienteService.SetClienteService;
 import com.cibersys.firewall.RequestHandlers.SetUsuarioService.SetUsuarioService;
 import com.cibersys.firewall.RequestHandlers.UserUpdateRequestService.UserUpdateRequestService;
 import com.cibersys.firewall.RequestHandlers.UserVerification.UserVerification;
@@ -33,6 +34,7 @@ public class CibersysFirewallDbmApplication {
         map.put("recuperatepassword", PasswordChangeRequestService.class);
         map.put("passwordchange", PasswordChangeService.class);
         map.put("setUsuario", SetUsuarioService.class);
+        map.put("setCliente", SetClienteService.class);
 
 
         return map;

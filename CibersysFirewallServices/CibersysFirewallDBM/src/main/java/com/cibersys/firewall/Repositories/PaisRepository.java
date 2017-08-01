@@ -14,5 +14,6 @@ public interface PaisRepository extends JpaRepository<Pais,Long> {
 
 
     List<Pais> findAll();
+    Pais findOneByidpais(Long id);
 
 }

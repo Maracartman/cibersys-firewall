@@ -4,6 +4,7 @@ package com.cibersys.firewall.autorization.Services.RequestHandlers.SetClienteRe
 import com.cibersys.firewall.autorization.Services.RequestHandlers.AbstractHandler.Impl.AbstractPrivateRequestHandlerServiceImpl;
 import com.cibersys.firewall.autorization.Services.RequestHandlers.SetClienteRequestService.SetClienteService;
 import com.cibersys.firewall.domain.models.DTO.RequestDTO.NewPanelClientRequestDTO;
+import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.NewPanelClientResponseDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.ResponseError;
 import com.cibersys.firewall.security.TokenUtils;
@@ -23,6 +24,7 @@ implements SetClienteService{
     @Override
     public ResponseEntity proceedRequest(NewPanelClientRequestDTO body, Map<String, String> header) {
         tokenUtils = new TokenUtils(secret, expiration);
+
         HttpEntity<NewPanelClientRequestDTO> request =
                 userGeneralRequestBuilder.buildSetUsuarioRequestDTO(body,header);
         try{
