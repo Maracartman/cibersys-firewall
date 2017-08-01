@@ -1,7 +1,7 @@
 package com.cibersys.firewall.domain.models.DTO.RequestDTO;
 
 import com.cibersys.firewall.domain.models.DTO.model.ClientDTO;
-import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
+import com.cibersys.firewall.domain.models.DTO.model.UserInfoDTO;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 
@@ -13,7 +13,7 @@ public class NewPanelClientRequestDTO {
 
     private ClientDTO clientInfo;
 
-    private UserDTO userInfo;
+    private UserInfoDTO userInfo;
 
     private String action;
 
@@ -26,8 +26,9 @@ public class NewPanelClientRequestDTO {
     public ClientDTO getClientInfo() {
         return clientInfo;
     }
+
     @JsonProperty("userInfo")
-    public UserDTO getUserInfo() {
+    public UserInfoDTO getUserInfo() {
         return userInfo;
     }
 
