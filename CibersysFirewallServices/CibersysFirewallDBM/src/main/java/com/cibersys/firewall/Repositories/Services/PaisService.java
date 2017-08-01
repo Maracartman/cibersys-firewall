@@ -10,4 +10,5 @@ import java.util.List;
 public interface PaisService {
 
     List<Pais> getAllPaises();
+    Pais getPaisById(String id);
 }

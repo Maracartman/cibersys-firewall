@@ -9,4 +9,5 @@ import com.cibersys.firewall.Domain.Model.Usuario;
 public interface ClientService {
 
     Cliente getClientByUsuarioActivacionAndEstaus(Usuario usuario_activacion, String estatus);
+    Cliente guardarCliente(Cliente client);
 }

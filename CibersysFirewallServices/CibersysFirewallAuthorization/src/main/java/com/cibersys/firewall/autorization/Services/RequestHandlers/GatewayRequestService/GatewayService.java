@@ -45,9 +45,6 @@ public class GatewayService {
             return ResponseEntity.ok(new ResponseError(Long.valueOf(401),"Servicio no válido",false,null));
         }
     }
-    /***
-     * Aquellos Request que requieran de algun mapping exclusivo seran controlados por aqui.
-     * */
 
     @RequestMapping(value = "**/private/**", method= RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<?> proceedLogin(HttpServletRequest request, HttpServletResponse response,

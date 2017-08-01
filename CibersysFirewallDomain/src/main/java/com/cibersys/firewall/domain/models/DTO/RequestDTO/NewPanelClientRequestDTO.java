@@ -15,6 +15,13 @@ public class NewPanelClientRequestDTO {
 
     private UserDTO userInfo;
 
+    private String action;
+
+    @JsonProperty("action")
+    public String getAction() {
+        return action;
+    }
+
     @JsonProperty("clientInfo")
     public ClientDTO getClientInfo() {
         return clientInfo;

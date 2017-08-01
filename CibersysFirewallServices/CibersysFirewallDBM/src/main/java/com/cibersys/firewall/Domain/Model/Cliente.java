@@ -24,8 +24,6 @@ public class Cliente {
 
     private Date fecha_activacion,fecha_actualizacion;
 
-//    @Column(columnDefinition="INT(11)")
-
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "usuario_activacion")
     private Usuario usuarioActivacion;

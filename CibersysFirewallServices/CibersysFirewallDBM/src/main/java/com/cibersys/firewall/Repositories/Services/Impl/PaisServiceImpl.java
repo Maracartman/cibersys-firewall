@@ -24,4 +24,9 @@ public class PaisServiceImpl implements PaisService {
     public List<Pais> getAllPaises() {
         return repository.findAll();
     }
+
+    @Override
+    public Pais getPaisById(String id) {
+        return repository.findOneByidpais(Long.valueOf(id));
+    }
 }

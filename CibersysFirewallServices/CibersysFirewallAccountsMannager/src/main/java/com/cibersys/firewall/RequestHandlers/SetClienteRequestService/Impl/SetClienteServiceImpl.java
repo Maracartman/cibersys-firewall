@@ -32,6 +32,9 @@ implements SetClienteService {
             NewPanelClientResponseDTO consult = restTemplate.postForObject(dbmRoute + dbmSetCliente,
                     request, NewPanelClientResponseDTO.class);
             if (!consult.getError()) {
+                /**
+                 * Aqui configuramos el correo.
+                 * **/
                 return consult;
             } else {
                 return new ResponseError(Long.valueOf(401),consult.getMessage(),
@@ -40,9 +43,6 @@ implements SetClienteService {
         }catch (ResourceAccessException e){
 
         }
-
-
-
         return null;
     }
 }

@@ -2,7 +2,7 @@ package com.cibersys.firewall.RequestHandlers.PasswordChangeRequestService.Impl;
 
 import com.cibersys.firewall.Domain.Model.Usuario;
 import com.cibersys.firewall.Repositories.UsuarioRepository;
-import com.cibersys.firewall.RequestHandlers.AbstractHandler.AbstractRequestHandler;
+import com.cibersys.firewall.RequestHandlers.AbstractHandler.Impl.AbstractRequestHandler;
 import com.cibersys.firewall.RequestHandlers.PasswordChangeRequestService.PasswordChangeRequestService;
 import com.cibersys.firewall.Utilities.ManagerToken;
 import com.cibersys.firewall.converter.ConverterUtilities;

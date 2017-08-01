@@ -69,18 +69,22 @@ public class AppFilter extends OncePerRequestFilter {
                 ((HttpServletResponse) response).sendError(HttpServletResponse.SC_UNAUTHORIZED, "El token no es valido.");
             } else {
                 tokenUtils = new TokenUtils(secret, expiration);
+
                 UserDTO userToken = tokenUtils.getUserFromToken(request.getHeader(tokenHeader));
                 if (userToken == null) {
                     ((HttpServletResponse) response).sendError(HttpServletResponse.SC_UNAUTHORIZED, "El token no es valido.");
                 } else {
-                    if(verifyValidRequest(userToken)){
+                    String requested_service = request.getRequestURL().toString().split("/")
+                            [request.getRequestURL().toString().split("/").length -1];
+                    if(verifyValidRequest(userToken,requested_service)){
                         Collection<SimpleGrantedAuthority> authorities = new ArrayList<SimpleGrantedAuthority>();
                         authorities.add(new SimpleGrantedAuthority("ADMIN"));
                         UsernamePasswordAuthenticationToken authRequest = new UsernamePasswordAuthenticationToken(userToken.getUserName(), userToken.getPassword(), authorities);
                         SecurityContextHolder.getContext().setAuthentication(authRequest);
                         filterChain.doFilter(request, response);
                     }else{
-                        ((HttpServletResponse) response).sendError(HttpServletResponse.SC_UNAUTHORIZED, "El usuario no es valido.");
+                        ((HttpServletResponse) response).sendError(HttpServletResponse.SC_UNAUTHORIZED, "El usuario no posee los permisos para " +
+                                "este servicio.");
                     }
                 }
             }
@@ -88,9 +92,18 @@ public class AppFilter extends OncePerRequestFilter {
             filterChain.doFilter(request, response);
         }
     }
-    private Boolean verifyValidRequest(UserDTO userToken) {
+    private Boolean verifyValidRequest(UserDTO userToken, String requested_service) {
         HttpEntity<UserDTO> request1 = userGeneralRequestBuilder.buildUserDTORequest(userToken);
         UserDTO consult = restTemplate.postForObject(mannagerRoute + mannagerUsuario, request1, LoginResponse.class).getResponse();
-        return consult != null && (userToken.getUserName().equals(consult.getUserName()));
+        return consult != null && (userToken.getUserName().equals(consult.getUserName())) && verifyRolRequeriment(userToken,requested_service);
+    }
+
+    private boolean verifyRolRequeriment(UserDTO userToken, String requested_service) {
+        switch (requested_service){
+            case "setCliente":
+                return userToken.getIdRol().toString().equalsIgnoreCase("1")? true : false;
+            default:
+                return true;
+        }
     }
 }

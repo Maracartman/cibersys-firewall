@@ -1,7 +1,7 @@
 package com.cibersys.firewall.RequestHandlers.UserVerification.UserVerificationImpl;
 
 import com.cibersys.firewall.Domain.Model.Usuario;
-import com.cibersys.firewall.RequestHandlers.AbstractHandler.AbstractRequestHandler;
+import com.cibersys.firewall.RequestHandlers.AbstractHandler.Impl.AbstractRequestHandler;
 import com.cibersys.firewall.converter.PasswordEncrypter;
 import com.cibersys.firewall.domain.models.DTO.ResponseBody.AbstractResponseBody;
 import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
