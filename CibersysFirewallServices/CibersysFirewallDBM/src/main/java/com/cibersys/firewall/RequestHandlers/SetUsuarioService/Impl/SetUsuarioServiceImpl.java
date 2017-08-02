@@ -80,7 +80,6 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                                 usuario.setNombre(request.getName());
                                 usuario.setEmail(request.getEmail());
                                 usuarioService.saveUsuario(false,usuario);
-
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.", false,
                                         new SetUsuarioResponse(request.getAction(),request.getName(),request.getLastName(),request.getEmail(),request.getBlock(),null
                                         ));
@@ -93,8 +92,6 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                             if(usuario != null){
                                 usuario.setEstatus(request.getBlock() ? "0" : "1");
                                 usuarioService.saveUsuario(false,usuario);
-//                                usuarioRepository.save(usuario);
-
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.", false,
                                         new SetUsuarioResponse(request.getAction(),request.getName(),request.getLastName(),request.getEmail(),request.getBlock(),null
                                         ));
@@ -107,7 +104,12 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                              * Se puede usar este fragmento y hacer uso de este servicio para la creacion de posteriores usuarios.                    *
                              *
                              * **/
-                            break;
+                            if(usuario != null)
+                                return new SetUsuarioReponseDTO(Long.valueOf(200), "", false, new SetUsuarioResponse(null,usuario.getNombre(),
+                                        usuario.getApellido(),usuario.getEmail(),null,null));
+                            else
+                                return new SetUsuarioReponseDTO(Long.valueOf(200),
+                                        "El correo no se encuentra en la base de Datos.", true, null);
                     }
             }
         } catch (Exception e) {

@@ -24,6 +24,11 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
+    public Cliente getCLientByIdAndEstatus(Long id, String estatus) {
+        return repository.findOneByIdclienteAndEstatus(id,estatus);
+    }
+
+    @Override
     public Cliente guardarCliente(Cliente client) {
         return repository.save(client);
     }

@@ -1,7 +1,0 @@
-com\cibersys\firewall\converter\PasswordEncrypter.class
-com\cibersys\firewall\Utilities\TimingUtilities.class
-com\cibersys\firewall\converter\ConverterUtilities.class
-com\cibersys\firewall\commons\Ping.class
-com\cibersys\firewall\security\SecurityService.class
-com\cibersys\firewall\security\TokenUtils.class
-com\cibersys\firewall\Utilities\ManagerToken.class

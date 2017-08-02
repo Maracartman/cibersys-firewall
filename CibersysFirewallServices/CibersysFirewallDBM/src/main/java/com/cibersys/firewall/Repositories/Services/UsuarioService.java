@@ -21,4 +21,8 @@ public interface UsuarioService {
     Usuario getUserByEmail(String email);
 
     Usuario saveUsuario(Boolean is_new,Usuario user);
+
+    Usuario getUserById(Long id);
+
+    Usuario find(Long usuario);
 }

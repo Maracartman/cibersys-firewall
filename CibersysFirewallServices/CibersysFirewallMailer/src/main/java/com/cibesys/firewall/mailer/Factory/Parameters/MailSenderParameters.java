@@ -9,5 +9,14 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class MailSenderParameters {
+
+    public MailSenderParameters(String request, String name, String email, String surName, String password) {
+        this.request = request;
+        this.name = name;
+        this.email = email;
+        this.surName = surName;
+        this.password = password;
+    }
+
     protected String request,username,token,job,email,name,surName,type,password,confirmPassword,img;
 }

@@ -13,5 +13,6 @@ import javax.transaction.Transactional;
 public interface ClienteRepository extends JpaRepository<Cliente,Long> {
 
     Cliente findByUsuarioActivacionAndEstatus(Usuario usuario_activacion, String estatus);
+    Cliente findOneByIdclienteAndEstatus(Long id, String estatus);
 
 }

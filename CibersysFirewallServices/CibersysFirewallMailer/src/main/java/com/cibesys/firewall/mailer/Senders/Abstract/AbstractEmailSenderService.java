@@ -1,5 +1,6 @@
 package com.cibesys.firewall.mailer.Senders.Abstract;
 
+import com.cibesys.firewall.mailer.MailerUtilities.MailerBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,9 @@ public abstract class AbstractEmailSenderService{
 
     @Autowired
     protected JavaMailSender sender;
+
+    @Autowired
+    protected MailerBuilder mailerBuilder;
 
     protected  String username;
 

@@ -3,8 +3,10 @@ package com.cibesys.firewall.mailer;
 
 import com.cibesys.firewall.mailer.RequestHandlers.NewPasswordRequestService.NewPasswordRequestService;
 import com.cibesys.firewall.mailer.RequestHandlers.PasswordChangeRequestService.PasswordChangeRequest;
+import com.cibesys.firewall.mailer.RequestHandlers.SetUsuarioRequestService.SetUsuarioService;
 import com.cibesys.firewall.mailer.Senders.NewPasswordSender.NewPasswordSender;
 import com.cibesys.firewall.mailer.Senders.RecuperaMailSender.RecuperateMailSenderService;
+import com.cibesys.firewall.mailer.Senders.SetUsuarioMailSender.SetUsuarioMailSender;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -38,6 +40,7 @@ public class CibersysFirewallMailerApplication {
 		 * **/
 		map.put("recuperatepassword", PasswordChangeRequest.class);
 		map.put("update", NewPasswordRequestService.class);
+		map.put("setUsuario", SetUsuarioService.class);
 		return map;
 	}
 
@@ -51,6 +54,7 @@ public class CibersysFirewallMailerApplication {
 		 * **/
 		map.put("recuperatepassword",RecuperateMailSenderService.class);
 		map.put("update",NewPasswordSender.class);
+		map.put("setUsuario",SetUsuarioMailSender.class);
 		return map;
 	}
 }

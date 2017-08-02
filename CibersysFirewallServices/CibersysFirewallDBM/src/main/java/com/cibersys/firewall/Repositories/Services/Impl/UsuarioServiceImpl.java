@@ -51,9 +51,21 @@ public class UsuarioServiceImpl implements UsuarioService{
             if(repository.findByEmail(user.getEmail()) != null) return null;
             else return repository.save(user);
         }else{
-            if(repository.findByEmail(user.getEmail()) == null) return null;
+            if(repository.findByidusuario(user.getIdusuario()) == null) return null;
             else
                 return repository.save(user);
 
         }    }
+
+    @Override
+    public Usuario getUserById(Long id) {
+        return repository.findByidusuario(id);
+    }
+
+
+
+    @Override
+    public Usuario find(Long usuario) {
+        return repository.findOne(usuario);
+    }
 }

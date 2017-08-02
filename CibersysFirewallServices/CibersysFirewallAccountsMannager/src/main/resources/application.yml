@@ -38,6 +38,7 @@ cibersys:
             route: http://localhost:5658
             services: CibersysFirewall/mailer/
             recuperatepassword: /CibersysFirewall/mailer/recuperatepassword
+            setUsuario: /CibersysFirewall/mailer/setUsuario
             update: /CibersysFirewall/mailer/update
 
 ---

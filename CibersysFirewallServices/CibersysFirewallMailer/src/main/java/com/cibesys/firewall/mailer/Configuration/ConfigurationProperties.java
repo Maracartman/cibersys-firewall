@@ -45,7 +45,9 @@ public class ConfigurationProperties {
 	public final static String EMAIL_BACKEND = "cibersys@example.ve";
 	
 	public final static String PATH_EMAIL_RECUPERATE_PASSWORD = "emails/Solicitud.html";
-	
+
+	public final static String PATH_EMAIL_WELCOME = "emails/Bienvenido.html";
+
 	public final static String CIBERSYS_HEADER_EMAIL = "emails/Solicitud_archivos/head.png";
 
 	public final static String CIBERSYS_LOGO_EMAIL = "emails/General_resources/cibersys-logo.png";

@@ -15,11 +15,17 @@ public class UserDTO {
 
     public UserDTO(){}
 
-    public UserDTO(String userName, String password, Integer idRol) {
-        this.id = id;
+    public UserDTO(String userName, String password, String name, String lastName) {
         this.userName = userName;
         this.password = password;
-        this.idRol = idRol;
+        this.name = name;
+        this.lastName = lastName;
+    }
+
+    public UserDTO(String userName, String password,Integer rol) {
+        this.userName = userName;
+        this.password = password;
+        this.idRol = rol;
     }
 
     public UserDTO(String s, String s1) {
@@ -69,4 +75,15 @@ public class UserDTO {
         this.password = password;
     }
 
+    public void setIdRol(Integer idRol) {
+        this.idRol = idRol;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 }

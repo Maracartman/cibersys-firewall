@@ -5,8 +5,10 @@ import com.cibersys.firewall.RequestHandlers.AbstractHandler.Impl.AbstractReques
 import com.cibersys.firewall.RequestHandlers.SetUsuarioService.SetUsuarioService;
 import com.cibersys.firewall.domain.models.DTO.RequestDTO.SetUsuarioRequestDTO;
 import com.cibersys.firewall.domain.models.DTO.ResponseBody.AbstractResponseBody;
+import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.ResponseError;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.SetUsuarioReponseDTO;
+import com.cibersys.firewall.domain.models.DTO.responseDTO.SetUsuarioResponse;
 import com.cibersys.firewall.security.TokenUtils;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
@@ -32,13 +34,22 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<AbstractRespon
         HttpEntity<SetUsuarioRequestDTO> request = new HttpEntity<SetUsuarioRequestDTO>(setUsuarioRequest, headers);
         try {
             SetUsuarioReponseDTO consult = restTemplate.postForObject(dbmRoute + dbmSetUsuario, request, SetUsuarioReponseDTO.class);
-            if (!consult.getError()){
-
+            if (!consult.getError()) {
                 /**
                  * Aqui se retorna la información obtenida del servicio de correo
                  *
                  * **/
-                return consult;
+                SetUsuarioResponse response_body = consult.getResponse();
+                UserDTO created_user = new UserDTO();
+                created_user.setUserName(response_body.getEmail());
+                created_user.setPassword(response_body.getPassword());
+                created_user.setName(response_body.getName());
+                created_user.setLastName(response_body.getLastName());
+
+                HttpEntity<UserDTO> request2 = new HttpEntity<>(created_user, headers);
+                SetUsuarioReponseDTO mailResult = restTemplate.postForObject(
+                        mailerRoute + mailerSetUsuario, request2, SetUsuarioReponseDTO.class);
+                return mailResult.getError() == false ? consult : mailResult;
             } else {
                 return new ResponseError(Long.valueOf(401), consult.getMessage(),
                         true, null);

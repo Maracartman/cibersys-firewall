@@ -50,6 +50,9 @@ public abstract class AbstractRequestHandler<T> {
     @Value("${cibersys.services.mailer.update}")
     protected String mailerUpdate;
 
+    @Value("${cibersys.services.mailer.setUsuario}")
+    protected String mailerSetUsuario;
+
     @Autowired
     protected RestTemplate restTemplate;
 

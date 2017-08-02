@@ -15,7 +15,7 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(columnDefinition="INT(11)")
-    private Integer idcliente;
+    private Long idcliente;
 
     private String rif,direccion,telefono_1,telefono_2,email,nombre;
 
@@ -40,7 +40,7 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Integer getIdcliente() {
+    public Long getIdcliente() {
         return idcliente;
     }
 
@@ -90,5 +90,57 @@ public class Cliente {
 
     public Pais getPais() {
         return pais;
+    }
+
+    public void setIdcliente(Long idcliente) {
+        this.idcliente = idcliente;
+    }
+
+    public void setRif(String rif) {
+        this.rif = rif;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public void setTelefono_1(String telefono_1) {
+        this.telefono_1 = telefono_1;
+    }
+
+    public void setTelefono_2(String telefono_2) {
+        this.telefono_2 = telefono_2;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setEstatus(String estatus) {
+        this.estatus = estatus;
+    }
+
+    public void setFecha_activacion(Date fecha_activacion) {
+        this.fecha_activacion = fecha_activacion;
+    }
+
+    public void setFecha_actualizacion(Date fecha_actualizacion) {
+        this.fecha_actualizacion = fecha_actualizacion;
+    }
+
+    public void setUsuarioActivacion(Usuario usuarioActivacion) {
+        this.usuarioActivacion = usuarioActivacion;
+    }
+
+    public void setUsuarioActualizacion(Usuario usuarioActualizacion) {
+        this.usuarioActualizacion = usuarioActualizacion;
+    }
+
+    public void setPais(Pais pais) {
+        this.pais = pais;
     }
 }

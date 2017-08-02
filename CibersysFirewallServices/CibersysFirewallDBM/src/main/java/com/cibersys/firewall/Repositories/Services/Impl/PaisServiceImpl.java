@@ -26,7 +26,7 @@ public class PaisServiceImpl implements PaisService {
     }
 
     @Override
-    public Pais getPaisById(String id) {
-        return repository.findOneByidpais(Long.valueOf(id));
+    public Pais getPaisById(Long id) {
+        return repository.findOneByidpais(id);
     }
 }

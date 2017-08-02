@@ -4,7 +4,7 @@ import com.cibersys.firewall.domain.models.DTO.RequestDTO.UserUpdateRequestDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.NewPasswordChangeRequestResponse;
 import com.cibesys.firewall.mailer.Factory.MailSenderFactory;
 import com.cibesys.firewall.mailer.Factory.Parameters.MailSenderParameters;
-import com.cibesys.firewall.mailer.RequestHandlers.AbstractHandler.AbstractRequestHandler;
+import com.cibesys.firewall.mailer.RequestHandlers.AbstractHandler.Impl.AbstractRequestHandlerImpl;
 import com.cibesys.firewall.mailer.RequestHandlers.NewPasswordRequestService.NewPasswordRequestService;
 import com.cibesys.firewall.mailer.Senders.Abstract.AbstractEmailSenderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ import java.util.Map;
  * Created by Luis Maracara on 6/26/2017.
  */
 @Service
-public class NewPasswordRequestServiceImpl extends AbstractRequestHandler<ResponseEntity<?>> implements NewPasswordRequestService {
+public class NewPasswordRequestServiceImpl extends AbstractRequestHandlerImpl<ResponseEntity<?>> implements NewPasswordRequestService {
 
     @Autowired
     private MailSenderFactory mailSenderFactory;
