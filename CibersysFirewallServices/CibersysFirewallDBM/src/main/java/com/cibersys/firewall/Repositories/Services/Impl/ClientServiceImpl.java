@@ -15,6 +15,8 @@ import javax.transaction.Transactional;
 @Service
 @Transactional
 public class ClientServiceImpl implements ClientService {
+
+
     @Autowired
     private ClienteRepository repository;
 
@@ -29,7 +31,14 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
+    public Cliente getCLientById(Long id) {
+        return repository.findOne(id);
+    }
+
+    @Override
     public Cliente guardarCliente(Cliente client) {
         return repository.save(client);
     }
+
+
 }

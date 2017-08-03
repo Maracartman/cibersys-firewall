@@ -17,6 +17,16 @@ public class NewPanelClientRequestDTO {
 
     private String action;
 
+    private Boolean block;
+
+    public NewPanelClientRequestDTO() {
+    }
+
+    @JsonProperty("block")
+    public Boolean getBlock() {
+        return block;
+    }
+
     @JsonProperty("action")
     public String getAction() {
         return action;
@@ -30,8 +40,5 @@ public class NewPanelClientRequestDTO {
     @JsonProperty("userInfo")
     public UserInfoDTO getUserInfo() {
         return userInfo;
-    }
-
-    public NewPanelClientRequestDTO() {
     }
 }

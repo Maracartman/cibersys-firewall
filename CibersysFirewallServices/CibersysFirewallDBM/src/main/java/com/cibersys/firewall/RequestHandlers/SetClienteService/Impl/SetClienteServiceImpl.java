@@ -11,7 +11,6 @@ import com.cibersys.firewall.RequestHandlers.SetClienteService.SetClienteService
 import com.cibersys.firewall.domain.models.DTO.RequestDTO.NewPanelClientRequestDTO;
 import com.cibersys.firewall.domain.models.DTO.ResponseBody.AbstractResponseBody;
 import com.cibersys.firewall.domain.models.DTO.model.ClientDTO;
-import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
 import com.cibersys.firewall.domain.models.DTO.model.UserInfoDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.NewPanelClientResponseDTO;
 import com.cibersys.firewall.security.TokenUtils;
@@ -59,30 +58,54 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                     return new NewPanelClientResponseDTO(Long.valueOf(200), "Falta información de cliente, pais o de usuario.",
                             true, null);
                 else {
-                    Cliente new_client = new Cliente(null, null, client.getDireccion(), client.getTelefono(),
-                            null, null, client.getNombreEmpresa(), "1", new Date(), new Date(), requester_user, requester_user,
-                            pais);
-                    if (usuarioService.getUserByEmail(user.getUserName()) == null) {
-                        Cliente saved_client = clientService.guardarCliente(new_client);
-                        if (saved_client != null) {
-                            String new_random_password = managerToken.generateRandomPassword(15);
-                            Usuario client_administrator = new Usuario(null, user.getUserName(),
-                                    passwordEncrypter.cryptWithMD5(new_random_password),
-                                    user.getName(), user.getLastName(), "3", null, null,
-                                    null, "1", new Date(), null, saved_client);
-                            client_administrator = usuarioService.saveUsuario(true, client_administrator);
-                            body.getUserInfo().setPassword(new_random_password);
-                            return client_administrator != null ? new NewPanelClientResponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.",
-                                    false, body) : new NewPanelClientResponseDTO(Long.valueOf(200), "Error al guardar el usuario.",
-                                    true, null);
+                    if (managerToken.checkNull(user)) {
 
-                        } else {
-                            return new NewPanelClientResponseDTO(Long.valueOf(200), "Error al guardar cliente, verificar los datos.",
-                                    true, null);
-                        }
-                    } else
-                        return new NewPanelClientResponseDTO(Long.valueOf(200), "Error al guardar cliente, el usuario ya existe.",
+                        /**
+                         *
+                         * Procedimiento de usuario
+                         *
+                         *
+                         *
+                         * **/
+                    if(usuarioService.getUserByEmail(user.getUserName()) == null){
+                        String new_random_password = managerToken.generateRandomPassword(15);
+                        Usuario user_administrator = new Usuario(null, user.getUserName(),
+                                passwordEncrypter.cryptWithMD5(new_random_password),
+                                user.getName(), user.getLastName(), "3", null, null,
+                                null, "1", new Date(), null,null);
+                        user_administrator = usuarioService.saveUsuario(true, user_administrator);
+                        body.getUserInfo().setPassword(new_random_password);
+                        if(user_administrator != null){
+                            /**
+                             *
+                             * Procedimiento de cliente
+                             *
+                             *
+                             *
+                             * **/
+                            Cliente new_client = new Cliente(null, null, client.getDireccion(), client.getTelefono(),
+                                    null, null, client.getNombreEmpresa(), "1", new Date(), new Date(),
+                                    user_administrator,user_administrator,
+                                    pais);
+                            Cliente saved_client = clientService.guardarCliente(new_client);
+                            if (saved_client != null) {
+                                user_administrator.setCliente(saved_client);
+                                usuarioService.saveUsuario(false,user_administrator);
+                            } else {
+                                return new NewPanelClientResponseDTO(Long.valueOf(200), "Error al guardar cliente, verificar los datos.",
+                                        true, null);
+                            }
+
+                        }else return new NewPanelClientResponseDTO(Long.valueOf(200), "Error al guardar el usuario.",
                                 true, null);
+
+                    }else
+                        return new NewPanelClientResponseDTO(Long.valueOf(200), "El usuario ya existe.",
+                                true, null);
+
+
+                    } else return new NewPanelClientResponseDTO(Long.valueOf(200), "Falta información del usuario.",
+                            true, null);
                 }
             case "1":
                 if (client == null || user == null || pais == null)
@@ -90,22 +113,22 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                             true, null);
                 else {
                     Cliente editing_client =
-                            clientService.getCLientByIdAndEstatus(client.getId(), "1");
+                            clientService.getCLientById(client.getId());
                     if (editing_client != null) {
-                        Usuario editing_user = usuarioService.find(editing_client.getUsuarioActivacion().getIdusuario());
+                        Usuario editing_user = editing_client.getUsuarioActivacion();
                         if (usuarioService.getUserByEmail(user.getUserName()) == null) {
                             /**
                              * Seteamos los valores nuevos de cliente y de usuario
                              *
                              * **/
-                            editing_client.setNombre(client.getNombreEmpresa());
-                            editing_client.setDireccion(client.getDireccion());
-                            editing_client.setTelefono_1(client.getTelefono());
-                            editing_client.setPais(pais);
+                            if (client.getNombreEmpresa() != null) editing_client.setNombre(client.getNombreEmpresa());
+                            if (client.getDireccion() != null) editing_client.setDireccion(client.getDireccion());
+                            if (client.getDireccion() != null) editing_client.setTelefono_1(client.getTelefono());
+                            if (client.getPais() != null) editing_client.setPais(pais);
 
-                            editing_user.setNombre(user.getName());
-                            editing_user.setApellido(user.getLastName());
-                            editing_user.setEmail(user.getUserName());
+                            if (user.getName() != null) editing_user.setNombre(user.getName());
+                            if (user.getLastName() != null) editing_user.setApellido(user.getLastName());
+                            if (user.getUserName() != null) editing_user.setEmail(user.getUserName());
 
                             editing_client = clientService.guardarCliente(editing_client);
                             if (editing_client != null) {
@@ -133,9 +156,32 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                             true, null);
                 }
             case "2":
+                Usuario editing_usuario = usuarioService.getUserByEmail(user.getUserName());
+                if (editing_usuario != null) {
+                    editing_usuario.setEstatus(body.getBlock() ? "0" : "1");
+                    usuarioService.saveUsuario(false, editing_usuario);
+                    return new NewPanelClientResponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.",
+                            false, body);
+
+                } else return new NewPanelClientResponseDTO(Long.valueOf(200),
+                        "El cliente no se ha encontrado.",
+                        true, null);
             case "3":
-
-
+                if (client.getId() != null) {
+                    Cliente consulting_client = clientService.getCLientById(client.getId());
+                    if (consulting_client != null) {
+                        Usuario consulting_user = consulting_client.getUsuarioActivacion();
+                        return new NewPanelClientResponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.",
+                                false, new NewPanelClientRequestDTO(new ClientDTO(consulting_client.getNombre(),
+                                consulting_client.getDireccion(), consulting_client.getTelefono1(), consulting_client.getIdcliente()
+                                , consulting_client.getPais().getIdpais()), new UserInfoDTO(consulting_user.getEmail(), null,
+                                Integer.parseInt(consulting_user.getRol()), consulting_user.getNombre(), consulting_user.getApellido()), "3", null));
+                    } else return new NewPanelClientResponseDTO(Long.valueOf(200),
+                            "El cliente no se ha encontrado.",
+                            true, null);
+                } else return new NewPanelClientResponseDTO(Long.valueOf(200),
+                        "El id del cliente no puede ser nulo para la busqueda.",
+                        true, null);
         }
         return null;
     }

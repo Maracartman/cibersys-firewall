@@ -34,16 +34,26 @@ public class UserUpdateRequestServiceImpl extends AbstractRequestHandler<UpdateR
     @Override
     public UpdateResponse proceedRequest(Map<String, String> body,Map<String, String> header) {
         UserUpdateRequestDTO u = objectMapper.convertValue(body,UserUpdateRequestDTO.class);
-        Usuario usuario = usuarioRepository.findByEmailAndCodigoValidacionAndEstatus(u.getEmail(),
-               u.getVerificationCode(),"1");
+        Usuario usuario = usuarioRepository.findByEmail(u.getEmail());
         if(usuario != null){
-            if(!timingUtilities.isTheVerificationCodeExpired(usuario.getFechaCodigoValidacion())){
-                usuario.setContraseña(encrypter.cryptWithMD5(u.getNewPassword()));
-                usuarioRepository.save(usuario);
-                return new UpdateResponse(Long.valueOf(200),"El usuario ha sido actualizado.",false,new UserUpdateResponseDTO(
-                        u.getEmail(),u.getNewPassword()));
-            }else{
-                return new UpdateResponse(Long.valueOf(200),"El código de validación ha expirado por favor vuelva a solicitar el cambio de contraseña.",true,
+            Boolean proceed = false;
+            String msj = "El usuario ha sido actualizado.";
+            if(usuario.getCodigoValidacion() != null)
+                if(!timingUtilities.isTheVerificationCodeExpired(usuario.getFechaCodigoValidacion()))
+                    proceed = true;
+                else msj = "El código de validación ha expirado por favor vuelva a solicitar el cambio de contraseña.";
+            else
+                if(passwordEncrypter.comparePassword(u.getVerificationCode(),usuario.getContraseña()))
+                    proceed = true;
+            else msj = "La contraseña con la que se verifica no es correcta.";
+                if(proceed){
+                    usuario.setContraseña(encrypter.cryptWithMD5(u.getNewPassword()));
+                    usuarioRepository.save(usuario);
+                    return new UpdateResponse(Long.valueOf(200),msj,false,new UserUpdateResponseDTO(
+                            u.getEmail(),u.getNewPassword()));
+                }
+            else{
+                return new UpdateResponse(Long.valueOf(200),"",true,
                         null);
             }
 

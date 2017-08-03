@@ -10,5 +10,6 @@ public interface ClientService {
 
     Cliente getClientByUsuarioActivacionAndEstaus(Usuario usuario_activacion, String estatus);
     Cliente getCLientByIdAndEstatus(Long id,String estatus);
+    Cliente getCLientById(Long id);
     Cliente guardarCliente(Cliente client);
 }

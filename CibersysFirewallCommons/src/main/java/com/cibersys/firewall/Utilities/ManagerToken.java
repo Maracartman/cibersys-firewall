@@ -3,6 +3,7 @@ package com.cibersys.firewall.Utilities;
 
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.Field;
 import java.util.Random;
 /**
  * 
@@ -75,6 +76,17 @@ public class ManagerToken {
 		 builder.append("TMP");
 		 builder.append(this.generateRandomToken());
 		 return builder.toString();
-		
+	}
+
+	public Boolean checkNull(Object T){
+		try{
+			for (Field f : T.getClass().getDeclaredFields())
+				if (f.get(this) == null)
+					return false;
+			return true;
+		}catch (IllegalAccessException  e){
+			return null;
+		}
+
 	}
 }
