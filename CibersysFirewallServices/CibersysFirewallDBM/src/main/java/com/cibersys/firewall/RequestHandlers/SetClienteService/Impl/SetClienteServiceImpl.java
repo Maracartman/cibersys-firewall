@@ -58,7 +58,8 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                     return new NewPanelClientResponseDTO(Long.valueOf(200), "Falta información de cliente, pais o de usuario.",
                             true, null);
                 else {
-                    if (managerToken.checkNull(user)) {
+
+                    if (user.getName() != null && user.getLastName() != null && user.getUserName() !=null) {
 
                         /**
                          *
@@ -91,6 +92,9 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                             if (saved_client != null) {
                                 user_administrator.setCliente(saved_client);
                                 usuarioService.saveUsuario(false,user_administrator);
+                                body.getUserInfo().setEdited_mail(true);
+                                return new NewPanelClientResponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.",
+                                        false, body);
                             } else {
                                 return new NewPanelClientResponseDTO(Long.valueOf(200), "Error al guardar cliente, verificar los datos.",
                                         true, null);
@@ -116,7 +120,7 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                             clientService.getCLientById(client.getId());
                     if (editing_client != null) {
                         Usuario editing_user = editing_client.getUsuarioActivacion();
-                        if (usuarioService.getUserByEmail(user.getUserName()) == null) {
+//                        if (usuarioService.getUserByEmail(user.getUserName()) == null) {
                             /**
                              * Seteamos los valores nuevos de cliente y de usuario
                              *
@@ -128,13 +132,22 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
 
                             if (user.getName() != null) editing_user.setNombre(user.getName());
                             if (user.getLastName() != null) editing_user.setApellido(user.getLastName());
-                            if (user.getUserName() != null) editing_user.setEmail(user.getUserName());
+                            if (user.getUserName() != null && !user.getUserName().equalsIgnoreCase(editing_user.getEmail())){
+                                String new_random_password = managerToken.generateRandomPassword(15);
+                                editing_user.setEmail(user.getUserName());
+                                editing_user.setCodigoValidacion(null);
+                                editing_user.setFechaCodigoValidacion(null);
+                                editing_user.setContraseña(passwordEncrypter.cryptWithMD5(new_random_password));
+
+                                body.getUserInfo().setPassword(new_random_password);
+                                body.getUserInfo().setEdited_mail(true);
+                            }else body.getUserInfo().setEdited_mail(false);
 
                             editing_client = clientService.guardarCliente(editing_client);
                             if (editing_client != null) {
                                 editing_user = usuarioService.saveUsuario(false, editing_user);
                                 if (editing_user != null)
-                                    new NewPanelClientResponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.",
+                                    return new NewPanelClientResponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.",
                                             false, body);
                                 else
                                     return new NewPanelClientResponseDTO(Long.valueOf(200),
@@ -146,10 +159,10 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                                         "Há ocurrido un error guardando el cliente.",
                                         true, null);
 
-                        } else
+                        /*} else
                             return new NewPanelClientResponseDTO(Long.valueOf(200),
                                     "El usuario introducido ya existe.",
-                                    true, null);
+                                    true, null);*/
 
                     } else return new NewPanelClientResponseDTO(Long.valueOf(200),
                             "El cliente no se ha encontrado.",
@@ -175,7 +188,7 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                                 false, new NewPanelClientRequestDTO(new ClientDTO(consulting_client.getNombre(),
                                 consulting_client.getDireccion(), consulting_client.getTelefono1(), consulting_client.getIdcliente()
                                 , consulting_client.getPais().getIdpais()), new UserInfoDTO(consulting_user.getEmail(), null,
-                                Integer.parseInt(consulting_user.getRol()), consulting_user.getNombre(), consulting_user.getApellido()), "3", null));
+                                Integer.parseInt(consulting_user.getRol()), consulting_user.getNombre(), consulting_user.getApellido(),false), "3", null));
                     } else return new NewPanelClientResponseDTO(Long.valueOf(200),
                             "El cliente no se ha encontrado.",
                             true, null);

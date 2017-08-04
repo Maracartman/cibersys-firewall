@@ -81,7 +81,8 @@ public class ManagerToken {
 	public Boolean checkNull(Object T){
 		try{
 			for (Field f : T.getClass().getDeclaredFields())
-				if (f.get(this) == null)
+				if ((!f.getName().equalsIgnoreCase("password")
+				&& !f.getName().equalsIgnoreCase("idRol"))&&(f.get(this) == null))
 					return false;
 			return true;
 		}catch (IllegalAccessException  e){

@@ -38,12 +38,14 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                 /**
                  * Aqui configuramos el correo.
                  * **/
-                UserInfoDTO info = consult.getResponse().getUserInfo();
-                UserDTO user_to_mail = new UserDTO(info.getUserName(),
-                        info.getPassword(), info.getName(), info.getLastName());
-                HttpEntity<UserDTO> mailer_request = new HttpEntity<>(user_to_mail, headers);
-                restTemplate.postForObject(
-                        mailerRoute + mailerSetUsuario, mailer_request, SetUsuarioReponseDTO.class);
+                if(consult.getResponse().getUserInfo().getEdited_mail()){
+                    UserInfoDTO info = consult.getResponse().getUserInfo();
+                    UserDTO user_to_mail = new UserDTO(info.getUserName(),
+                            info.getPassword(), info.getName(), info.getLastName());
+                    HttpEntity<UserDTO> mailer_request = new HttpEntity<>(user_to_mail, headers);
+                    restTemplate.postForObject(
+                            mailerRoute + mailerSetUsuario, mailer_request, SetUsuarioReponseDTO.class);
+                }
                 return consult;
             } else {
                 return new ResponseError(Long.valueOf(401), consult.getMessage(),
