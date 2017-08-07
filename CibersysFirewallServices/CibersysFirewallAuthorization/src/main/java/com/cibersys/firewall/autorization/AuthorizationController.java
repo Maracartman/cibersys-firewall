@@ -1,5 +1,6 @@
 package com.cibersys.firewall.autorization;
 
+import com.cibersys.firewall.autorization.Services.RequestHandlers.CountryService.CountryService;
 import com.cibersys.firewall.autorization.Services.RequestHandlers.LoginRequestService.LoginService;
 import com.cibersys.firewall.autorization.Services.RequestHandlers.PasswordChangeService.PasswordChange;
 import com.cibersys.firewall.autorization.Services.RequestHandlers.PasswordChangeRequestService.PasswordChangeRequest;
@@ -60,9 +61,11 @@ public class AuthorizationController {
         map.put("public/login", LoginService.class);
         map.put("public/update", UserUpdateRequestService.class);
         map.put("public/recuperatepassword", PasswordChangeRequest.class);
+        map.put("public/countries", CountryService.class);
         map.put("private/passwordchange", PasswordChange.class);
-        map.put("private/setUsuario", SetUsuarioService.class);
-        map.put("private/setCliente", SetClienteService.class);
+        map.put("private/user", SetUsuarioService.class);
+        map.put("private/client", SetClienteService.class);
+
 
 
         return map;

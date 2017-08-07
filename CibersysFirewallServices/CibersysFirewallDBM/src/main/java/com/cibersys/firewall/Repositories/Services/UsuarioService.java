@@ -1,5 +1,6 @@
 package com.cibersys.firewall.Repositories.Services;
 
+import com.cibersys.firewall.Domain.Model.Cliente;
 import com.cibersys.firewall.Domain.Model.Usuario;
 import org.springframework.data.repository.query.Param;
 
@@ -12,8 +13,6 @@ public interface UsuarioService {
 
     Usuario getUserByEmailAndEncryptedPasswordAndEstatus(@Param("user") String email, @Param("password") String encrypted, @Param("estatus") String estatus);
 
-    List<Usuario> getAllUsers(@Param("email") String email, @Param("password") String encriptedPassword);
-
     Usuario getUserByEmailAndCodigoValidacionAndEstatus(String email,String codigoValidacion,String estatus);
 
     Usuario getUserByEmailAndEstatus(String email,String estatus);
@@ -25,4 +24,8 @@ public interface UsuarioService {
     Usuario getUserById(Long id);
 
     Usuario find(Long usuario);
+
+    Usuario getUserByCliente(Cliente cliente);
+
+    List<Usuario> getAllUsuario();
 }

@@ -51,4 +51,9 @@ public class SetUsuarioResponse extends SetUsuarioRequestDTO {
         super(isNew, name, lastName, email, block);
         this.password = password;
     }
+
+    public SetUsuarioResponse(String isNew,Long id,String name, String lastName, String email, Boolean block, String password) {
+        super(isNew,id, name, lastName, email, block);
+        this.password = password;
+    }
 }

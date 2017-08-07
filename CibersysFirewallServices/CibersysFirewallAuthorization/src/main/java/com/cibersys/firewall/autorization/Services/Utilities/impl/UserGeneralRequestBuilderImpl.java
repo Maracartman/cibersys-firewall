@@ -55,25 +55,30 @@ public class UserGeneralRequestBuilderImpl implements UserGeneralRequestBuilder{
 
     @Override
     public HttpEntity<UserDTO> buildUserDTORequest(UserDTO body) {
+        headers.remove("requester_user");
         return new HttpEntity<>(body, headers);
     }
     @Override
     public HttpEntity<UserUpdateRequestDTO> buildUserUpdateDTORequest(UserUpdateRequestDTO u) {
+        headers.remove("requester_user");
         return new HttpEntity<>(u,headers);
     }
 
     @Override
     public HttpEntity<PasswordChangeRequestDTO> buildPasswordChangeRequestDTO(PasswordChangeRequestDTO u) {
+        headers.remove("requester_user");
         return new HttpEntity<>(u,headers);
     }
 
     @Override
     public HttpEntity<NewPasswordChangeRequestDTO> buildNewPasswordChangeRequestDTO(NewPasswordChangeRequestDTO u) {
+        headers.remove("requester_user");
         return new HttpEntity<>(u,headers);
     }
 
     @Override
     public HttpEntity<PasswordChangeRequest> buildPasswordChangeRequestDTO(PasswordChangeRequest u) {
+        headers.remove("requester_user");
         return new HttpEntity<>(u,headers);
     }
     @Override
@@ -86,5 +91,11 @@ public class UserGeneralRequestBuilderImpl implements UserGeneralRequestBuilder{
     public HttpEntity<NewPanelClientRequestDTO> buildSetUsuarioRequestDTO(NewPanelClientRequestDTO setClienteRequest, Map<String, String> header) {
         headers.add("requester_user",header.get("x-auth-token"));
         return new HttpEntity<>(setClienteRequest,headers);
+    }
+
+    @Override
+    public HttpEntity<Map<String, String>> buildCountriesRequest(Map<String, String> body) {
+        headers.remove("requester_user");
+        return new HttpEntity<>(body,headers);
     }
 }

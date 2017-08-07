@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 /**
  * Created by Maracartman on 31/7/2017.
@@ -38,6 +39,11 @@ public class ClientServiceImpl implements ClientService {
     @Override
     public Cliente guardarCliente(Cliente client) {
         return repository.save(client);
+    }
+
+    @Override
+    public List<Cliente> getAllClientes() {
+        return repository.findAll();
     }
 
 

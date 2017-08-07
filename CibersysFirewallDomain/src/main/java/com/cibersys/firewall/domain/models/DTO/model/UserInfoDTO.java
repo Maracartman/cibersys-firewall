@@ -16,7 +16,12 @@ public class UserInfoDTO {
     private Integer idRol;
     private String name, lastName;
     private Boolean edited_mail;
+    private Long userId;
 
+    @JsonProperty("userId")
+    public Long getUserId() {
+        return userId;
+    }
 
     @JsonProperty("edited_mail")
     public Boolean getEdited_mail() {

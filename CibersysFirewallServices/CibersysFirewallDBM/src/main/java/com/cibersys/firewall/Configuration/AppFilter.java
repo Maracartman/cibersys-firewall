@@ -47,8 +47,6 @@ public class AppFilter extends OncePerRequestFilter {
         AntPathMatcher urlMatch = new AntPathMatcher();
         response.addHeader("Access-Control-Allow-Headers",tokenHeader);
         response.addHeader("Access-Control-Expose-Headers",tokenHeader);
-        if (urlMatch.match(services + "**",
-                    request.getRequestURI().substring(request.getContextPath().length()))) {
             if (request.getHeader(tokenHeader) == null) {
                 ((HttpServletResponse) response).sendError(HttpServletResponse.SC_UNAUTHORIZED, "El token no es valido.");
             } else {
@@ -69,9 +67,5 @@ public class AppFilter extends OncePerRequestFilter {
                     }
                 }
             }
-        } else {
-            filterChain.doFilter(request, response);
-        }
-
     }
 }

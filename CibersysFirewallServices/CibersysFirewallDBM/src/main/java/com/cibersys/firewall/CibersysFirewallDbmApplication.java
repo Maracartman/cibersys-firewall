@@ -1,6 +1,7 @@
 package com.cibersys.firewall;
 
 
+import com.cibersys.firewall.RequestHandlers.CountriesService.CountriesService;
 import com.cibersys.firewall.RequestHandlers.PasswordChangeRequestService.PasswordChangeRequestService;
 import com.cibersys.firewall.RequestHandlers.PasswordChangeService.PasswordChangeService;
 import com.cibersys.firewall.RequestHandlers.SetClienteService.SetClienteService;
@@ -35,6 +36,7 @@ public class CibersysFirewallDbmApplication {
         map.put("passwordchange", PasswordChangeService.class);
         map.put("setUsuario", SetUsuarioService.class);
         map.put("setCliente", SetClienteService.class);
+        map.put("countries", CountriesService.class);
 
 
         return map;

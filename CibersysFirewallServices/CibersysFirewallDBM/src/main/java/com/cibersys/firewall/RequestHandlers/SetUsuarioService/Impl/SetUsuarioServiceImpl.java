@@ -15,8 +15,7 @@ import com.cibersys.firewall.security.TokenUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by Maracartman on 27/7/2017.
@@ -58,58 +57,67 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                      * 2. El usuario otro usuario Cibersys (rol igual a 2). Este es un usuario Cibersys que se crea para que atienda las solicitudes de los clientes y es creado exclusivamente por el administrador Cibersys (rol igual a 1).
                      3. El usuario administrador Cliente (rol igual a 3). Este es la persona de contacto del cliente y se crea cuando creamos al cliente. Este usuario es creado exclusivamente por el administrador Cibersys (rol igual a 1).
                      * **/
-                    Usuario usuario = request.getAction().equals("2")? usuarioRepository.findByEmail(request.getEmail()) : usuarioRepository.findByEmailAndEstatus(request.getEmail(), "1");
-
-
-                    switch (request.getAction()){
+                    Usuario usuario = null;
+                    if(request.getIdUsuario() != null )
+                        usuario = usuarioService.getUserById(request.getIdUsuario());
+                    else if(request.getEmail() != null)
+                        usuario = usuarioService.getUserByEmail(request.getEmail());
+                    switch (request.getAction()) {
                         case "0":
                             if (usuario == null) {
                                 String new_user_password = managerToken.generateRandomPassword(15);
-                                Usuario new_user = new Usuario(null,request.getEmail(),passwordEncrypter.cryptWithMD5(new_user_password)
-                                        ,request.getName(),request.getLastName(),"2",
-                                        null,null,null,"1",new Date(),null,null);
-                                usuarioService.saveUsuario(true,new_user);
+                                Usuario new_user = new Usuario(null, request.getEmail(), passwordEncrypter.cryptWithMD5(new_user_password)
+                                        , request.getName(), request.getLastName(), "2",
+                                        null, null, null, "1", new Date(), null, null);
+                                usuarioService.saveUsuario(true, new_user);
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.", false,
-                                        new SetUsuarioResponse(request.getAction(),request.getName(),request.getLastName(),request.getEmail(),request.getBlock(),new_user_password
-                                        ));
+                                        Arrays.asList(new SetUsuarioResponse(request.getAction(), request.getName(), request.getLastName(), request.getEmail(), request.getBlock(), new_user_password
+                                        )));
                             } else
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "El correo electrónico ya esta en uso.", true, null);
                         case "1":
-                            if(usuario != null){
+                            if (usuario != null) {
                                 usuario.setApellido(request.getLastName());
                                 usuario.setNombre(request.getName());
                                 usuario.setEmail(request.getEmail());
-                                usuarioService.saveUsuario(false,usuario);
+                                usuarioService.saveUsuario(false, usuario);
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.", false,
-                                        new SetUsuarioResponse(request.getAction(),request.getName(),request.getLastName(),request.getEmail(),request.getBlock(),null
-                                        ));
+                                        Arrays.asList(new SetUsuarioResponse(request.getAction(), request.getName(), request.getLastName(), request.getEmail(), request.getBlock(), null
+                                        )));
 
 
-                            }else
+                            } else
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "El correo no se encuentra en la base de Datos.", true, null);
 
                         case "2":
-                            if(usuario != null){
+                            if (usuario != null) {
                                 usuario.setEstatus(request.getBlock() ? "0" : "1");
-                                usuarioService.saveUsuario(false,usuario);
+                                usuarioService.saveUsuario(false, usuario);
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.", false,
-                                        new SetUsuarioResponse(request.getAction(),request.getName(),request.getLastName(),request.getEmail(),request.getBlock(),null
-                                        ));
+                                        Arrays.asList(new SetUsuarioResponse(request.getAction(), request.getName(), request.getLastName(), request.getEmail(), request.getBlock(), null
+                                        )));
 
 
-                            }else
+                            } else
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "El correo no se encuentra en la base de Datos.", true, null);
                         case "3":
                             /**
                              * Se puede usar este fragmento y hacer uso de este servicio para la creacion de posteriores usuarios.                    *
                              *
                              * **/
-                            if(usuario != null)
-                                return new SetUsuarioReponseDTO(Long.valueOf(200), "", false, new SetUsuarioResponse(null,usuario.getNombre(),
-                                        usuario.getApellido(),usuario.getEmail(),null,null));
-                            else
+                            if (usuario != null)
+                                return new SetUsuarioReponseDTO(Long.valueOf(200), "", false, Arrays.asList(new SetUsuarioResponse(null,usuario.getIdusuario(),
+                                        usuario.getNombre(), usuario.getApellido(), usuario.getEmail(), null, null)));
+                            else {
+                                List<SetUsuarioResponse> sur = new ArrayList<>();
+                                for (Usuario u : usuarioService.getAllUsuario()) {
+                                    sur.add(new SetUsuarioResponse(null,u.getIdusuario(), u.getNombre(),
+                                            u.getApellido(), u.getEmail(), null, null));
+                                }
                                 return new SetUsuarioReponseDTO(Long.valueOf(200),
-                                        "El correo no se encuentra en la base de Datos.", true, null);
+                                        "Éxito en el envío de los datos.", false, sur);
+                            }
+
                     }
             }
         } catch (Exception e) {

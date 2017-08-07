@@ -2,6 +2,7 @@ package com.cibersys.firewall.Repositories;
 
 
 
+import com.cibersys.firewall.Domain.Model.Cliente;
 import com.cibersys.firewall.Domain.Model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
@@ -28,5 +29,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario,Long> {
     Usuario findByEmail(String email);
 
     Usuario findByidusuario(Long id);
+
+    Usuario findByCliente(Cliente idCliente);
 }
 

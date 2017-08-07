@@ -14,6 +14,7 @@ cibersys:
             dbm:
               services: /CibersysFirewall/dbm/
               usuario: /CibersysFirewall/dbm/usuario
+              countries: /CibersysFirewall/dbm/countries
               path: CibersysFirewall/dbm/
               route: http://localhost:5656
             mannager:
@@ -23,7 +24,10 @@ cibersys:
               recuperatepassword: /CibersysFirewall/mannager/recuperatepassword
               passwordchange: /CibersysFirewall/mannager/passwordchange
               setUsuario: /CibersysFirewall/mannager/setUsuario
+              users: /CibersysFirewall/mannager/users
               setCliente: /CibersysFirewall/mannager/setCliente
+              clients: /CibersysFirewall/mannager/clients
+              countries : /CibersysFirewall/mannager/countries
 
               path: CibersysFirewall/mannager/
               route: http://localhost:5657

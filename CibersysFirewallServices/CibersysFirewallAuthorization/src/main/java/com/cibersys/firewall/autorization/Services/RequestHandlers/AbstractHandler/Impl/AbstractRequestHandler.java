@@ -26,6 +26,9 @@ public abstract class AbstractRequestHandler<T> {
     @Value("${cibersys.services.dbm.usuario}")
     protected String dbmUsuario;
 
+    @Value("${cibersys.services.dbm.countries}")
+    protected String dbmCountries;
+
     @Value("${cibersys.services.dbm.route}")
     protected String dbmRoute;
 

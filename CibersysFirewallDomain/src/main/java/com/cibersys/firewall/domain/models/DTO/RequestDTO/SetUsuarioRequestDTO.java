@@ -17,6 +17,8 @@ public class SetUsuarioRequestDTO {
     protected String email;
     protected Boolean block;
     protected String nonEncryptedPassword;
+    protected Long idUsuario;
+
 
 
     public SetUsuarioRequestDTO(String action, String name, String lastName, String email, Boolean block) {
@@ -27,8 +29,22 @@ public class SetUsuarioRequestDTO {
         this.block = block;
     }
 
+    public SetUsuarioRequestDTO(String action,Long id, String name, String lastName, String email, Boolean block) {
+        this.action = action;
+        this.idUsuario = id;
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.block = block;
+    }
+
     public SetUsuarioRequestDTO() {
     }
+    @JsonProperty("userId")
+    public Long getIdUsuario() {
+        return idUsuario;
+    }
+
     @JsonProperty("password")
     public String getNonEncryptedPassword(){return nonEncryptedPassword;}
 

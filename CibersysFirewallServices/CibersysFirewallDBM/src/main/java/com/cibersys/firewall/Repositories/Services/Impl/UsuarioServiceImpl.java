@@ -1,5 +1,6 @@
 package com.cibersys.firewall.Repositories.Services.Impl;
 
+import com.cibersys.firewall.Domain.Model.Cliente;
 import com.cibersys.firewall.Domain.Model.Usuario;
 import com.cibersys.firewall.Repositories.Services.UsuarioService;
 import com.cibersys.firewall.Repositories.UsuarioRepository;
@@ -23,11 +24,6 @@ public class UsuarioServiceImpl implements UsuarioService{
     @Override
     public Usuario getUserByEmailAndEncryptedPasswordAndEstatus(String email, String encrypted, String estatus) {
         return repository.findOneByEmailAndContraseñaAndEstatus(email,encrypted,estatus);
-    }
-
-    @Override
-    public List<Usuario> getAllUsers(String email, String encriptedPassword) {
-        return repository.findByEmailAndContraseña(email,encriptedPassword);
     }
 
     @Override
@@ -68,4 +64,15 @@ public class UsuarioServiceImpl implements UsuarioService{
     public Usuario find(Long usuario) {
         return repository.findOne(usuario);
     }
+
+    @Override
+    public Usuario getUserByCliente(Cliente cliente) {
+        return repository.findByCliente(cliente);
+    }
+
+    @Override
+    public List<Usuario> getAllUsuario(){
+        return repository.findAll();
+    }
+
 }

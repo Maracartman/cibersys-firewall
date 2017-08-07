@@ -95,15 +95,15 @@ public class AppFilter extends OncePerRequestFilter {
     private Boolean verifyValidRequest(UserDTO userToken, String requested_service) {
         HttpEntity<UserDTO> request1 = userGeneralRequestBuilder.buildUserDTORequest(userToken);
         UserDTO consult = restTemplate.postForObject(mannagerRoute + mannagerUsuario, request1, LoginResponse.class).getResponse();
-        return consult != null && (userToken.getUserName().equals(consult.getUserName())) && verifyRolRequeriment(userToken,requested_service);
+        return consult != null &&
+                (userToken.getUserName().equals(consult.getUserName())) &&
+                verifyRolRequeriment(userToken,requested_service);
     }
 
     private boolean verifyRolRequeriment(UserDTO userToken, String requested_service) {
         switch (requested_service){
-            case "setCliente":
-                return userToken.getIdRol().toString().equalsIgnoreCase("1")? true : false;
             default:
-                return true;
+                return userToken.getIdRol().toString().equalsIgnoreCase("1")? true : false;
         }
     }
 }

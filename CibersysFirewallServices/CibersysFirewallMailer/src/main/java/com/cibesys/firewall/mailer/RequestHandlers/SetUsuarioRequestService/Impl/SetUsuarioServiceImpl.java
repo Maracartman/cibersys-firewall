@@ -1,6 +1,5 @@
 package com.cibesys.firewall.mailer.RequestHandlers.SetUsuarioRequestService.Impl;
 
-import com.cibersys.firewall.domain.models.DTO.RequestDTO.SetUsuarioRequestDTO;
 import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.SetUsuarioReponseDTO;
 import com.cibesys.firewall.mailer.Factory.Parameters.MailSenderParameters;

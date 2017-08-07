@@ -32,7 +32,7 @@ public class SetClienteGatewayService {
     @Autowired
     private ApplicationContext context;
 
-    @RequestMapping(value = "**/setCliente", method= RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value = "**/client", method= RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<?> proceedLogin(HttpServletRequest request, HttpServletResponse response,
                                           @RequestBody NewPanelClientRequestDTO body,
                                           @RequestHeader Map<String,String> header){

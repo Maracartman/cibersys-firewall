@@ -34,12 +34,12 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<AbstractRespon
         HttpEntity<SetUsuarioRequestDTO> request = new HttpEntity<SetUsuarioRequestDTO>(setUsuarioRequest, headers);
         try {
             SetUsuarioReponseDTO consult = restTemplate.postForObject(dbmRoute + dbmSetUsuario, request, SetUsuarioReponseDTO.class);
-            if (!consult.getError()) {
+            if (!consult.getError() && setUsuarioRequest.getAction().equalsIgnoreCase("0") ) {
                 /**
                  * Aqui se retorna la información obtenida del servicio de correo
                  *
                  * **/
-                SetUsuarioResponse response_body = consult.getResponse();
+                SetUsuarioResponse response_body = consult.getResponse().get(0);
                 UserDTO created_user = new UserDTO();
                 created_user.setUserName(response_body.getEmail());
                 created_user.setPassword(response_body.getPassword());
@@ -50,10 +50,8 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<AbstractRespon
                 SetUsuarioReponseDTO mailResult = restTemplate.postForObject(
                         mailerRoute + mailerSetUsuario, request2, SetUsuarioReponseDTO.class);
                 return mailResult.getError() == false ? consult : mailResult;
-            } else {
-                return new ResponseError(Long.valueOf(401), consult.getMessage(),
-                        true, null);
             }
+            return  consult;
         } catch (ResourceAccessException e) {
             return new ResponseError(Long.valueOf(401), "El servicio solicitado no se encuentra disponible", true, null);
         }

@@ -8,6 +8,7 @@ import com.cibersys.firewall.Repositories.Services.PaisService;
 import com.cibersys.firewall.Repositories.Services.UsuarioService;
 import com.cibersys.firewall.RequestHandlers.AbstractHandler.Impl.AbstractPrivateRequestHandlerServiceImpl;
 import com.cibersys.firewall.RequestHandlers.SetClienteService.SetClienteService;
+import com.cibersys.firewall.Utilities.DBMServices;
 import com.cibersys.firewall.domain.models.DTO.RequestDTO.NewPanelClientRequestDTO;
 import com.cibersys.firewall.domain.models.DTO.ResponseBody.AbstractResponseBody;
 import com.cibersys.firewall.domain.models.DTO.model.ClientDTO;
@@ -17,8 +18,7 @@ import com.cibersys.firewall.security.TokenUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by AKDESK25 on 8/1/2017.
@@ -26,6 +26,9 @@ import java.util.Map;
 @Service
 public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceImpl<AbstractResponseBody, NewPanelClientRequestDTO>
         implements SetClienteService {
+
+    @Autowired
+    private DBMServices services;
 
     @Autowired
     private ClientService clientService;
@@ -67,7 +70,7 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                          *
                          *
                          * **/
-                        if (usuarioService.getUserByEmail(user.getUserName()) == null) {
+                        if (user.getUserId() == null || usuarioService.find(user.getUserId()) == null) {
                             String new_random_password = managerToken.generateRandomPassword(15);
                             Usuario user_administrator = new Usuario(null, user.getUserName(),
                                     passwordEncrypter.cryptWithMD5(new_random_password),
@@ -93,7 +96,7 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                                     usuarioService.saveUsuario(false, user_administrator);
                                     body.getUserInfo().setEdited_mail(true);
                                     return new NewPanelClientResponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.",
-                                            false, body);
+                                            false, Arrays.asList(body));
                                 } else {
                                     return new NewPanelClientResponseDTO(Long.valueOf(200), "Error al guardar cliente, verificar los datos.",
                                             true, null);
@@ -122,7 +125,7 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                     Cliente editing_client =
                             clientService.getCLientById(client.getId());
                     if (editing_client != null) {
-                        Usuario editing_user = editing_client.getUsuarioActivacion();
+                        Usuario editing_user = usuarioService.getUserByCliente(editing_client);
                         /**
                          * Seteamos los valores nuevos de cliente y de usuario
                          *
@@ -154,7 +157,7 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                             editing_user = usuarioService.saveUsuario(false, editing_user);
                             if (editing_user != null)
                                 return new NewPanelClientResponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.",
-                                        false, body);
+                                        false, Arrays.asList(body));
                             else
                                 return new NewPanelClientResponseDTO(Long.valueOf(200),
                                         "Há ocurrido un error guardando el usuario.",
@@ -170,32 +173,85 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                             true, null);
                 }
             case "2":
-                Usuario editing_usuario = usuarioService.getUserByEmail(user.getUserName());
-                if (editing_usuario != null) {
-                    editing_usuario.setEstatus(body.getBlock() ? "0" : "1");
-                    usuarioService.saveUsuario(false, editing_usuario);
-                    return new NewPanelClientResponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.",
-                            false, body);
+                if(client != null && client.getId() != null){
+                    if(body.getBlock() != null){
+                        Cliente client_to_block = clientService.getCLientById(client.getId());
+                        Usuario user_to_block = usuarioService.getUserByCliente(client_to_block);
+                        if(client_to_block != null && user_to_block != null){
+                            if((body.getBlock() && client_to_block.getEstatus().equalsIgnoreCase("0"))
+                                    || (!body.getBlock() && client_to_block.getEstatus().equalsIgnoreCase("1")))
+                                return  new NewPanelClientResponseDTO(Long.valueOf(200),
+                                        body.getBlock() ? "El cliente ya se encuentra bloqueado." : "El cliente ya se encuentra desbloqueado.",
+                                        true, null);
+                            else{
+                                if(body.getBlock()){
+                                    client_to_block.setEstatus("0");
+                                    user_to_block.setEstatus("0");
+                                }else{
+                                    client_to_block.setEstatus("1");
+                                    user_to_block.setEstatus("1");
+                                }
+                                client_to_block.setUsuarioActualizacion(requester_user);
+                                client_to_block.setFecha_actualizacion(new Date());
+
+                                /**
+                                 * Guardamos los cambios
+                                 *
+                                 * **/
+                                clientService.guardarCliente(client_to_block);
+                                usuarioService.saveUsuario(false,user_to_block);
+
+                                return new NewPanelClientResponseDTO(Long.valueOf(200),
+                                        "Éxito en el envío de los datos.",
+                                        true, null);
+
+                            }
+
+                        }else return new NewPanelClientResponseDTO(Long.valueOf(200),
+                                "Ha ocurrido un error obteniendo la información de la BD.",
+                                true, null);
+                    }else return new NewPanelClientResponseDTO(Long.valueOf(200),
+                            "Debe indicar si desea bloquear o no el cliente (block).",
+                            true, null);
 
                 } else return new NewPanelClientResponseDTO(Long.valueOf(200),
-                        "El cliente no se ha encontrado.",
+                        "Debe ingresar la información (ID) del cliente a bloquear.",
                         true, null);
+
             case "3":
-                if (client.getId() != null) {
+                if (client != null && client.getId() != null) {
                     Cliente consulting_client = clientService.getCLientById(client.getId());
                     if (consulting_client != null) {
-                        Usuario consulting_user = consulting_client.getUsuarioActivacion();
+                        Usuario consulting_user = usuarioService.getUserByCliente(consulting_client);
                         return new NewPanelClientResponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.",
-                                false, new NewPanelClientRequestDTO(new ClientDTO(consulting_client.getNombre(),
+                                false, Arrays.asList(new NewPanelClientRequestDTO(new ClientDTO(consulting_client.getNombre(),
                                 consulting_client.getDireccion(), consulting_client.getTelefono1(), consulting_client.getIdcliente()
                                 , consulting_client.getPais().getIdpais()), new UserInfoDTO(consulting_user.getEmail(), null,
-                                Integer.parseInt(consulting_user.getRol()), consulting_user.getNombre(), consulting_user.getApellido(), false), "3", null));
+                                Integer.parseInt(consulting_user.getRol()),
+                                consulting_user.getNombre(), consulting_user.getApellido(),
+                                false,consulting_user.getIdusuario()), "3", null)));
                     } else return new NewPanelClientResponseDTO(Long.valueOf(200),
                             "El cliente no se ha encontrado.",
                             true, null);
-                } else return new NewPanelClientResponseDTO(Long.valueOf(200),
-                        "El id del cliente no puede ser nulo para la busqueda.",
-                        true, null);
+                } else {
+                    try{
+                        List<NewPanelClientRequestDTO> listOfPanelClients = new ArrayList<NewPanelClientRequestDTO>();
+                        for(Cliente c : clientService.getAllClientes()){
+                            ClientDTO dto = services.mapToClienteDTO(c);
+                            UserInfoDTO uidto = services.mapToUserInfoDTO(usuarioService.getUserByCliente(c));
+                            listOfPanelClients.add(new NewPanelClientRequestDTO(dto,uidto,"3",null));
+                        }
+                        return new NewPanelClientResponseDTO(Long.valueOf(200),
+                                "Éxito en el envío de los datos.",
+                                false,listOfPanelClients);
+                    }catch (Exception e){
+                        return new NewPanelClientResponseDTO(Long.valueOf(200),
+                                "Há ocurrido un error consultando el listado de clientes.",
+                                true,null);
+                    }
+
+
+                }
         }
         return null;
     }
