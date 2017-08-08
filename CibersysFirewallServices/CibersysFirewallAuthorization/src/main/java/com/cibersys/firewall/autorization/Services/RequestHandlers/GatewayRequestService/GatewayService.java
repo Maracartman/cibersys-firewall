@@ -9,12 +9,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -56,6 +54,22 @@ public class GatewayService {
             AbstractRequestHandler handler  = (AbstractRequestHandler<ResponseEntity<?>>) context.getBean((Class<?>)
                     requestHandlerCollection.get(serviceRequested));
             return (ResponseEntity<?>) handler.proceedRequest(body,header);
+        }else{
+            return ResponseEntity.ok(new ResponseError(Long.valueOf(401),"Servicio no válido",false,null));
+        }
+    }
+
+    @RequestMapping(value = "**/countries", method = RequestMethod.GET)
+    public ResponseEntity<?> processCountriesRequest(@RequestParam(value="id",required = false)String id,HttpServletRequest request){
+        String serviceRequested = request.getRequestURI().split("/")[request.getRequestURI().split("/").length-2] +"/"+
+                request.getRequestURI().split("/")[request.getRequestURI().split("/").length-1];
+        if(requestHandlerCollection.get(serviceRequested) != null){
+            AbstractRequestHandler handler  = (AbstractRequestHandler<ResponseEntity<?>>) context.getBean((Class<?>)
+                    requestHandlerCollection.get(serviceRequested));
+            Map<String,String> body = new HashMap<>();
+            if(id != null)
+            body.put("id",id);
+            return (ResponseEntity<?>) handler.proceedRequest(body,null);
         }else{
             return ResponseEntity.ok(new ResponseError(Long.valueOf(401),"Servicio no válido",false,null));
         }
