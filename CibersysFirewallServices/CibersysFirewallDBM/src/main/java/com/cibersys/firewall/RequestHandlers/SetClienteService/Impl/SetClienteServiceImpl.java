@@ -239,7 +239,7 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                                         , consulting_client.getPais().getIdpais()), new UserInfoDTO(consulting_user.getEmail(), null,
                                         Integer.parseInt(consulting_user.getRol()),
                                         consulting_user.getNombre(), consulting_user.getApellido(),
-                                        false,consulting_user.getIdusuario()), "3", null)));
+                                        false,consulting_user.getIdusuario()), "3", consulting_client.getEstatus().equals("1")?false:true)));
                             } else return new NewPanelClientResponseDTO(Long.valueOf(200),
                                     "El cliente no se ha encontrado.",
                                     true, null);
@@ -249,7 +249,7 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                                 for(Cliente c : clientService.getAllClientes()){
                                     ClientDTO dto = services.mapToClienteDTO(c);
                                     UserInfoDTO uidto = services.mapToUserInfoDTO(usuarioService.getUserByCliente(c));
-                                    listOfPanelClients.add(new NewPanelClientRequestDTO(dto,uidto,"3",null));
+                                    listOfPanelClients.add(new NewPanelClientRequestDTO(dto,uidto,"3",c.getEstatus().equals("1")?false:true));
                                 }
                                 return new NewPanelClientResponseDTO(Long.valueOf(200),
                                         "Éxito en el envío de los datos.",

@@ -33,12 +33,6 @@ public class SetUsuarioResponse extends SetUsuarioRequestDTO {
     }
 
     @Override
-    @JsonIgnore
-    public Boolean getBlock() {
-        return super.getBlock();
-    }
-
-    @Override
     public String getName() {
         return super.getName();
     }

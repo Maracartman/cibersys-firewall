@@ -76,7 +76,10 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                                         null, null, null, "1", new Date(), null, null);
                                 new_user = usuarioService.saveUsuario(true, new_user);
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.", false,
-                                        Arrays.asList(new SetUsuarioResponse(request.getAction(),new_user.getIdusuario(), request.getName(), request.getLastName(), request.getEmail(), request.getBlock(), new_user_password
+                                        Arrays.asList(new SetUsuarioResponse(request.getAction(),
+                                                new_user.getIdusuario(),
+                                                request.getName(), request.getLastName(),
+                                                request.getEmail(),false, new_user_password
                                         )));
                             } else
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "El correo electrónico ya esta en uso.", true, null);
@@ -100,10 +103,10 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                                                     true, null);
                                     }
                                 }
-                                usuarioService.saveUsuario(false, usuario);
+                                usuario = usuarioService.saveUsuario(false, usuario);
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.", false,
                                         Arrays.asList(new SetUsuarioResponse(request.getAction(),usuario.getIdusuario(), usuario.getNombre(),
-                                                usuario.getApellido(), usuario.getEmail(), request.getBlock(),
+                                                usuario.getApellido(), usuario.getEmail(), usuario.getEstatus().equals("1")? false : true,
                                                 _edited ? new_random_password : null, _edited)));
 
 
@@ -113,9 +116,11 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                         case "2":
                             if (usuario != null) {
                                 usuario.setEstatus(request.getBlock() ? "0" : "1");
-                                usuarioService.saveUsuario(false, usuario);
+                                usuario = usuarioService.saveUsuario(false, usuario);
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.", false,
-                                        Arrays.asList(new SetUsuarioResponse(request.getAction(), request.getName(), request.getLastName(), request.getEmail(), request.getBlock(), null
+                                        Arrays.asList(new SetUsuarioResponse(request.getAction(),
+                                                usuario.getNombre(), usuario.getApellido(),
+                                                usuario.getEmail(), usuario.getEstatus().equals("1")? false : true, null
                                         )));
 
 
@@ -128,12 +133,12 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                              * **/
                             if (usuario != null)
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "", false, Arrays.asList(new SetUsuarioResponse(null, usuario.getIdusuario(),
-                                        usuario.getNombre(), usuario.getApellido(), usuario.getEmail(), null, null)));
+                                        usuario.getNombre(), usuario.getApellido(), usuario.getEmail(), usuario.getEstatus().equals("1")? false:true, null)));
                             else {
                                 List<SetUsuarioResponse> sur = new ArrayList<>();
                                 for (Usuario u : usuarioService.getAllUsuario()) {
                                     sur.add(new SetUsuarioResponse(null, u.getIdusuario(), u.getNombre(),
-                                            u.getApellido(), u.getEmail(), null, null));
+                                            u.getApellido(), u.getEmail(),u.getEstatus().equals("1") ? false : true, null));
                                 }
                                 return new SetUsuarioReponseDTO(Long.valueOf(200),
                                         "Éxito en el envío de los datos.", false, sur);
