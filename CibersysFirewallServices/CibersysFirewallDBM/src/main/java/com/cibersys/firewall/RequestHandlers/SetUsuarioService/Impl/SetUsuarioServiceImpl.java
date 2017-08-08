@@ -33,9 +33,14 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
     @Autowired
     private UsuarioRepository usuarioRepository;
 
+    private Boolean _edited = false;
+
+    private String new_random_password;
+
     @Override
     public SetUsuarioReponseDTO proceedRequest(Map<String, String> body, Map<String, String> header) {
         tokenUtils = new TokenUtils(secret, expiration);
+
         try {
             /**
              * Obtenemos el usuario que hace la petición de registro o actualizacion de usuario.
@@ -58,9 +63,9 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                      3. El usuario administrador Cliente (rol igual a 3). Este es la persona de contacto del cliente y se crea cuando creamos al cliente. Este usuario es creado exclusivamente por el administrador Cibersys (rol igual a 1).
                      * **/
                     Usuario usuario = null;
-                    if(request.getIdUsuario() != null )
+                    if (request.getIdUsuario() != null && !request.getAction().equals("0"))
                         usuario = usuarioService.getUserById(request.getIdUsuario());
-                    else if(request.getEmail() != null)
+                    else if (request.getEmail() != null)
                         usuario = usuarioService.getUserByEmail(request.getEmail());
                     switch (request.getAction()) {
                         case "0":
@@ -69,25 +74,41 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                                 Usuario new_user = new Usuario(null, request.getEmail(), passwordEncrypter.cryptWithMD5(new_user_password)
                                         , request.getName(), request.getLastName(), "2",
                                         null, null, null, "1", new Date(), null, null);
-                                usuarioService.saveUsuario(true, new_user);
+                                new_user = usuarioService.saveUsuario(true, new_user);
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.", false,
-                                        Arrays.asList(new SetUsuarioResponse(request.getAction(), request.getName(), request.getLastName(), request.getEmail(), request.getBlock(), new_user_password
+                                        Arrays.asList(new SetUsuarioResponse(request.getAction(),new_user.getIdusuario(), request.getName(), request.getLastName(), request.getEmail(), request.getBlock(), new_user_password
                                         )));
                             } else
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "El correo electrónico ya esta en uso.", true, null);
                         case "1":
+                            _edited = false;
+                            new_random_password = "";
                             if (usuario != null) {
-                                usuario.setApellido(request.getLastName());
-                                usuario.setNombre(request.getName());
-                                usuario.setEmail(request.getEmail());
+                                if (request.getLastName() != null) usuario.setApellido(request.getLastName());
+                                if (request.getName() != null) usuario.setNombre(request.getName());
+                                if (request.getEmail() != null) {
+                                    if (!usuario.getEmail().equals(request.getEmail())) {
+                                        if (usuarioService.getUserByEmail(request.getEmail()) == null) {
+                                            _edited = true;
+                                            usuario.setEmail(request.getEmail());
+                                            new_random_password = managerToken.generateRandomPassword(15);
+                                            usuario.setCodigoValidacion(null);
+                                            usuario.setFechaCodigoValidacion(null);
+                                            usuario.setContraseña(passwordEncrypter.cryptWithMD5(new_random_password));
+                                        } else
+                                            return new SetUsuarioReponseDTO(Long.valueOf(200), "El correo ya se encuentra en la base de Datos.",
+                                                    true, null);
+                                    }
+                                }
                                 usuarioService.saveUsuario(false, usuario);
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.", false,
-                                        Arrays.asList(new SetUsuarioResponse(request.getAction(), request.getName(), request.getLastName(), request.getEmail(), request.getBlock(), null
-                                        )));
+                                        Arrays.asList(new SetUsuarioResponse(request.getAction(),usuario.getIdusuario(), usuario.getNombre(),
+                                                usuario.getApellido(), usuario.getEmail(), request.getBlock(),
+                                                _edited ? new_random_password : null, _edited)));
 
 
                             } else
-                                return new SetUsuarioReponseDTO(Long.valueOf(200), "El correo no se encuentra en la base de Datos.", true, null);
+                                return new SetUsuarioReponseDTO(Long.valueOf(200), "El usuario no se encuentra en la base de Datos.", true, null);
 
                         case "2":
                             if (usuario != null) {
@@ -106,12 +127,12 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                              *
                              * **/
                             if (usuario != null)
-                                return new SetUsuarioReponseDTO(Long.valueOf(200), "", false, Arrays.asList(new SetUsuarioResponse(null,usuario.getIdusuario(),
+                                return new SetUsuarioReponseDTO(Long.valueOf(200), "", false, Arrays.asList(new SetUsuarioResponse(null, usuario.getIdusuario(),
                                         usuario.getNombre(), usuario.getApellido(), usuario.getEmail(), null, null)));
                             else {
                                 List<SetUsuarioResponse> sur = new ArrayList<>();
                                 for (Usuario u : usuarioService.getAllUsuario()) {
-                                    sur.add(new SetUsuarioResponse(null,u.getIdusuario(), u.getNombre(),
+                                    sur.add(new SetUsuarioResponse(null, u.getIdusuario(), u.getNombre(),
                                             u.getApellido(), u.getEmail(), null, null));
                                 }
                                 return new SetUsuarioReponseDTO(Long.valueOf(200),
@@ -121,7 +142,7 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                     }
             }
         } catch (Exception e) {
-            return new SetUsuarioReponseDTO(Long.valueOf(200), "Error obteniendo el usuario solicitante", true, null);
+            return new SetUsuarioReponseDTO(Long.valueOf(200), "Error obteniendo el usuario solicitante.", true, null);
         }
         return new SetUsuarioReponseDTO(Long.valueOf(200), "Error no manejado del servidor.", true, null);
 

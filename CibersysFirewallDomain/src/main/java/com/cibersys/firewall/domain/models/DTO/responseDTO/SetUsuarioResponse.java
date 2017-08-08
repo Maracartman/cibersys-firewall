@@ -11,6 +11,7 @@ import lombok.Data;
 @Data
 public class SetUsuarioResponse extends SetUsuarioRequestDTO {
     private String password;
+    private Boolean edited_mail;
 
     @JsonProperty("password")
     public String getPassword() {
@@ -18,6 +19,11 @@ public class SetUsuarioResponse extends SetUsuarioRequestDTO {
     }
 
     public SetUsuarioResponse() {
+    }
+
+    @JsonProperty("edited_mail")
+    public Boolean getEdited_mail() {
+        return edited_mail;
     }
 
     @Override
@@ -55,5 +61,29 @@ public class SetUsuarioResponse extends SetUsuarioRequestDTO {
     public SetUsuarioResponse(String isNew,Long id,String name, String lastName, String email, Boolean block, String password) {
         super(isNew,id, name, lastName, email, block);
         this.password = password;
+    }
+
+    public SetUsuarioResponse(String action, String name, String lastName, String email, Boolean block, String nonEncryptedPassword
+            , Long idUsuario, String password, Boolean edited_mail) {
+        super(action, name, lastName, email, block, nonEncryptedPassword, idUsuario);
+        this.password = password;
+        this.edited_mail = edited_mail;
+    }
+
+    public SetUsuarioResponse(String action, String name, String lastName, String email, Boolean block, String password, Boolean edited_mail) {
+        super(action, name, lastName, email, block);
+        this.password = password;
+        this.edited_mail = edited_mail;
+    }
+
+    public SetUsuarioResponse(String action, Long id, String name, String lastName, String email, Boolean block, String password, Boolean edited_mail) {
+        super(action, id, name, lastName, email, block);
+        this.password = password;
+        this.edited_mail = edited_mail;
+    }
+
+    public SetUsuarioResponse(String password, Boolean edited_mail) {
+        this.password = password;
+        this.edited_mail = edited_mail;
     }
 }

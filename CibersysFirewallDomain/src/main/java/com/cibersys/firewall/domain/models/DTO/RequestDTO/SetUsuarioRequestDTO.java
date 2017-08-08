@@ -40,7 +40,7 @@ public class SetUsuarioRequestDTO {
 
     public SetUsuarioRequestDTO() {
     }
-    @JsonProperty("userId")
+    @JsonProperty("id")
     public Long getIdUsuario() {
         return idUsuario;
     }

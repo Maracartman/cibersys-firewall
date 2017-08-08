@@ -34,7 +34,8 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<AbstractRespon
         HttpEntity<SetUsuarioRequestDTO> request = new HttpEntity<SetUsuarioRequestDTO>(setUsuarioRequest, headers);
         try {
             SetUsuarioReponseDTO consult = restTemplate.postForObject(dbmRoute + dbmSetUsuario, request, SetUsuarioReponseDTO.class);
-            if (!consult.getError() && setUsuarioRequest.getAction().equalsIgnoreCase("0") ) {
+            if (!consult.getError() && (setUsuarioRequest.getAction().equalsIgnoreCase("0") ||(setUsuarioRequest.getAction().equalsIgnoreCase("1") &&
+            consult.getResponse() != null && consult.getResponse().get(0).getEdited_mail())) ) {
                 /**
                  * Aqui se retorna la información obtenida del servicio de correo
                  *
