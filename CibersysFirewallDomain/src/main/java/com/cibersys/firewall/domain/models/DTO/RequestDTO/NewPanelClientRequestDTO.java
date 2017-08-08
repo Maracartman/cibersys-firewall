@@ -4,11 +4,13 @@ import com.cibersys.firewall.domain.models.DTO.model.ClientDTO;
 import com.cibersys.firewall.domain.models.DTO.model.UserInfoDTO;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 
 /**
  * Created by Maracartman on 31/7/2017.
  */
 @AllArgsConstructor
+@Data
 public class NewPanelClientRequestDTO {
 
     private ClientDTO clientInfo;

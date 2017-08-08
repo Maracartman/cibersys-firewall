@@ -161,6 +161,10 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                                                 true, null);
 
                                     } else body.getUserInfo().setEdited_mail(false);
+                                }else{
+                                    UserInfoDTO  consult = new UserInfoDTO(editing_user.getEmail(),null,
+                                            Integer.valueOf(editing_user.getRol()),editing_user.getNombre(),editing_user.getApellido(),null,editing_user.getIdusuario());
+                                    body.setUserInfo(consult);
                                 }
                                 editing_client = clientService.guardarCliente(editing_client);
                                 if (editing_client != null) {
