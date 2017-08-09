@@ -63,7 +63,6 @@
     </dependencies>
 
     <profiles>
-
         <profile>
             <id>Development-remote</id>
             <properties>
@@ -141,6 +140,17 @@
             <properties>
                 <spring.profiles.active>production</spring.profiles.active>
             </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                        <configuration>
+                            <executable>true</executable>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
 
         <profile>
@@ -172,4 +182,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
