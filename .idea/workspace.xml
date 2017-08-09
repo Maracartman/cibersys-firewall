@@ -7,8 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0dfa1381-676e-486a-bdc9-8f4b286316c5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/pom.xml" afterPath="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallAuthorization/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CibersysFirewallServices/pom.xml" afterPath="$PROJECT_DIR$/CibersysFirewallServices/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/CibersysFirewallServices/CibersysAccountsMannager/target/" />
     <ignored path="$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallConfig/target/" />
@@ -1076,15 +1074,15 @@
       <workItem from="1501803983302" duration="6210000" />
       <workItem from="1502109375046" duration="17562000" />
       <workItem from="1502195345780" duration="20729000" />
-      <workItem from="1502288781933" duration="303000" />
+      <workItem from="1502288781933" duration="901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173208000" />
+    <option name="totallyTimeSpent" value="173806000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1376" height="784" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
