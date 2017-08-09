@@ -58,7 +58,7 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
         Pais pais = client != null ? paisService.getPaisById(client.getPais()) : null;
 
         switch (requester_userDTO.getIdRol()) {
-            case 1:
+            case 2:
                 switch (body.getAction()) {
                     case "0":
                         if (client == null || user == null || pais == null)
@@ -268,7 +268,7 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                         }
                 }
                 default: return new NewPanelClientResponseDTO(Long.valueOf(200),
-                        "No posee los permisos para este servicio",
+                        "No posee los permisos para este servicio.",
                         true, null);
         }
     }
