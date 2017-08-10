@@ -137,6 +137,9 @@
 
         <profile>
             <id>Production</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <spring.profiles.active>production</spring.profiles.active>
             </properties>
