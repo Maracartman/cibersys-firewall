@@ -85,4 +85,9 @@ public class UsuarioServiceImpl implements UsuarioService{
         return repository.findAllByCliente(cli);
     }
 
+    @Override
+    public List<Usuario> getAllUsuariosByRol(String rol) {
+        return repository.findAllByRol(rol);
+    }
+
 }

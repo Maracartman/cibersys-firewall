@@ -32,4 +32,6 @@ public interface UsuarioService {
     List<Usuario> getAllUsuarioByRolAndCliente(String rol, Cliente cli);
 
     List<Usuario> getAllUsuarioByCliente(Cliente cli);
+
+    List<Usuario> getAllUsuariosByRol(String rol);
 }

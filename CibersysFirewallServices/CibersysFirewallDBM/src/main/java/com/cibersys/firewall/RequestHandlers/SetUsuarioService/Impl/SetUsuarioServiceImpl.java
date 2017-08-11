@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by Maracartman on 27/7/2017.
@@ -139,11 +140,13 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "", false, Arrays.asList(new SetUsuarioResponse(null, usuario.getIdusuario(),
                                         usuario.getNombre(), usuario.getApellido(), usuario.getEmail(), usuario.getEstatus().equals("1")? false:true, null)));
                             else {
+                                List<Usuario> users;
+                                users = requester_user.getIdRol() == 1 ?  usuarioService.getAllUsuariosByRol("2") : usuarioService.getAllUsuarioByRolAndCliente("4",
+                                        usuarioService.getUserByEmail(requester_user.getUserName()).getCliente());
                                 List<SetUsuarioResponse> sur = new ArrayList<>();
-                                for (Usuario u : usuarioService.getAllUsuario()) {
-                                    sur.add(new SetUsuarioResponse(null, u.getIdusuario(), u.getNombre(),
-                                            u.getApellido(), u.getEmail(),u.getEstatus().equals("1") ? false : true, null));
-                                }
+                                if(users !=null)
+                                    sur.addAll(users.stream().map(u -> new SetUsuarioResponse(null, u.getIdusuario(), u.getNombre(),
+                                            u.getApellido(), u.getEmail(), u.getEstatus().equals("1") ? false : true, null)).collect(Collectors.toList()));
                                 return new SetUsuarioReponseDTO(Long.valueOf(200),
                                         "Éxito en el envío de los datos.", false, sur);
                             }

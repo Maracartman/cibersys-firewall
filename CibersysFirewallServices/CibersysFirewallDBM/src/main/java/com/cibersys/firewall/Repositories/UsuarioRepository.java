@@ -35,5 +35,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario,Long> {
     List<Usuario> findAllByRolAndCliente(String rol, Cliente cli);
 
     List<Usuario> findAllByCliente(Cliente cli);
+
+    List<Usuario> findAllByRol(String rol);
 }
 
