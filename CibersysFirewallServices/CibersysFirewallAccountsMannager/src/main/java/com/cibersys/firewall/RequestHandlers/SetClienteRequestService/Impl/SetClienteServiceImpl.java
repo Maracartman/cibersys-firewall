@@ -38,7 +38,7 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                 /**
                  * Aqui configuramos el correo.
                  * **/
-                if(consult.getResponse().size() == 1 &&  consult.getResponse().get(0).getUserInfo() != null &&
+                if(consult.getResponse() != null && consult.getResponse().size() == 1 &&  consult.getResponse().get(0).getUserInfo() != null &&
                         consult.getResponse().get(0).getUserInfo().getEdited_mail() != null
                         && consult.getResponse().get(0).getUserInfo().getEdited_mail()){
 

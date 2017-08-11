@@ -103,9 +103,11 @@ public class AppFilter extends OncePerRequestFilter {
     private boolean verifyRolRequeriment(UserDTO userToken, String requested_service) {
         switch (requested_service){
             case "client":
-                return userToken.getIdRol().toString().equalsIgnoreCase("2")? true : false;
+                return userToken.getIdRol().toString().equalsIgnoreCase("1")
+             || userToken.getIdRol().toString().equalsIgnoreCase("2")? true : false;
             default:
-                return userToken.getIdRol().toString().equalsIgnoreCase("1")? true : false;
+                return userToken.getIdRol().toString().equalsIgnoreCase("1") ||
+                        userToken.getIdRol().toString().equalsIgnoreCase("3")? true : false;
         }
     }
 }

@@ -6,6 +6,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * Created by Maracartman on 31/7/2017.
  */
@@ -16,6 +18,8 @@ public class NewPanelClientRequestDTO {
     private ClientDTO clientInfo;
 
     private UserInfoDTO userInfo;
+
+    private List<UserInfoDTO> clientUsers;
 
     private String action;
 
@@ -43,4 +47,7 @@ public class NewPanelClientRequestDTO {
     public UserInfoDTO getUserInfo() {
         return userInfo;
     }
+
+    @JsonProperty("clientUsers")
+    public List<UserInfoDTO> getClientUsers(){return this.clientUsers;}
 }

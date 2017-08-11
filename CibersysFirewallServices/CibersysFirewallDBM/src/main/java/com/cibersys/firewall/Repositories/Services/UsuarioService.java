@@ -25,7 +25,11 @@ public interface UsuarioService {
 
     Usuario find(Long usuario);
 
-    Usuario getUserByCliente(Cliente cliente);
+    Usuario getClientAdministratorByCliente(Cliente cliente);
 
     List<Usuario> getAllUsuario();
+
+    List<Usuario> getAllUsuarioByRolAndCliente(String rol, Cliente cli);
+
+    List<Usuario> getAllUsuarioByCliente(Cliente cli);
 }

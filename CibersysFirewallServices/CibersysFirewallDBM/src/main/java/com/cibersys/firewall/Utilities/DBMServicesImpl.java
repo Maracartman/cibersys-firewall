@@ -22,6 +22,6 @@ public class DBMServicesImpl implements DBMServices {
         return  new UserInfoDTO(usuario.getEmail(), null,
                 Integer.parseInt(usuario.getRol()),
                 usuario.getNombre(), usuario.getApellido(),
-                false,usuario.getIdusuario());
+                false,usuario.getIdusuario(),usuario.getEstatus().equals("1")?false:true);
     }
 }

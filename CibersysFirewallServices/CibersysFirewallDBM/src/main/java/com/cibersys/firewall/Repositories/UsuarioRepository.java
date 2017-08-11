@@ -30,6 +30,10 @@ public interface UsuarioRepository extends JpaRepository<Usuario,Long> {
 
     Usuario findByidusuario(Long id);
 
-    Usuario findByCliente(Cliente idCliente);
+    Usuario findOneByClienteAndRol(Cliente idCliente,String rol);
+
+    List<Usuario> findAllByRolAndCliente(String rol, Cliente cli);
+
+    List<Usuario> findAllByCliente(Cliente cli);
 }
 

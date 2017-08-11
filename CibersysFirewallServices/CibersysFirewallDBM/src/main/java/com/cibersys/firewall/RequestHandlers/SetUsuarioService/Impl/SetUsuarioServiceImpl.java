@@ -7,6 +7,7 @@ import com.cibersys.firewall.Repositories.UsuarioRepository;
 import com.cibersys.firewall.RequestHandlers.AbstractHandler.Impl.AbstractRequestHandler;
 import com.cibersys.firewall.RequestHandlers.SetUsuarioService.SetUsuarioService;
 import com.cibersys.firewall.Utilities.ManagerToken;
+import com.cibersys.firewall.converter.PasswordEncrypter;
 import com.cibersys.firewall.domain.models.DTO.RequestDTO.SetUsuarioRequestDTO;
 import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.SetUsuarioReponseDTO;
@@ -37,6 +38,9 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
 
     private String new_random_password;
 
+    @Autowired
+    private PasswordEncrypter passwordEncrypter;
+
     @Override
     public SetUsuarioReponseDTO proceedRequest(Map<String, String> body, Map<String, String> header) {
         tokenUtils = new TokenUtils(secret, expiration);
@@ -55,8 +59,7 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
             /**
              * verificamos los roles dependiendo de lo solicitado y el tipo de rol procedemos a realizar el registro del usuario
              * **/
-            switch (requester_user.getIdRol()) {
-                case 1:
+
                     /**
                      * El que registra es un administrador (1)
                      * 2. El usuario otro usuario Cibersys (rol igual a 2). Este es un usuario Cibersys que se crea para que atienda las solicitudes de los clientes y es creado exclusivamente por el administrador Cibersys (rol igual a 1).
@@ -72,8 +75,9 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                             if (usuario == null) {
                                 String new_user_password = managerToken.generateRandomPassword(15);
                                 Usuario new_user = new Usuario(null, request.getEmail(), passwordEncrypter.cryptWithMD5(new_user_password)
-                                        , request.getName(), request.getLastName(), "2",
-                                        null, null, null, "1", new Date(), null, null);
+                                        , request.getName(), request.getLastName(), requester_user.getIdRol() == 1? "2":"4",
+                                        null, null, null, "1", new Date(), null, requester_user.getIdRol() != 3? null :
+                                        usuarioService.getUserByEmail(requester_user.getUserName()).getCliente());
                                 new_user = usuarioService.saveUsuario(true, new_user);
                                 return new SetUsuarioReponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.", false,
                                         Arrays.asList(new SetUsuarioResponse(request.getAction(),
@@ -143,9 +147,8 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                                 return new SetUsuarioReponseDTO(Long.valueOf(200),
                                         "Éxito en el envío de los datos.", false, sur);
                             }
-
                     }
-            }
+
         } catch (Exception e) {
             return new SetUsuarioReponseDTO(Long.valueOf(200), "Error obteniendo el usuario solicitante.", true, null);
         }

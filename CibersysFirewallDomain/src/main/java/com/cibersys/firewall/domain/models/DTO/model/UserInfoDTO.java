@@ -1,6 +1,5 @@
 package com.cibersys.firewall.domain.models.DTO.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,6 +16,7 @@ public class UserInfoDTO {
     private String name, lastName;
     private Boolean edited_mail;
     private Long userId;
+    private Boolean block;
 
     @JsonProperty("userId")
     public Long getUserId() {
@@ -51,5 +51,10 @@ public class UserInfoDTO {
     @JsonProperty("rol")
     public Integer getIdRol() {
         return idRol;
+    }
+
+    @JsonProperty("block")
+    public Boolean getBlock() {
+        return block;
     }
 }
