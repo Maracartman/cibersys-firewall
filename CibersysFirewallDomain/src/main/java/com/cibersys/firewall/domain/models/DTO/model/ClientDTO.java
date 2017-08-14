@@ -13,6 +13,7 @@ public class ClientDTO {
 
     private String nombreEmpresa, direccion, telefono;
     private Long id, pais;
+    private String fechaCreacion;
 
 
     public ClientDTO() {
@@ -42,4 +43,7 @@ public class ClientDTO {
     public Long getPais() {
         return pais;
     }
+
+    @JsonProperty("fecha_creacion")
+    public String getFechaCreacion(){return  this.fechaCreacion;}
 }

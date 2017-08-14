@@ -14,7 +14,7 @@ public class DBMServicesImpl implements DBMServices {
     @Override
     public ClientDTO mapToClienteDTO(Cliente cliente) {
         return new ClientDTO(cliente.getNombre(),cliente.getDireccion(),cliente.getTelefono1(),
-                cliente.getIdcliente(),cliente.getPais().getIdpais());
+                cliente.getIdcliente(),cliente.getPais().getIdpais(),cliente.getFechaActivacion().toString());
     }
 
     @Override

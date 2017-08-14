@@ -248,7 +248,7 @@ public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceI
                         return new NewPanelClientResponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.",
                                 false, Arrays.asList(new NewPanelClientRequestDTO(new ClientDTO(consulting_client.getNombre(),
                                 consulting_client.getDireccion(), consulting_client.getTelefono1(), consulting_client.getIdcliente()
-                                , consulting_client.getPais().getIdpais()), new UserInfoDTO(consulting_user.getEmail(), null,
+                                , consulting_client.getPais().getIdpais(),consulting_client.getFechaActivacion().toString()), new UserInfoDTO(consulting_user.getEmail(), null,
                                 Integer.parseInt(consulting_user.getRol()),
                                 consulting_user.getNombre(), consulting_user.getApellido(),
                                 false, consulting_user.getIdusuario(), consulting_user.getEstatus().equals("1") ? false : true), sur, "3",

@@ -4,6 +4,9 @@ package com.cibersys.firewall.Utilities;
 import org.joda.time.DateTime;
 import org.joda.time.Period;
 import org.springframework.stereotype.Service;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -21,4 +24,18 @@ public class TimingUtilities {
                 p.getMonths() != 0 ||
         p.getYears() != 0 ? true : false;
         }
+
+/**
+ * Formateador de fechas estandar.
+ *
+ * **/
+  private Date standarApplicationDateFormatter(Date old_format_date){
+      SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+      try {
+          return formatter.parse(old_format_date.toString());
+      } catch (ParseException e) {
+          e.printStackTrace();
+          return null;
+      }
+  }
 }

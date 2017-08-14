@@ -1,13 +1,9 @@
 server:
   port: 5655
 
-  ssl:
-      key-store: /etc/letsencrypt/live/qa.cc.cloudvoice.io/keystore.p12
-      keyStoreType: PKCS12
-      key-store-password: ark123456
-
-  security:
-      require-ssl: true
+spring:
+  profiles:
+      active: @spring.profiles.active@
 
 cibersys:
     services:
@@ -78,9 +74,6 @@ server:
       key-store: /etc/letsencrypt/live/qa.cc.cloudvoice.io/keystore.p12
       keyStoreType: PKCS12
       key-store-password: ark123456
-      
-
-
   security:
       require-ssl: true
 
@@ -93,17 +86,6 @@ cibersys:
           route: http://localhost:5656
         mannager:
           route: http://localhost:5657
-
-server:
-  ssl:
-      key-store: /etc/letsencrypt/live/qa.cc.cloudvoice.io/keystore.p12
-      keyStoreType: PKCS12
-      key-store-password: ark123456
-
-
-
-  security:
-      require-ssl: false
 
 ---
 spring:
