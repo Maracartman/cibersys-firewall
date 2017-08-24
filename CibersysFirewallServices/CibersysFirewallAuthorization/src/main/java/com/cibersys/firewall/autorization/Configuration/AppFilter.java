@@ -4,6 +4,7 @@ package com.cibersys.firewall.autorization.Configuration;
 import com.cibersys.firewall.autorization.Services.Utilities.UserGeneralRequestBuilder;
 import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
 import com.cibersys.firewall.domain.models.DTO.responseDTO.LoginResponse;
+import com.cibersys.firewall.security.ApplicationSecurityEnvironment;
 import com.cibersys.firewall.security.TokenUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -54,6 +55,9 @@ public class AppFilter extends OncePerRequestFilter {
     private TokenUtils tokenUtils = new TokenUtils(secret, expiration);
 
 
+    private ApplicationSecurityEnvironment securityEnvironment = new ApplicationSecurityEnvironment();
+
+
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
@@ -77,11 +81,7 @@ public class AppFilter extends OncePerRequestFilter {
                     String requested_service = request.getRequestURL().toString().split("/")
                             [request.getRequestURL().toString().split("/").length -1];
                     if(verifyValidRequest(userToken,requested_service)){
-                        Collection<SimpleGrantedAuthority> authorities = new ArrayList<SimpleGrantedAuthority>();
-                        authorities.add(new SimpleGrantedAuthority("ADMIN"));
-                        UsernamePasswordAuthenticationToken authRequest = new UsernamePasswordAuthenticationToken(userToken.getUserName(), userToken.getPassword(), authorities);
-                        SecurityContextHolder.getContext().setAuthentication(authRequest);
-                        filterChain.doFilter(request, response);
+                        securityEnvironment.proceedRequest(filterChain,request,response,userToken);
                     }else{
                         ((HttpServletResponse) response).sendError(HttpServletResponse.SC_UNAUTHORIZED, "El usuario no posee los permisos para " +
                                 "este servicio.");
@@ -107,7 +107,8 @@ public class AppFilter extends OncePerRequestFilter {
              || userToken.getIdRol().toString().equalsIgnoreCase("2")? true : false;
             default:
                 return userToken.getIdRol().toString().equalsIgnoreCase("1") ||
-                        userToken.getIdRol().toString().equalsIgnoreCase("3")? true : false;
+                        userToken.getIdRol().toString().equalsIgnoreCase("3")
+                        || userToken.getIdRol().toString().equalsIgnoreCase("4")? true : false;
         }
     }
 }

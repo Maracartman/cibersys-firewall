@@ -29,8 +29,13 @@ public class UserVerificationServiceImpl extends AbstractRequestHandler<Abstract
     @Override
     public AbstractResponseBody proceedRequest(Map<String,String> body,Map<String, String> header) {
         UserDTO user = objectMapper.convertValue(body,UserDTO.class);
-        Usuario usuario = usuarioRepository.findOneByEmailAndContraseñaAndEstatus(user.getUserName(),user.getPassword().length()>20 ? user.getPassword() : encrypter.cryptWithMD5(user.getPassword()),"1");
-        return usuario != null? (AbstractResponseBody) new LoginResponse(Long.valueOf(200),"",false,new UserDTO(usuario.getEmail(),usuario.getContraseña(),Integer.parseInt(usuario.getRol()))) : new ResponseError(Long.valueOf(401),"Usuario no encontrado.",true,null);
+        Usuario usuario = usuarioRepository.findOneByEmailAndContraseñaAndEstatus(user.getUserName(),
+                user.getPassword().length()>20 ? user.getPassword() :
+                        encrypter.cryptWithMD5(user.getPassword()),"1");
+
+        return usuario != null && !usuario.getRol().equals("5")? (AbstractResponseBody) new LoginResponse(Long.valueOf(200),
+                "",false,new UserDTO(usuario.getEmail(),usuario.getContraseña(),
+                Integer.parseInt(usuario.getRol()))) : new ResponseError(Long.valueOf(401),"Usuario no encontrado, o no válido.",true,null);
     }
 
 }

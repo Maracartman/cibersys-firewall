@@ -19,6 +19,13 @@ public class SetUsuarioRequestDTO {
     protected String nonEncryptedPassword;
     protected Long idUsuario;
 
+    /**
+     * Mapping para Usuario cliente bajo el mismo servicio de creacion de usuario
+     ***/
+    protected Boolean userClient;
+    protected String IpAddress;
+
+
 
 
     public SetUsuarioRequestDTO(String action, String name, String lastName, String email, Boolean block) {
@@ -40,6 +47,9 @@ public class SetUsuarioRequestDTO {
 
     public SetUsuarioRequestDTO() {
     }
+    /**
+     * Se puede usar este campo en caso de que sea crear un usuario cliente:
+     * */
     @JsonProperty("id")
     public Long getIdUsuario() {
         return idUsuario;
@@ -52,7 +62,6 @@ public class SetUsuarioRequestDTO {
     public Boolean getBlock() {
         return block;
     }
-
 
     @JsonProperty("action")
     public String getAction() {
@@ -73,6 +82,16 @@ public class SetUsuarioRequestDTO {
     public String getEmail() {
         return email;
     }
-
-
+    /***
+     * Para usuarios clientes
+     *
+     * ***/
+    @JsonProperty("user_client")
+    public Boolean getUserClient() {
+        return userClient;
+    }
+    @JsonProperty("ip_address")
+    public String getIpAddress() {
+        return IpAddress;
+    }
 }

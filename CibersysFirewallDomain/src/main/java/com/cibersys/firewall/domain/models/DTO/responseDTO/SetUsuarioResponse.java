@@ -13,6 +13,12 @@ public class SetUsuarioResponse extends SetUsuarioRequestDTO {
     private String password;
     private Boolean edited_mail;
 
+
+    @Override
+    public String getAction() {
+        return action;
+    }
+
     @JsonProperty("password")
     public String getPassword() {
         return password;
@@ -26,26 +32,7 @@ public class SetUsuarioResponse extends SetUsuarioRequestDTO {
         return edited_mail;
     }
 
-    @Override
-    @JsonIgnore
-    public String getAction() {
-        return super.getAction();
-    }
 
-    @Override
-    public String getName() {
-        return super.getName();
-    }
-
-    @Override
-    public String getLastName() {
-        return super.getLastName();
-    }
-
-    @Override
-    public String getEmail() {
-        return super.getEmail();
-    }
 
     public SetUsuarioResponse(String isNew, String name, String lastName, String email, Boolean block, String password) {
         super(isNew, name, lastName, email, block);
@@ -57,12 +44,6 @@ public class SetUsuarioResponse extends SetUsuarioRequestDTO {
         this.password = password;
     }
 
-    public SetUsuarioResponse(String action, String name, String lastName, String email, Boolean block, String nonEncryptedPassword
-            , Long idUsuario, String password, Boolean edited_mail) {
-        super(action, name, lastName, email, block, nonEncryptedPassword, idUsuario);
-        this.password = password;
-        this.edited_mail = edited_mail;
-    }
 
     public SetUsuarioResponse(String action, String name, String lastName, String email, Boolean block, String password, Boolean edited_mail) {
         super(action, name, lastName, email, block);

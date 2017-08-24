@@ -3,6 +3,7 @@ package com.cibersys.firewall.Utilities;
 import com.cibersys.firewall.Domain.Model.Cliente;
 import com.cibersys.firewall.Domain.Model.Usuario;
 import com.cibersys.firewall.domain.models.DTO.model.ClientDTO;
+import com.cibersys.firewall.domain.models.DTO.model.UserDTO;
 import com.cibersys.firewall.domain.models.DTO.model.UserInfoDTO;
 import org.springframework.stereotype.Service;
 
@@ -24,4 +25,6 @@ public class DBMServicesImpl implements DBMServices {
                 usuario.getNombre(), usuario.getApellido(),
                 false,usuario.getIdusuario(),usuario.getEstatus().equals("1")?false:true);
     }
+
+
 }

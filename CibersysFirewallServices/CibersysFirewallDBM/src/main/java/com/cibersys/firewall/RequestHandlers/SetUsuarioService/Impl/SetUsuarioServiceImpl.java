@@ -1,7 +1,11 @@
 package com.cibersys.firewall.RequestHandlers.SetUsuarioService.Impl;
 
 
+import com.cibersys.firewall.Domain.Model.Cliente;
 import com.cibersys.firewall.Domain.Model.Usuario;
+import com.cibersys.firewall.Domain.Model.UsuarioCliente;
+import com.cibersys.firewall.Repositories.Services.ClientService;
+import com.cibersys.firewall.Repositories.Services.UsuarioClienteService;
 import com.cibersys.firewall.Repositories.Services.UsuarioService;
 import com.cibersys.firewall.Repositories.UsuarioRepository;
 import com.cibersys.firewall.RequestHandlers.AbstractHandler.Impl.AbstractRequestHandler;
@@ -31,6 +35,12 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
 
     @Autowired
     private UsuarioService usuarioService;
+
+    @Autowired
+    private UsuarioClienteService usuarioClienteService;
+
+    @Autowired
+    private ClientService clientService;
 
     @Autowired
     private UsuarioRepository usuarioRepository;
@@ -74,18 +84,43 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
             switch (request.getAction()) {
                 case "0":
                     if (usuario == null) {
-                        String new_user_password = managerToken.generateRandomPassword(15);
-                        Usuario new_user = new Usuario(null, request.getEmail(), passwordEncrypter.cryptWithMD5(new_user_password)
-                                , request.getName(), request.getLastName(), requester_user.getIdRol() == 1 ? "2" : "4",
-                                null, null, null, "1", new Date(), null, requester_user.getIdRol() != 3 ? null :
-                                usuarioService.getUserByEmail(requester_user.getUserName()).getCliente());
-                        new_user = usuarioService.saveUsuario(true, new_user);
-                        return new SetUsuarioReponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.", false,
-                                Arrays.asList(new SetUsuarioResponse(request.getAction(),
-                                        new_user.getIdusuario(),
-                                        request.getName(), request.getLastName(),
-                                        request.getEmail(), false, new_user_password
-                                )));
+                        if(request.getUserClient() != null && request.getUserClient()){
+                            if(requester_user.getIdRol() == 3 || requester_user.getIdRol() == 4){
+                                Usuario creador = usuarioService.getUserByEmail(requester_user.getUserName());
+
+                                UsuarioCliente usuarioCliente = new UsuarioCliente(null,request.getName(),
+                                        request.getLastName(),request.getEmail(),request.getIpAddress(),
+                                        creador.getCliente(),creador, new Date(),"1");
+                                UsuarioCliente result = usuarioClienteService.guardarUsuarioCliente(usuarioCliente);
+
+                                return  result != null ?
+                                        new SetUsuarioReponseDTO(Long.valueOf(200),
+                                                "Éxito en el envío de los datos.", false,
+                                        Arrays.asList(new SetUsuarioResponse(request.getAction(),
+                                                result.getIdUsuarioCliente(),
+                                                request.getName(), request.getLastName(),
+                                                request.getEmail(), false, null
+                                        ))) : new SetUsuarioReponseDTO(Long.valueOf(200),
+                                        "Ha ocurrido un error guardando los datos verifique y envie nuevamente.", true, null);
+                            }else
+                                return new SetUsuarioReponseDTO(Long.valueOf(200),
+                                        "No posee los permisos para crear este tipo de usuario.", true, null);
+
+                        }else{
+                            String new_user_password = managerToken.generateRandomPassword(15);
+                            Usuario new_user = new Usuario(null, request.getEmail(), passwordEncrypter.cryptWithMD5(new_user_password)
+                                    , request.getName(), request.getLastName(), requester_user.getIdRol() == 1 ? "2" : "4",
+                                    null, null, null, "1", new Date(), null, requester_user.getIdRol() != 3 ? null :
+                                    usuarioService.getUserByEmail(requester_user.getUserName()).getCliente());
+                            new_user = usuarioService.saveUsuario(true, new_user);
+                            return new SetUsuarioReponseDTO(Long.valueOf(200), "Éxito en el envío de los datos.", false,
+                                    Arrays.asList(new SetUsuarioResponse(request.getAction(),
+                                            new_user.getIdusuario(),
+                                            request.getName(), request.getLastName(),
+                                            request.getEmail(), false, new_user_password
+                                    )));
+                        }
+
                     } else
                         return new SetUsuarioReponseDTO(Long.valueOf(200), "El correo electrónico ya esta en uso.", true, null);
                 case "1":

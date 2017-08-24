@@ -1,15 +1,15 @@
 package com.cibersys.firewall.Domain.Model;
 
-import lombok.AllArgsConstructor;
+
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 /**
  * Created by Luis Maracara on 6/14/2017.
  */
 @Entity
-@AllArgsConstructor
 @Table(name = "cliente")
 public class Cliente {
     @Id
@@ -36,6 +36,34 @@ public class Cliente {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "idpais")
     private Pais pais;
+
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    private Set<UsuarioCliente> listOfUserClients;
+
+
+    public Cliente(String rif, String direccion,
+                   String telefono_1, String telefono_2,
+                   String email, String nombre, String estatus,
+                   String s, Date fecha_activacion,
+                   Date fecha_actualizacion,
+                   Usuario usuarioActivacion,
+                   Usuario usuarioActualizacion,
+                   Pais pais) {
+        this.rif = rif;
+        this.direccion = direccion;
+        this.telefono_1 = telefono_1;
+        this.telefono_2 = telefono_2;
+        this.email = email;
+        this.nombre = nombre;
+        this.estatus = estatus;
+        this.fecha_activacion = fecha_activacion;
+        this.fecha_actualizacion = fecha_actualizacion;
+        this.usuarioActivacion = usuarioActivacion;
+        this.usuarioActualizacion = usuarioActualizacion;
+        this.pais = pais;
+    }
+
+
 
     public Cliente() {
     }

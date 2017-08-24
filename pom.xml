@@ -7,7 +7,7 @@
     <groupId>com.cibersys.firewall</groupId>
     <artifactId>CibersysFirewall</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>2.1.2</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
