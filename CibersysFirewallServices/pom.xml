@@ -18,15 +18,16 @@
         <module>CibersysFirewallConfig</module>
         <module>CibersysFirewallAccountsMannager</module>
         <module>CibersysFirewallDBM</module>
+        <module>CibersysFirewallGroupsMannager</module>
     </modules>
 
 
     <dependencies>
         <dependency>
-            <!-- Setup Spring Boot -->
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
+        <!-- Setup Spring Boot -->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+    </dependency>
 
         <dependency>
             <!-- Setup Spring MVC & REST, use Embedded Tomcat -->

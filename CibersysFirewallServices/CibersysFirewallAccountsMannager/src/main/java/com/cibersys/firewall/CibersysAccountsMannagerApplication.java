@@ -29,7 +29,7 @@ public class CibersysAccountsMannagerApplication {
 
 	@Bean
 	public Map<String,Class<?>> requestHandlerCollection(){
-		Map<String, Class<?>> map = new HashMap<>();
+		Map<String, Class<?>> map = new HashMap<String,Class<?>>();
 
 		/**
 		 *

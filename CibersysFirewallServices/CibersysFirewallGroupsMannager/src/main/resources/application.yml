@@ -1,0 +1,42 @@
+server:
+  port: 5659
+#Configuracion de seguridad
+cibersys:
+  token:
+    header: X-Auth-Token
+    secret: 1234567890*-+/AbCdEfGhIjKlMnOpQrStUvWxYz.,
+    expiration: 604800
+  #Configuracion de enrutamiento
+  services:
+          services: /CibersysFirewall/groups/
+          path: CibersysFirewall/groups/
+
+          groups:
+            services: /CibersysFirewall/groups/
+            path: CibersysFirewall/mailer/
+
+          dbm:
+            services: /CibersysFirewall/dbm/
+            usuario: /CibersysFirewall/dbm/usuario
+            route: http://localhost:5656
+          mailer:
+            path: CibersysFirewall/mailer/
+            route: http://localhost:5658
+            services: CibersysFirewall/mailer/
+            recuperatepassword: /CibersysFirewall/mailer/recuperatepassword
+
+---
+spring:
+  application:
+    name: groups-mannager
+  profiles: production
+---
+spring:
+  profiles: development
+---
+spring:
+  profiles: remote
+
+
+
+

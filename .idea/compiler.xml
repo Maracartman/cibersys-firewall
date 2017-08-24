@@ -21,6 +21,7 @@
         <module name="CibersysFirewallConfig" />
         <module name="CibersysFirewallDBM" />
         <module name="CibersysFirewallDomain" />
+        <module name="CibersysFirewallGroupsMannager" />
         <module name="cibersysfirewallmailer" />
         <module name="CibersysFirewallMailer" />
       </profile>
@@ -30,18 +31,19 @@
       <module name="cibersys-firewall-backend" target="1.6" />
       <module name="cibersys-firewall-eureka" target="1.6" />
       <module name="CibersysAccountsMannager" target="1.8" />
-      <module name="CibersysFirewallAccountsMannager" target="1.8" />
+      <module name="CibersysFirewallAccountsMannager" target="1.6" />
       <module name="CibersysFirewallAuthorization" target="1.7" />
       <module name="CibersysfirewallAuthorization" target="1.7" />
       <module name="cibersysfirewallcenter" target="1.8" />
       <module name="CibersysFirewallCenter" target="1.8" />
       <module name="CibersysFirewallCommons" target="1.5" />
       <module name="CibersysFirewallConfig" target="1.6" />
-      <module name="CibersysFirewallDBM" target="1.8" />
+      <module name="CibersysFirewallDBM" target="1.6" />
       <module name="CibersysFirewallDomain" target="1.5" />
       <module name="CibersysFirewallEureka" target="1.8" />
+      <module name="CibersysFirewallGroupsMannager" target="1.8" />
       <module name="CibersysFirewallMailer" target="1.8" />
-      <module name="cibersysfirewallmailer" target="1.8" />
+      <module name="cibersysfirewallmailer" target="1.6" />
       <module name="CibersysFirewallServices" target="1.6" />
     </bytecodeTargetLevel>
   </component>

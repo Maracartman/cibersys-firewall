@@ -10,6 +10,7 @@
     <file url="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallConfig" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallDBM" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallEureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallGroupsMannager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CibersysFirewallServices/CibersysFirewallMailer" charset="UTF-8" />
   </component>
 </project>
