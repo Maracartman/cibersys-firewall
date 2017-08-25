@@ -19,7 +19,8 @@ import java.util.Map;
  * Created by Maracartman on 31/7/2017.
  */
 @Service
-public class SetClienteServiceImpl extends AbstractPrivateRequestHandlerServiceImpl<ResponseEntity,NewPanelClientRequestDTO>
+public class SetClienteServiceImpl extends
+        AbstractPrivateRequestHandlerServiceImpl<ResponseEntity,NewPanelClientRequestDTO>
 implements SetClienteService{
     @Override
     public ResponseEntity proceedRequest(NewPanelClientRequestDTO body, Map<String, String> header) {

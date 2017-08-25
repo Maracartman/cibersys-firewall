@@ -5,6 +5,7 @@ import com.cibersys.firewall.Domain.Model.Cliente;
 import com.cibersys.firewall.Domain.Model.Usuario;
 import com.cibersys.firewall.Domain.Model.UsuarioCliente;
 import com.cibersys.firewall.Repositories.Services.ClientService;
+import com.cibersys.firewall.Repositories.Services.GrupoService;
 import com.cibersys.firewall.Repositories.Services.UsuarioClienteService;
 import com.cibersys.firewall.Repositories.Services.UsuarioService;
 import com.cibersys.firewall.Repositories.UsuarioRepository;
@@ -43,6 +44,9 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
     private ClientService clientService;
 
     @Autowired
+    private GrupoService grupoService;
+
+    @Autowired
     private UsuarioRepository usuarioRepository;
 
     private Boolean _edited = false;
@@ -51,6 +55,10 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
 
     @Autowired
     private PasswordEncrypter passwordEncrypter;
+
+    @Autowired
+    private GrupoService getIdUsuarioCliente;
+
 
     @Override
     public SetUsuarioReponseDTO proceedRequest(Map<String, String> body, Map<String, String> header) {
@@ -167,23 +175,51 @@ public class SetUsuarioServiceImpl extends AbstractRequestHandler<SetUsuarioRepo
                     } else
                         return new SetUsuarioReponseDTO(Long.valueOf(200), "El correo no se encuentra en la base de Datos.", true, null);
                 case "3":
-                    /**
-                     * Se puede usar este fragmento y hacer uso de este servicio para la creacion de posteriores usuarios.                    *
-                     *
-                     * **/
-                    if (usuario != null)
-                        return new SetUsuarioReponseDTO(Long.valueOf(200), "", false, Arrays.asList(new SetUsuarioResponse(null, usuario.getIdusuario(),
-                                usuario.getNombre(), usuario.getApellido(), usuario.getEmail(), usuario.getEstatus().equals("1") ? false : true, null)));
-                    else {
-                        List<Usuario> users;
-                        users = requester_user.getIdRol() == 1 ? usuarioService.getAllUsuariosByRol("2") : usuarioService.getAllUsuarioByRolAndCliente("4",
-                                usuarioService.getUserByEmail(requester_user.getUserName()).getCliente());
-                        List<SetUsuarioResponse> sur = new ArrayList<>();
-                        if (users != null)
-                            sur.addAll(users.stream().map(u -> new SetUsuarioResponse(null, u.getIdusuario(), u.getNombre(),
-                                    u.getApellido(), u.getEmail(), u.getEstatus().equals("1") ? false : true, null)).collect(Collectors.toList()));
-                        return new SetUsuarioReponseDTO(Long.valueOf(200),
-                                "Éxito en el envío de los datos.", false, sur);
+                    if(request.getUserClient() != null && request.getUserClient()){
+                       List<SetUsuarioResponse> list = new ArrayList<>();
+                        List<UsuarioCliente> usuarios = new ArrayList<>();
+                        if(request.getIdUsuario() == null){
+                            ArrayList<Long> array = new ArrayList<>();
+                            array.add(request.getIdUsuario());
+                            usuarios = usuarioClienteService.obtenerUsuariosClientePorGrupo(array);
+                        }else{
+                            Usuario u = usuarioService.getUserByEmail(requester_user.getUserName());
+                            grupoService.obtenerTodosLosGruposPorIdCliente(u.getCliente().getIdcliente()).forEach(grupo -> {
+                               grupo.getUserClients().forEach(usuarioCliente -> {
+//                                   usuarios.add(usuarioCliente);
+                               });
+                            });
+                        }
+                       /* return new SetUsuarioReponseDTO(Long.valueOf(200),
+                               "Éxito en el envío de los datos.", false,
+                               Arrays.asList(new SetUsuarioResponse(request.getAction(),
+                                       result.getIdUsuarioCliente(),
+                                       request.getName(), request.getLastName(),
+                                       request.getEmail(), false, null
+                               )))
+
+                         new SetUsuarioReponseDTO(Long.valueOf(200),
+                                "Éxito en el envío de los datos.", false,
+                                Arrays.asList(new SetUsuarioResponse(request.getAction(),
+                                        result.getIdUsuarioCliente(),
+                                        request.getName(), request.getLastName(),
+                                        request.getEmail(), false, null
+                                )))*/
+                    }else{
+                        if (usuario != null)
+                            return new SetUsuarioReponseDTO(Long.valueOf(200), "", false, Arrays.asList(new SetUsuarioResponse(null, usuario.getIdusuario(),
+                                    usuario.getNombre(), usuario.getApellido(), usuario.getEmail(), usuario.getEstatus().equals("1") ? false : true, null)));
+                        else {
+                            List<Usuario> users;
+                            users = requester_user.getIdRol() == 1 ? usuarioService.getAllUsuariosByRol("2") : usuarioService.getAllUsuarioByRolAndCliente("4",
+                                    usuarioService.getUserByEmail(requester_user.getUserName()).getCliente());
+                            List<SetUsuarioResponse> sur = new ArrayList<>();
+                            if (users != null)
+                                sur.addAll(users.stream().map(u -> new SetUsuarioResponse(null, u.getIdusuario(), u.getNombre(),
+                                        u.getApellido(), u.getEmail(), u.getEstatus().equals("1") ? false : true, null)).collect(Collectors.toList()));
+                            return new SetUsuarioReponseDTO(Long.valueOf(200),
+                                    "Éxito en el envío de los datos.", false, sur);
+                        }
                     }
             }
 

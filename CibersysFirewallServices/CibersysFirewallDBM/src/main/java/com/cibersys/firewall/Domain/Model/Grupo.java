@@ -5,6 +5,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created by AKDESK25 on 8/24/2017.
@@ -41,5 +43,16 @@ public class Grupo {
     @OneToOne
     @JoinColumn(name = "usuario_creacion")
     private Usuario usuarioCreacion;
+
+    public Grupo() {
+    }
+    /**TODO: PARA TESTEAR EL FUNCIONAMIENTO
+     * **/
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "grupo_usuario_cliente",
+            joinColumns = @JoinColumn(name = "idgrupo",referencedColumnName = "idgrupo"),
+    inverseJoinColumns = @JoinColumn(name = "idusuariocliente",referencedColumnName = "idusuariocliente"))
+    private List<UsuarioCliente> userClients;
+
 
 }

@@ -30,6 +30,9 @@ public abstract class AbstractPrivateRequestHandlerServiceImpl<T,E>
     @Value("${cibersys.services.dbm.route}")
     protected String dbmRoute;
 
+    @Value("${cibersys.services.dbm.group}")
+    protected String dbmGroup;
+
     @Value("${cibersys.services.mailer.route}")
     protected String mailerRoute;
 

@@ -1,5 +1,6 @@
 package com.cibersys.firewall.groups;
 
+import com.cibersys.firewall.groups.RequestHandlers.GroupRequestService.GroupRequestService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -32,7 +33,7 @@ public class CibersysFirewallGroupsApplication {
 		 * y construir el response.
 		 *
 		 **/
-		map.put("usuario",null);
+		map.put("group", GroupRequestService.class);
 
 		return map;
 	}

@@ -12,15 +12,18 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @Table(name = "grupo_usuario_cliente")
-@IdClass(GrupoUsuarioClienteKey.class)
 public class GrupoUsuarioCliente {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(columnDefinition = "INT(11)", name = "idgrupousuario")
+    private Long idgrupousuario;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "idusuariocliente")
     private UsuarioCliente usuarioCliente;
 
-    @Id
+
     @OneToOne
     @JoinColumn(name = "idgrupo")
     private Grupo grupo;

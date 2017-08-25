@@ -28,6 +28,12 @@ public abstract class AbstractPrivateRequestHandlerServiceImpl<T,E>
     @Value("${cibersys.services.dbm.usuario}")
     protected String dbmUsuario;
 
+    @Value("${cibersys.services.group.route}")
+    protected String groupRoute;
+
+    @Value("${cibersys.services.group.group}")
+    protected String groupService;
+
     @Value("${cibersys.services.dbm.route}")
     protected String dbmRoute;
 
@@ -51,6 +57,7 @@ public abstract class AbstractPrivateRequestHandlerServiceImpl<T,E>
 
     @Value("${cibersys.services.mannager.setCliente}")
     protected String mannagerSetCliente;
+
     @Autowired
     protected UserGeneralRequestBuilder userGeneralRequestBuilder;
 
@@ -61,9 +68,6 @@ public abstract class AbstractPrivateRequestHandlerServiceImpl<T,E>
     protected ObjectMapper objectMapper;
 
     protected TokenUtils tokenUtils;
-
-
-
 
     public abstract  T proceedRequest(E body, Map<String, String> header);
 }

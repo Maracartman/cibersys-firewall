@@ -17,6 +17,7 @@ public interface UserGeneralRequestBuilder {
     HttpEntity<PasswordChangeRequest> buildPasswordChangeRequestDTO(PasswordChangeRequest u);
     HttpEntity<SetUsuarioRequestDTO> buildSetUsuarioRequestDTO(SetUsuarioRequestDTO setUsuarioRequest, Map<String, String> header);
     HttpEntity<NewPanelClientRequestDTO> buildSetUsuarioRequestDTO(NewPanelClientRequestDTO setClienteRequest, Map<String, String> header);
+    HttpEntity<GroupRequestDTO> buildGroupRequestDTO(GroupRequestDTO groupRequest, Map<String, String> header);
 
     HttpEntity<Map<String,String>> buildCountriesRequest(Map<String, String> body);
 }

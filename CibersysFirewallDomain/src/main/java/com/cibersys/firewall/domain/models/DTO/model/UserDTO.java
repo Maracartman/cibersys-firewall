@@ -21,6 +21,13 @@ public class UserDTO {
         this.name = name;
         this.lastName = lastName;
     }
+    public UserDTO(String userName, String password, String rol, String name, String lastName) {
+        this.userName = userName;
+        this.password = password;
+        this.idRol = Integer.parseInt(rol);
+        this.name = name;
+        this.lastName = lastName;
+    }
 
     public UserDTO(String userName, String password,Integer rol) {
         this.userName = userName;
@@ -56,7 +63,7 @@ public class UserDTO {
         return idRol;
     }
 
-    @JsonProperty("email") /**En versiónes anteriores esté era user**/
+    @JsonProperty("email")
     public String getUserName() {
         return userName;
     }

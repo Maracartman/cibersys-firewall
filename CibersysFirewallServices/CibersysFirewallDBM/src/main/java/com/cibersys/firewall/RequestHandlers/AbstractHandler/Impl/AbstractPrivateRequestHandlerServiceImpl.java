@@ -35,8 +35,5 @@ public abstract class AbstractPrivateRequestHandlerServiceImpl<T,E>
     @Autowired
     protected ManagerToken managerToken;
 
-
-
-
     public abstract  T proceedRequest(E body, Map<String, String> header);
 }

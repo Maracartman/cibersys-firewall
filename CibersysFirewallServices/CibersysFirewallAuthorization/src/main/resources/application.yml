@@ -7,14 +7,14 @@ spring:
 
 cibersys:
     services:
+            path: CibersysFirewall/
             login: /CibersysFirewall/public/login
             update: /CibersysFirewall/public/update
             passwordchange: /CibersysFirewall/public/passwordchange
             services:
               public: /CibersysFirewall/public/
               private: /CibersysFirewall/private/
-            path: CibersysFirewall/
-
+              path: CibersysFirewall/
             dbm:
               services: /CibersysFirewall/dbm/
               usuario: /CibersysFirewall/dbm/usuario
@@ -32,9 +32,13 @@ cibersys:
               setCliente: /CibersysFirewall/mannager/setCliente
               clients: /CibersysFirewall/mannager/clients
               countries : /CibersysFirewall/mannager/countries
-
               path: CibersysFirewall/mannager/
               route: http://localhost:5657
+            group:
+              services: /CibersysFirewall/group/
+              group: /CibersysFirewall/group/group
+              path: CibersysFirewall/group/
+              route: http://localhost:5659
   #Configuracion de seguridad
     token:
       header: X-Auth-Token

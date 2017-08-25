@@ -105,10 +105,13 @@ public class AppFilter extends OncePerRequestFilter {
             case "client":
                 return userToken.getIdRol().toString().equalsIgnoreCase("1")
              || userToken.getIdRol().toString().equalsIgnoreCase("2")? true : false;
+            case "group":
+                return  userToken.getIdRol().toString().equalsIgnoreCase("3")
+                        || userToken.getIdRol().toString().equalsIgnoreCase("4")? true : false;
             default:
                 return userToken.getIdRol().toString().equalsIgnoreCase("1") ||
-                        userToken.getIdRol().toString().equalsIgnoreCase("3")
-                        || userToken.getIdRol().toString().equalsIgnoreCase("4")? true : false;
+                        userToken.getIdRol().toString().equalsIgnoreCase("3")||
+                        userToken.getIdRol().toString().equalsIgnoreCase("4") ? true : false;
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.cibersys.firewall.autorization;
 
 import com.cibersys.firewall.autorization.Services.RequestHandlers.CountryService.CountryService;
+import com.cibersys.firewall.autorization.Services.RequestHandlers.GroupRequestService.GroupRequestService;
 import com.cibersys.firewall.autorization.Services.RequestHandlers.LoginRequestService.LoginService;
 import com.cibersys.firewall.autorization.Services.RequestHandlers.PasswordChangeService.PasswordChange;
 import com.cibersys.firewall.autorization.Services.RequestHandlers.PasswordChangeRequestService.PasswordChangeRequest;
@@ -65,6 +66,7 @@ public class AuthorizationController {
         map.put("private/passwordchange", PasswordChange.class);
         map.put("private/user", SetUsuarioService.class);
         map.put("private/client", SetClienteService.class);
+        map.put("private/group", GroupRequestService.class);
 
 
 

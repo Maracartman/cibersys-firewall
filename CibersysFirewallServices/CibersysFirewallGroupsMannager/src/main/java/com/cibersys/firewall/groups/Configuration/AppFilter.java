@@ -19,7 +19,7 @@ public class AppFilter extends OncePerRequestFilter {
 
     @Value("${cibersys.token.header}")
     private String tokenHeader;
-    @Value("${cibersys.services.groups.services}")
+    @Value("${cibersys.services.group.services}")
     private String services;
 
     @Value("${cibersys.token.secret}")

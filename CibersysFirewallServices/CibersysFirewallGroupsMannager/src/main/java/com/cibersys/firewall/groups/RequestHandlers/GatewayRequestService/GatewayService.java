@@ -17,7 +17,7 @@ import java.util.Map;
  * Created by Luis Maracara on 6/16/2017.
  */
 @RestController
-@RequestMapping("${cibersys.services.groups.path}")
+@RequestMapping("${cibersys.services.group.path}")
 public class GatewayService {
 
     @Autowired

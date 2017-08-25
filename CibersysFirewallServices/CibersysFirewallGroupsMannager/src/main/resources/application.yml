@@ -10,14 +10,12 @@ cibersys:
   services:
           services: /CibersysFirewall/groups/
           path: CibersysFirewall/groups/
-
-          groups:
-            services: /CibersysFirewall/groups/
+          group:
+            services: /CibersysFirewall/group/
             path: CibersysFirewall/mailer/
-
           dbm:
             services: /CibersysFirewall/dbm/
-            usuario: /CibersysFirewall/dbm/usuario
+            group: /CibersysFirewall/dbm/group
             route: http://localhost:5656
           mailer:
             path: CibersysFirewall/mailer/

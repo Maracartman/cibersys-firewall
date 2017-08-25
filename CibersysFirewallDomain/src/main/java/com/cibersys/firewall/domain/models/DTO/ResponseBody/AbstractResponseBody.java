@@ -10,7 +10,7 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
-public abstract  class AbstractResponseBody<T extends Object>{
+public abstract class AbstractResponseBody<T extends Object>{
 
     @JsonProperty("code")
     protected Long code;

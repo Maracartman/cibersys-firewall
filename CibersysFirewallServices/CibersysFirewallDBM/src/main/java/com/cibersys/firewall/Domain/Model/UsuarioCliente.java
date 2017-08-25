@@ -4,14 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.security.acl.Group;
 import java.util.Date;
 
 /**
  * Created by AKDESK25 on 8/24/2017.
  */
 @Entity
-@Data
 @AllArgsConstructor
+@Data
 @Table(name = "usuario_cliente")
 public class UsuarioCliente {
 
@@ -45,4 +46,7 @@ public class UsuarioCliente {
 
     @Column(columnDefinition = "CHAR(1)",name = "estatus")
     private String estatus;
+
+    public UsuarioCliente() {
+    }
 }
