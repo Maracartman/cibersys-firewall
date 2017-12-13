@@ -37,6 +37,6 @@ public class GrupoServiceImpl implements GrupoService {
 
     @Override
     public List<Grupo> obtenerTodosLosGruposPorIdCliente(Long idCliente) {
-        return repository.findAllGroupsByClient(idCliente);
+        return/* repository.findAllGroupsByClient(idCliente);*/null;
     }
 }

@@ -13,7 +13,6 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Table(name = "accion")
 public class Accion {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(columnDefinition = "INT(11)", name = "idaccion")

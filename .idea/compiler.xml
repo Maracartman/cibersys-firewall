@@ -1,41 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <resourceExtensions />
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true">
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
         <module name="Cibersys Firewall - Backend" />
         <module name="cibersys-firewall-eureka" />
         <module name="CibersysAccountsMannager" />
         <module name="CibersysFirewallAccountsMannager" />
-        <module name="CibersysFirewallAuthorization" />
         <module name="CibersysfirewallAuthorization" />
+        <module name="CibersysFirewallAuthorization" />
         <module name="CibersysFirewallCommons" />
         <module name="CibersysFirewallConfig" />
         <module name="CibersysFirewallDBM" />
         <module name="CibersysFirewallDomain" />
+        <module name="CibersysFirewallGroups" />
         <module name="CibersysFirewallGroupsMannager" />
-        <module name="cibersysfirewallmailer" />
         <module name="CibersysFirewallMailer" />
+        <module name="cibersysfirewallmailer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="cibersys-firewall-backend" target="1.8" />
       <module name="cibersys-firewall-eureka" target="1.8" />
       <module name="CibersysFirewallAccountsMannager" target="1.8" />
-      <module name="CibersysfirewallAuthorization" target="1.8" />
-      <module name="CibersysFirewallCommons" target="1.8" />
+      <module name="CibersysfirewallAuthorization" target="1.7" />
+      <module name="CibersysFirewallCommons" target="1.5" />
       <module name="CibersysFirewallConfig" target="1.8" />
       <module name="CibersysFirewallDBM" target="1.8" />
-      <module name="CibersysFirewallDomain" target="1.8" />
-      <module name="CibersysFirewallGroupsMannager" target="1.8" />
+      <module name="CibersysFirewallDomain" target="1.5" />
+      <module name="CibersysFirewallGroups" target="1.8" />
       <module name="cibersysfirewallmailer" target="1.8" />
       <module name="CibersysFirewallServices" target="1.8" />
     </bytecodeTargetLevel>

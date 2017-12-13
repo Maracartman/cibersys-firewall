@@ -14,6 +14,6 @@ public interface GrupoRepository extends JpaRepository<Grupo,Long> {
 
     List<Grupo> findAllByUsuarioCreacion(Usuario usuario_creacion);
 
-    @Query(value = "select distinct g.* from grupo g inner join usuario u on g.usuario_creacion = u.idusuario where u.idcliente = ?1 order by g.nombre")
-    List<Grupo> findAllGroupsByClient(Long idCliente);
+    /*@Query(value = "select distinct g.* from grupo g inner join usuario u on g.usuario_creacion = u.idusuario where u.idcliente = ?1 order by g.nombre")
+    List<Grupo> findAllGroupsByClient(Long idCliente);*/
 }
